@@ -1,5 +1,7 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { HiOutlineMenu, HiX } from "react-icons/hi";
+import { FiLinkedin, FiMail } from "react-icons/fi"; // minimalist icons
 
 const projects = [
   { name: "Project One", slug: "project-one" },
@@ -7,12 +9,10 @@ const projects = [
   { name: "Project Three", slug: "project-three" },
 ];
 
-const socialLinks = [
-  // ... (your social icons as before)
-];
-
 export default function Header() {
   const [dropdown, setDropdown] = useState(false);
+  const [hovered, setHovered] = useState(null);
+  const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
@@ -22,40 +22,54 @@ export default function Header() {
   };
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 bg-white rounded-2xl w-[90%] px-8 py-4 flex items-center justify-between">
+    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] bg-white/80 backdrop-blur-md rounded-2xl shadow-sm px-6 py-3 flex items-center justify-between">
       {/* Logo */}
-      <Link
-        to="/"
-        className="font-bold text-xl text-gray-900 flex-shrink-0 w-[120px]"
-      >
-        <img src="/header_logo.png" alt="" className="w-full h-full" />
+      <Link to="/" className="w-[100px] flex-shrink-0">
+        <img
+          src="/header_logo.png"
+          alt="Kimia Logo"
+          className="h-auto w-full object-contain"
+        />
       </Link>
 
-      {/* Center Nav */}
-      <nav className="flex items-center gap-8">
-        <Link
-          to="/about"
-          className="relative px-2 py-1 text-gray-700 hover:text-blue-600 transition"
-        >
-          About
-        </Link>
+      {/* Desktop Nav */}
+      <nav className="hidden md:flex items-start gap-10 text-sm font-medium text-zinc-800">
+        {/* About */}
         <div
-          className="relative"
-          onMouseEnter={() => setDropdown(true)}
-          onMouseLeave={() => setDropdown(false)}
+          className="relative flex flex-col items-center"
+          onMouseEnter={() => setHovered("about")}
+          onMouseLeave={() => setHovered(null)}
         >
-          <button
-            className="flex items-center gap-1 px-2 py-1 text-gray-700 hover:text-blue-600 transition group"
-            type="button"
-          >
-            Projects
-            <span className="ml-1 w-2 h-2 rotate-45 bg-gray-300 group-hover:bg-blue-500 transition"></span>
-          </button>
+          <Link to="/about" className="hover:text-blue-600 transition">
+            About
+          </Link>
+        </div>
+
+        {/* Projects Dropdown */}
+        <div
+          className="relative flex flex-col items-center"
+          onMouseEnter={() => {
+            setDropdown(true);
+            setHovered("projects");
+          }}
+          onMouseLeave={() => {
+            setDropdown(false);
+            setHovered(null);
+          }}
+        >
+          <button className="hover:text-blue-600 transition">Projects</button>
+          <span
+            className={`mt-1 w-2 h-2 rotate-45 border ${
+              hovered === "projects" ? "opacity-0" : "border-zinc-400"
+            } transition-all duration-200`}
+          />
+          {hovered === "projects" && (
+            <span className="absolute -bottom-3 w-3 h-3 rotate-45 bg-blue-600 border border-blue-600 shadow" />
+          )}
+
+          {/* Dropdown */}
           {dropdown && (
-            <div className="absolute left-1/2 -translate-x-1/2 mt-2 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[220px] z-20">
-              <div className="flex justify-center pt-2">
-                <span className="w-4 h-4 bg-blue-500 rotate-45"></span>
-              </div>
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[220px] z-50">
               <ul className="py-2">
                 {projects.map((project) => (
                   <li key={project.slug}>
@@ -63,8 +77,8 @@ export default function Header() {
                       to={`/projects/${project.slug}`}
                       className="flex items-center gap-2 px-6 py-2 hover:bg-blue-50 group transition"
                     >
-                      <span className="w-2 h-2 rotate-45 bg-gray-300 group-hover:bg-blue-500 transition"></span>
-                      <span className="text-gray-700 group-hover:text-blue-600">
+                      <span className="w-2 h-2 rotate-45 bg-gray-300 group-hover:bg-blue-500 transition" />
+                      <span className="text-zinc-700 group-hover:text-blue-600">
                         {project.name}
                       </span>
                     </Link>
@@ -76,21 +90,22 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Right: Socials & Resume */}
-      <div className="flex items-center gap-4">
-        <div className="flex gap-2">
-          {socialLinks.map((social, idx) => (
-            <a
-              key={idx}
-              href={social.link}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-600 transition"
-            >
-              {social.icon}
-            </a>
-          ))}
-        </div>
+      {/* Socials + Resume */}
+      <div className="hidden md:flex items-center gap-4">
+        <a
+          href="https://linkedin.com/in/YOUR_ID"
+          target="_blank"
+          rel="noopener noreferrer"
+          className="text-zinc-500 hover:text-blue-600 transition"
+        >
+          <FiLinkedin size={18} />
+        </a>
+        <a
+          href="mailto:your.email@example.com"
+          className="text-zinc-500 hover:text-blue-600 transition"
+        >
+          <FiMail size={18} />
+        </a>
         <button
           onClick={handleResumeDownload}
           className="ml-2 px-4 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-sm font-medium"
@@ -98,6 +113,61 @@ export default function Header() {
           Resume
         </button>
       </div>
+
+      {/* Mobile Menu Button */}
+      <div className="md:hidden">
+        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+          {mobileMenuOpen ? <HiX size={24} /> : <HiOutlineMenu size={24} />}
+        </button>
+      </div>
+
+      {/* Mobile Dropdown */}
+      {mobileMenuOpen && (
+        <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-md rounded-b-2xl md:hidden z-40">
+          <div className="flex flex-col p-4 gap-4 text-sm font-medium">
+            <Link
+              to="/about"
+              onClick={() => setMobileMenuOpen(false)}
+              className="text-gray-700 hover:text-blue-600"
+            >
+              About
+            </Link>
+            {projects.map((project) => (
+              <Link
+                key={project.slug}
+                to={`/projects/${project.slug}`}
+                onClick={() => setMobileMenuOpen(false)}
+                className="text-gray-700 hover:text-blue-600"
+              >
+                {project.name}
+              </Link>
+            ))}
+            <a
+              href="https://linkedin.com/in/YOUR_ID"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="text-gray-500 hover:text-blue-600 flex items-center gap-2"
+            >
+              <FiLinkedin /> LinkedIn
+            </a>
+            <a
+              href="mailto:your.email@example.com"
+              className="text-gray-500 hover:text-blue-600 flex items-center gap-2"
+            >
+              <FiMail /> Email
+            </a>
+            <button
+              onClick={() => {
+                setMobileMenuOpen(false);
+                handleResumeDownload();
+              }}
+              className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+            >
+              Resume
+            </button>
+          </div>
+        </div>
+      )}
     </header>
   );
 }
