@@ -4,9 +4,10 @@ import { HiOutlineMenu, HiX } from "react-icons/hi";
 import { FiLinkedin, FiMail } from "react-icons/fi"; // minimalist icons
 
 const projects = [
-  { name: "Project One", slug: "project-one" },
-  { name: "Project Two", slug: "project-two" },
-  { name: "Project Three", slug: "project-three" },
+  { name: "Keysight PWMA", slug: "Keysight_pwma" },
+  { name: "Dark Patterns", slug: "Dark_Patterns" },
+  { name: "Travel Link", slug: "Travel_Link" },
+  { name: "Uxlerator", slug: "Uxlerator" },
 ];
 
 export default function Header() {
@@ -17,7 +18,7 @@ export default function Header() {
   const handleResumeDownload = () => {
     const link = document.createElement("a");
     link.href = "/resume.pdf";
-    link.download = "resume.pdf";
+    link.download = "https://www.kimiamostadam.com/s/Top-Resume-6_16.pdf";
     link.click();
   };
 
@@ -93,7 +94,7 @@ export default function Header() {
       {/* Socials + Resume */}
       <div className="hidden md:flex items-center gap-4">
         <a
-          href="https://linkedin.com/in/YOUR_ID"
+          href="https://www.linkedin.com/in/kimiamostadam?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0GMlLIPkQziEpSiKmOAhHA%3D%3D"
           target="_blank"
           rel="noopener noreferrer"
           className="text-zinc-500 hover:text-blue-600 transition"
@@ -101,7 +102,7 @@ export default function Header() {
           <FiLinkedin size={18} />
         </a>
         <a
-          href="mailto:your.email@example.com"
+          href="mailto:kimiamostadam@gmail.com"
           className="text-zinc-500 hover:text-blue-600 transition"
         >
           <FiMail size={18} />
@@ -143,7 +144,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://linkedin.com/in/YOUR_ID"
+              href="https://www.linkedin.com/in/kimiamostadam?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0GMlLIPkQziEpSiKmOAhHA%3D%3D"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-blue-600 flex items-center gap-2"
@@ -151,7 +152,7 @@ export default function Header() {
               <FiLinkedin /> LinkedIn
             </a>
             <a
-              href="mailto:your.email@example.com"
+              href="mailto:kimiamostadam@gmail.com"
               className="text-gray-500 hover:text-blue-600 flex items-center gap-2"
             >
               <FiMail /> Email

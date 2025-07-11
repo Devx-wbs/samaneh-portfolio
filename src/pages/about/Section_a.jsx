@@ -12,7 +12,7 @@ export default function Section_a() {
           </h1>
         </div>
         {/* Right: About Text */}
-        <div className="w-full flex items-center lg:items-start justify-between gap-8">
+        <div className="w-full flex items-center flex-col md:flex-row lg:items-start justify-between gap-8">
           <div className="">
             <img
               src="/profile_pic.jpg"

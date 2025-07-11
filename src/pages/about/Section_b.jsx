@@ -16,7 +16,7 @@ export default function Section_b() {
           </h2>
         </div>
         {/* Right: Animated Paragraphs */}
-        <div className="w-full max-w-[70%] m-auto text-[#332f29] text-base sm:text-lg space-y-6 animate-fade-in">
+        <div className="w-full max-w-[100%] md:max-w-[70%] text-center md:text-start m-auto text-[#332f29] text-base sm:text-lg space-y-6 animate-fade-in">
           <p>
             I’m a UX Researcher with a Master’s in Human-Computer Interaction
             from UC Santa Cruz and a background in Cognitive Science and
