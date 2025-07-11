@@ -3,7 +3,7 @@ import React from "react";
 const Section_a = () => {
   return (
     <section className="min-h-screen flex items-center bg-[#F5F2EC] px-6 py-16">
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
+      <div className="max-w-7xl m-auto w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
         <div />
 
         <div className="text-[#2E2B26]">
