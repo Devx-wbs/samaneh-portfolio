@@ -19,7 +19,6 @@ const Section_b = () => {
         <div className="bg-[#FFCE9F] relative rounded-md px-6 py-10 flex flex-col items-center text-center">
           <div className="absolute w-[300px] h-[300px] bg-[#FF8C3E] rounded-full blur-3xl opacity-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0" />
 
-          <p className="text-xs text-[#2E2B26] mb-1 relative z-10">P</p>
           <h3 className="text-lg md:text-xl font-bold text-white mb-1 relative z-10">
             UX DESIGN/RESEARCH
           </h3>
