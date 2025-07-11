@@ -7,11 +7,9 @@ export default function App() {
   return (
     <BrowserRouter>
       <Header />
-      <div className="max-w-7xl mx-auto px-4 py-8">
-        <Routes>
-          <Route path="/" element={<Home />} />
-        </Routes>
-      </div>
+      <Routes>
+        <Route path="/" element={<Home />} />
+      </Routes>
     </BrowserRouter>
   );
 }
