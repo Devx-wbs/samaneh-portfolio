@@ -2,7 +2,7 @@ import React from "react";
 
 const Section_b = () => {
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[200px] px-2">
+    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
       <h2 className="text-2xl sm:text-3xl md:text-[64px] font-extrabold text-center text-[#2E2B26] mb-6 tracking-tight">
         OVERVIEW:
       </h2>
