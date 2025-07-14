@@ -6,6 +6,7 @@ import About from "./pages/about";
 import Footer from "./components/footer";
 import Keysight_pwma from "./pages/projects/Keysight_pwma";
 import DarkPatterns from "./pages/DarkPatterns";
+import TraverlLink from "./pages/TraverlLink";
 
 export default function App() {
   return (
@@ -16,6 +17,7 @@ export default function App() {
         <Route path="/about" element={<About />} />
         <Route path="/projects/Keysight_pwma" element={<Keysight_pwma />} />
         <Route path="/projects/Dark_Patterns" element={<DarkPatterns />} />
+        <Route path="/projects/Travel_Link" element={<TraverlLink />} />
 
       </Routes>
       <Footer />
