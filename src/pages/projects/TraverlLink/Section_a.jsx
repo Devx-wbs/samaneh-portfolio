@@ -2,7 +2,7 @@ import React from "react";
 
 const Section_a = () => {
   return (
-    <section className="bg-[#F5F2EC] min-h-screen flex justify-center px-6 py-8">
+    <section className="bg-[#F5F2EC] min-h-screen flex justify-center px-6 py-8 pt-[200px]">
       <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
         <div className="space-y-8">
           <div>
