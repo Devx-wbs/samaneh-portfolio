@@ -7,6 +7,7 @@ import Footer from "./components/footer";
 import Keysight_pwma from "./pages/projects/Keysight_pwma";
 import DarkPatterns from "./pages/DarkPatterns";
 import TraverlLink from "./pages/TraverlLink";
+import Uxlerator from "./pages/projects/Uxlerator";
 
 export default function App() {
   return (
@@ -18,7 +19,7 @@ export default function App() {
         <Route path="/projects/Keysight_pwma" element={<Keysight_pwma />} />
         <Route path="/projects/Dark_Patterns" element={<DarkPatterns />} />
         <Route path="/projects/Travel_Link" element={<TraverlLink />} />
-
+        <Route path="/projects/Uxlerator" element={<Uxlerator />} />
       </Routes>
       <Footer />
     </BrowserRouter>
