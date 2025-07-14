@@ -37,7 +37,7 @@ const Section_e = () => {
           </div>
           <button className="bg-[#2c2c2c] hover:bg-black text-white px-6 py-3 rounded text-sm w-full md:w-auto">
             VIEW PROJECT
-          </button>
+          </button> 
         </div>
       </div>
     </div>

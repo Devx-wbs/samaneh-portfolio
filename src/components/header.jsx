@@ -91,7 +91,6 @@ export default function Header() {
         </div>
       </nav>
 
-      {/* Socials + Resume */}
       <div className="hidden md:flex items-center gap-4">
         <a
           href="https://www.linkedin.com/in/kimiamostadam?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0GMlLIPkQziEpSiKmOAhHA%3D%3D"
@@ -115,14 +114,12 @@ export default function Header() {
         </button>
       </div>
 
-      {/* Mobile Menu Button */}
       <div className="md:hidden">
         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <HiX size={24} /> : <HiOutlineMenu size={24} />}
         </button>
       </div>
 
-      {/* Mobile Dropdown */}
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-md rounded-b-2xl md:hidden z-40">
           <div className="flex flex-col p-4 gap-4 text-sm font-medium">
