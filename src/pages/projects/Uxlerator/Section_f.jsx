@@ -4,7 +4,7 @@ const Section_f = () => {
   return (
     <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
       <div className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-6 flex flex-col items-center">
-        <h3 className="font-extrabold text-[22px] text-center leading-[24px] md:text-[44px] md:leading-[50px] text-[#2E2B26] mb-4 text-left w-full">
+        <h3 className="font-extrabold text-[22px] text-center leading-[24px] md:text-[44px] md:leading-[50px] text-[#2E2B26] mb-4 w-full">
           KEY FINDINGS
         </h3>
         <div>
