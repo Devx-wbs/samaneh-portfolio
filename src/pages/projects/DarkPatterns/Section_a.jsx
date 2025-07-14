@@ -1,19 +1,22 @@
-import React from 'react';
+import React from "react";
 
 const Section_a = () => {
   return (
     <div className="min-h-screen bg-[#F9F6EF] text-black px-16 py-12 flex items-start justify-start font-sans pt-[200px]">
-      <div className="max-w-7xl">
+      <div className="px-6 sm:px-10 py-12 max-w-7xl w-full m-auto">
         <h1 className="text-5xl sm:text-6xl font-extrabold leading-tight tracking-tight text-[#2b2520]">
-          DARK<br />
-          PATTER<br />
-          NS
+          DARK
+          <br />
+          PATTERNS
         </h1>
 
         <p className="mt-6 text-2xl sm:text-3xl font-extrabold text-[#2b2520] leading-snug">
-          A WEBSITE THAT DISPLAYS<br />
-          COMMON DARK VISUAL<br />
-          DESIGN LAYOUTS AND<br />
+          A WEBSITE THAT DISPLAYS
+          <br />
+          COMMON DARK VISUAL
+          <br />
+          DESIGN LAYOUTS AND
+          <br />
           PATTERNS.
         </p>
 

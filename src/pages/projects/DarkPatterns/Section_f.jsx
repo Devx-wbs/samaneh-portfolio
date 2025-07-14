@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const Section_f = () => {
   return (
@@ -9,13 +9,13 @@ const Section_f = () => {
         </h2>
 
         <div className="w-full mt-12 text-center">
-          <h3 className="text-3xl sm:text-4xl font-bold tracking-tight">
+          {/* <h3 className="text-3xl sm:text-4xl font-bold tracking-tight">
             <span className="text-black">DARK</span>{' '}
             <span className="text-[#2B2520]">DESIGN PATTERNS</span>
           </h3>
           <p className="text-sm sm:text-lg mt-2 tracking-wide text-[#2B2520]">
             CAN STEAL YOUR MONEY AND TIME
-          </p>
+          </p> */}
 
           <img
             src="https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/6ac5b718-d0d6-4ef9-8123-d860eddcdcb7/645d6839d4d75958f40cae1a_Page.png?format=2500w"
@@ -23,8 +23,6 @@ const Section_f = () => {
             className="w-full h-auto mt-8 rounded-md shadow-md"
           />
         </div>
-
-      
       </div>
     </div>
   );
