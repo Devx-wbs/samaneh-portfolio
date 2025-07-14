@@ -59,24 +59,24 @@ export default function Header() {
           }}
         >
           <button className="hover:text-blue-600 transition">Projects</button>
-          <span
+          {/* <span
             className={`mt-1 w-2 h-2 rotate-45 border ${
               hovered === "projects" ? "opacity-0" : "border-zinc-400"
             } transition-all duration-200`}
           />
           {hovered === "projects" && (
             <span className="absolute -bottom-3 w-3 h-3 rotate-45 bg-blue-600 border border-blue-600 shadow" />
-          )}
+          )} */}
 
           {/* Dropdown */}
           {dropdown && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-4 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[220px] z-50">
+            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[220px] z-50">
               <ul className="py-2">
                 {projects.map((project) => (
                   <li key={project.slug}>
                     <Link
                       to={`/projects/${project.slug}`}
-                      className="flex items-center gap-2 px-6 py-2 hover:bg-blue-50 group transition"
+                      className="flex items-center gap-2 px-6 py-1 hover:bg-blue-50 group transition"
                     >
                       <span className="w-2 h-2 rotate-45 bg-gray-300 group-hover:bg-blue-500 transition" />
                       <span className="text-zinc-700 group-hover:text-blue-600">
