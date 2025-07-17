@@ -1,7 +1,7 @@
-import React, { useState } from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { HiOutlineMenu, HiX } from "react-icons/hi";
-import { FiLinkedin, FiMail } from "react-icons/fi"; // minimalist icons
+import { FiLinkedin, FiMail } from "react-icons/fi";
 
 const projects = [
   { name: "Keysight PWMA", slug: "Keysight_pwma" },
@@ -12,14 +12,25 @@ const projects = [
 
 export default function Header() {
   const [dropdown, setDropdown] = useState(false);
-  const [hovered, setHovered] = useState(null);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
+  const timeoutRef = useRef(null); // 🕒 for delay
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
     link.href = "/resume.pdf";
-    link.download = "https://www.kimiamostadam.com/s/Top-Resume-6_16.pdf";
+    link.download = "Top-Resume.pdf";
     link.click();
+  };
+
+  const handleMouseEnter = () => {
+    if (timeoutRef.current) clearTimeout(timeoutRef.current);
+    setDropdown(true);
+  };
+
+  const handleMouseLeave = () => {
+    timeoutRef.current = setTimeout(() => {
+      setDropdown(false);
+    }, 200); // 🕒 delay in ms
   };
 
   return (
@@ -33,34 +44,23 @@ export default function Header() {
         />
       </Link>
 
-      {/* Desktop Nav */}
+      {/* Desktop Navigation */}
       <nav className="hidden md:flex items-start gap-10 text-sm font-medium text-zinc-800">
         {/* About */}
-        <div
-          className="relative flex flex-col items-center"
-          onMouseEnter={() => setHovered("about")}
-          onMouseLeave={() => setHovered(null)}
-        >
+        <div className="relative flex flex-col items-center">
           <Link to="/about" className="hover:text-blue-600 transition">
             About
           </Link>
         </div>
 
-        {/* Projects Dropdown */}
+        {/* Projects Dropdown (with delay) */}
         <div
-          className="relative flex flex-col items-center"
-          onMouseEnter={() => {
-            setDropdown(true);
-            setHovered("projects");
-          }}
-          onMouseLeave={() => {
-            setDropdown(false);
-            setHovered(null);
-          }}
+          className="relative"
+          onMouseEnter={handleMouseEnter}
+          onMouseLeave={handleMouseLeave}
         >
           <button className="hover:text-blue-600 transition">Projects</button>
 
-          {/* Dropdown */}
           {dropdown && (
             <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[220px] z-50">
               <ul className="py-2">
@@ -83,9 +83,10 @@ export default function Header() {
         </div>
       </nav>
 
+      {/* Desktop Icons & Resume */}
       <div className="hidden md:flex items-center gap-4">
         <a
-          href="https://www.linkedin.com/in/kimiamostadam?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0GMlLIPkQziEpSiKmOAhHA%3D%3D"
+          href="https://www.linkedin.com/in/kimiamostadam"
           target="_blank"
           rel="noopener noreferrer"
           className="text-zinc-500 hover:text-blue-600 transition"
@@ -106,12 +107,14 @@ export default function Header() {
         </button>
       </div>
 
+      {/* Mobile Menu Button */}
       <div className="md:hidden">
         <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
           {mobileMenuOpen ? <HiX size={24} /> : <HiOutlineMenu size={24} />}
         </button>
       </div>
 
+      {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
         <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-md rounded-b-2xl md:hidden z-40">
           <div className="flex flex-col p-4 gap-4 text-sm font-medium">
@@ -133,7 +136,7 @@ export default function Header() {
               </Link>
             ))}
             <a
-              href="https://www.linkedin.com/in/kimiamostadam?lipi=urn%3Ali%3Apage%3Ad_flagship3_profile_view_base_contact_details%3B0GMlLIPkQziEpSiKmOAhHA%3D%3D"
+              href="https://www.linkedin.com/in/kimiamostadam"
               target="_blank"
               rel="noopener noreferrer"
               className="text-gray-500 hover:text-blue-600 flex items-center gap-2"
