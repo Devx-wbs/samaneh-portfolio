@@ -59,14 +59,6 @@ export default function Header() {
           }}
         >
           <button className="hover:text-blue-600 transition">Projects</button>
-          {/* <span
-            className={`mt-1 w-2 h-2 rotate-45 border ${
-              hovered === "projects" ? "opacity-0" : "border-zinc-400"
-            } transition-all duration-200`}
-          />
-          {hovered === "projects" && (
-            <span className="absolute -bottom-3 w-3 h-3 rotate-45 bg-blue-600 border border-blue-600 shadow" />
-          )} */}
 
           {/* Dropdown */}
           {dropdown && (

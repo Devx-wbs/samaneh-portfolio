@@ -2,11 +2,11 @@ import React from "react";
 
 const Section_f = () => {
   return (
-    <section className="min-h-screen flex items-center bg-[#F5F2EC] px-6 py-16">
+    <section className="min-h-[90vh] flex items-center bg-[#F5F2EC] px-6 py-16">
       <div className="max-w-7xl m-auto w-full flex flex-col md:flex-row items-center gap-10">
         <div className="w-full md:w-1/2 flex justify-center">
           <img
-            src="/profile_pic.jpg" 
+            src="/profile_pic.jpg"
             alt="Profile"
             className="w-64 h-64 object-cover rounded-xl shadow-lg"
           />
