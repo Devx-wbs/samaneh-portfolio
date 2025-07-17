@@ -8,7 +8,7 @@ const Section_f = () => {
           <img
             src="/profile_pic.jpg"
             alt="Profile"
-            className="w-64 h-64 object-cover rounded-xl shadow-lg"
+            className="w-64 h-84 object-cover rounded-xl shadow-lg"
           />
         </div>
         <div className="w-full md:w-1/2 text-[#2E2B26] flex flex-col justify-center">
