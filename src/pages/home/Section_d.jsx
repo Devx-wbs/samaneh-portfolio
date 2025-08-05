@@ -1,51 +1,70 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Section_d = () => {
   return (
-    <div className="bg-[#F5F2EC] py-10">
-      <div className="flex flex-col items-end md:flex-row justify-end gap-8 max-w-7xl w-full m-auto">
-        <div className="bg-[#cc4ac0] text-white p-6 sm:p-8 rounded-md w-full md:max-w-xs text-center md:text-left">
-          <h2 className="text-lg sm:text-xl font-bold mb-4 uppercase tracking-wide">
-            Travel Link
-          </h2>
-          <p className="text-sm sm:text-base mb-16 leading-relaxed">
-            A platform where you will <br className="hidden md:block" />
-            find everything to plan a trip.
-          </p>
-          <button className="bg-[#1f1f1f] hover:bg-black text-white px-6 py-4 rounded text-sm">
+    <div className="min-h-96 bg-[#f1f1f1]  flex items-center justify-center px-4 py-16">
+      <div className="flex flex-col md:flex-row items-center gap-10 max-w-7xl w-full">
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="w-full md:w-[320px] bg-[#cc4ac0] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-96 hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div>
+            <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide uppercase">
+              Travel Link
+            </h2>
+            <p className="text-sm sm:text-base mb-10 leading-relaxed font-inter">
+              A platform where you will <br className="hidden md:block" />
+              find everything to plan a trip.
+            </p>
+          </div>
+          <button className="bg-[#1f1f1f] hover:bg-black text-white px-6 py-3 rounded-md text-sm w-full md:w-auto transition-all duration-300 shadow-sm font-inter">
             VIEW PROJECT
           </button>
-        </div>
+        </motion.div>
 
-        <div
-          className="relative w-[700px] rounded-md px-6 py-10 sm:py-16 overflow-hidden bg-cover bg-center"
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="relative w-full md:w-2/3 rounded-xl overflow-hidden flex flex-col items-center justify-center text-center px-6 py-14 bg-cover bg-center shadow-xl"
           style={{
-            backgroundImage: `url('https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/f3827ffb-147a-4d98-9ffa-076da3a87c59/pink.png?format=2500w')`,
+            backgroundImage:
+              "url('https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/f3827ffb-147a-4d98-9ffa-076da3a87c59/pink.png?format=2500w')",
           }}
         >
-          <h1 className="text-white text-2xl sm:text-4xl font-extrabold text-center uppercase mb-2 tracking-wide">
-            Travel Link
-          </h1>
-          <p className="text-white text-lg sm:text-2xl font-semibold text-center mb-10 tracking-wide">
-            UX RESEARCH/DESIGN PROJECT
-          </p>
+          {/* Glass Card */}
+          <div className="bg-white/30 backdrop-blur-md px-6 py-4 rounded-lg shadow-md w-full max-w-sm">
+            <h1 className="text-gray-800 text-xl sm:text-2xl font-grotesk tracking-wide">
+              Travel Link
+            </h1>
+            <p className="text-gray-900 text-2xl sm:text-4xl font-grotesk font-bold tracking-tight mt-2 leading-tight">
+              UX RESEARCH <br className="hidden sm:block" /> PROJECT
+            </p>
+          </div>
 
-          <div className="flex justify-center items-end gap-10 sm:gap-20 relative z-10">
+          {/* Device Images */}
+          <div className="mt-10 flex justify-center items-end gap-6 sm:gap-10 relative z-10 flex-wrap">
             <img
               src="https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/68a71d60-c2d4-426d-8a57-f8295a2336ee/Group+620.png?format=500w"
-              alt="watch"
-              className="h-36 sm:h-44 md:h-48 drop-shadow-2xl"
+              alt="Watch"
+              className="h-36 sm:h-44 md:h-48 drop-shadow-lg rounded-lg hover:scale-105 transition duration-300"
             />
             <img
               src="https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/cbb509e4-527a-4bbe-afdf-e565438d7f3d/Group+471.png?format=750w"
-              alt="phone"
-              className="h-40 sm:h-48 md:h-56 drop-shadow-2xl"
+              alt="Phone"
+              className="h-40 sm:h-48 md:h-56 drop-shadow-lg rounded-lg hover:scale-105 transition duration-300"
             />
           </div>
-        </div>
+        </motion.div>
       </div>
     </div>
   );
 };
 
 export default Section_d;
+

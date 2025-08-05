@@ -1,43 +1,65 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Section_b = () => {
   return (
-    <section className="min-h-60 bg-[#F5F2EC]  flex items-center justify-center px-4   ">
-      <div className="max-w-7xl w-full grid grid-cols-1 md:grid-cols-2 gap-10 items-center">
-        <div className="bg-[#FF8C3E] px-6 py-10 md:px-10 md:py-16 rounded-md shadow-md max-w-md ms-auto">
-          <h2 className="text-xl font-extrabold text-[#2E2B26] mb-4">
-            KEYSIGHT PWMA
-          </h2>
-          <p className="text-white text-base mb-8 leading-relaxed">
-            Design improvements for Keysight's analytics software, Pathwave
-            Measurement Analytics.
-          </p>
-          <button className="bg-[#2E2B26] text-white text-sm font-medium px-6 py-2 rounded-md hover:bg-black transition">
+    <section className="min-h-60 bg-[#f1f1f1] flex items-center justify-center px-4 py-16">
+      <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-10">
+
+        {/* Left Panel - Description Card */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="w-full md:w-[320px] bg-[#cc4ac0] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-96 hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div>
+            <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide uppercase">
+              KEYSIGHT PWMA
+            </h2>
+            <p className="text-sm sm:text-base mb-10 leading-relaxed font-inter">
+              Design improvements for Keysight's analytics software, Pathwave
+              Measurement Analytics.
+            </p>
+          </div>
+          <button className="bg-[#1f1f1f] hover:bg-black text-white px-6 py-3 rounded-md text-sm w-full md:w-auto transition-all duration-300 shadow-sm font-inter">
             VIEW PROJECT
           </button>
-        </div>
+        </motion.div>
 
-        <div className="bg-[#FFCE9F] relative rounded-md px-6 py-10 flex flex-col items-center text-center">
-          <div className="absolute w-[300px] h-[300px] bg-[#FF8C3E] rounded-full blur-3xl opacity-30 top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 z-0" />
-
-          <h3 className="text-lg md:text-xl font-bold text-white mb-1 relative z-10">
-            UX DESIGN/RESEARCH
-          </h3>
-          <h4 className="text-base md:text-lg font-bold text-white mb-6 relative z-10">
-            KEYSIGHT PWMA
-          </h4>
+        {/* Right Panel - Image Block */}
+        <motion.div
+          initial={{ opacity: 0, y: 60 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
+          viewport={{ once: true, amount: 0.2 }}
+          className="relative w-full md:w-2/3 bg-[#FFCE9F] rounded-md px-6 py-10 flex flex-col items-center text-center shadow-xl"
+        >
+          <div className="bg-white/30 backdrop-blur-md px-6 py-4 rounded-lg shadow-md w-full max-w-sm">
+            <h1 className="text-gray-800 text-xl sm:text-2xl font-grotesk tracking-wide">
+              UX DESIGN/RESEARCH<br />
+            </h1>
+            <p className="text-gray-900 text-2xl sm:text-4xl font-grotesk font-bold tracking-tight mt-2 leading-tight">
+              KEYSIGHT PWMA <br className="hidden sm:block" />
+            </p>
+          </div>
 
           <img
-            src={
-              "https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/9ce9a86c-6c7d-4da3-a5f7-71a04c23df39/65513038fdbf390e34f05484_Keysight%2BMain%2BImage-p-1600%2B%281%29.png?format=1500w"
-            }
+            src="https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/9ce9a86c-6c7d-4da3-a5f7-71a04c23df39/65513038fdbf390e34f05484_Keysight%2BMain%2BImage-p-1600%2B%281%29.png?format=1500w"
             alt="Laptop Interface"
-            className="relative z-10 max-w-full w-[90%] md:w-[480px] object-contain"
+            className="h-48 sm:h-56 md:h-64 drop-shadow-lg rounded-lg hover:scale-105 transition duration-300 mt-10"
           />
-        </div>
+        </motion.div>
+
       </div>
     </section>
   );
 };
 
 export default Section_b;
+
+
+
+
+
