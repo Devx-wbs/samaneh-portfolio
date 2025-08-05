@@ -13,7 +13,7 @@ const projects = [
 export default function Header() {
   const [dropdown, setDropdown] = useState(false);
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
-  const timeoutRef = useRef(null); // 🕒 for delay
+  const timeoutRef = useRef(null);
 
   const handleResumeDownload = () => {
     const link = document.createElement("a");
@@ -30,13 +30,21 @@ export default function Header() {
   const handleMouseLeave = () => {
     timeoutRef.current = setTimeout(() => {
       setDropdown(false);
-    }, 200); // 🕒 delay in ms
+    }, 200);
   };
 
   return (
-    <header className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] bg-white/80 backdrop-blur-md rounded-2xl shadow-sm px-6 py-3 flex items-center justify-between">
+    <header
+      className="fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] 
+                      bg-white/90 backdrop-blur-md rounded-2xl shadow-lg 
+                      px-6 py-4 flex items-center justify-between 
+                      border border-neutral-200/50"
+    >
       {/* Logo */}
-      <Link to="/" className="w-[100px] flex-shrink-0">
+      <Link
+        to="/"
+        className="w-[60px] flex-shrink-0 hover:opacity-80 transition-opacity"
+      >
         <img
           src="/header_logo.png"
           alt="Kimia Logo"
@@ -45,33 +53,59 @@ export default function Header() {
       </Link>
 
       {/* Desktop Navigation */}
-      <nav className="hidden md:flex items-start gap-10 text-sm font-medium text-zinc-800">
+      <nav className="hidden md:flex items-start gap-10 text-body-sm font-medium text-charcoal">
         {/* About */}
         <div className="relative flex flex-col items-center">
-          <Link to="/about" className="hover:text-blue-600 transition">
+          <Link
+            to="/about"
+            className="hover:text-accent-teal transition-colors duration-300 
+                     relative after:absolute after:bottom-0 after:left-0 
+                     after:h-0.5 after:w-0 after:bg-accent-teal 
+                     after:transition-all after:duration-300 
+                     hover:after:w-full"
+          >
             About
           </Link>
         </div>
 
-        {/* Projects Dropdown (with delay) */}
+        {/* Projects Dropdown */}
         <div
           className="relative"
           onMouseEnter={handleMouseEnter}
           onMouseLeave={handleMouseLeave}
         >
-          <button className="hover:text-blue-600 transition">Projects</button>
+          <button
+            className="hover:text-accent-teal transition-colors duration-300
+                           relative after:absolute after:bottom-0 after:left-0 
+                           after:h-0.5 after:w-0 after:bg-accent-teal 
+                           after:transition-all after:duration-300 
+                           hover:after:w-full"
+          >
+            Projects
+          </button>
 
           {dropdown && (
-            <div className="absolute top-full left-1/2 -translate-x-1/2 mt-1 bg-white border border-gray-200 rounded-lg shadow-lg min-w-[220px] z-50">
+            <div
+              className="absolute top-full left-1/2 -translate-x-1/2 mt-2 
+                          bg-white border border-neutral-200 rounded-xl shadow-xl 
+                          min-w-[220px] z-50 animate-fade-in"
+            >
               <ul className="py-2">
                 {projects.map((project) => (
                   <li key={project.slug}>
                     <Link
                       to={`/projects/${project.slug}`}
-                      className="flex items-center gap-2 px-6 py-1 hover:bg-blue-50 group transition"
+                      className="flex items-center gap-3 px-6 py-3 hover:bg-neutral-50 
+                               group transition-all duration-300"
                     >
-                      <span className="w-2 h-2 rotate-45 bg-gray-300 group-hover:bg-blue-500 transition" />
-                      <span className="text-zinc-700 group-hover:text-blue-600">
+                      <span
+                        className="w-2 h-2 rotate-45 bg-neutral-300 
+                                     group-hover:bg-accent-teal transition-colors duration-300"
+                      />
+                      <span
+                        className="text-neutral-700 group-hover:text-accent-teal 
+                                     font-medium"
+                      >
                         {project.name}
                       </span>
                     </Link>
@@ -89,19 +123,23 @@ export default function Header() {
           href="https://www.linkedin.com/in/kimiamostadam"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-zinc-500 hover:text-blue-600 transition"
+          className="text-neutral-500 hover:text-accent-teal transition-colors duration-300
+                   hover:scale-110 transform"
         >
           <FiLinkedin size={18} />
         </a>
         <a
           href="mailto:kimiamostadam@gmail.com"
-          className="text-zinc-500 hover:text-blue-600 transition"
+          className="text-neutral-500 hover:text-accent-teal transition-colors duration-300
+                   hover:scale-110 transform"
         >
           <FiMail size={18} />
         </a>
         <button
           onClick={handleResumeDownload}
-          className="ml-2 px-4 py-1.5 bg-blue-600 text-white rounded hover:bg-blue-700 transition text-sm font-medium"
+          className="ml-2 px-6 py-2 bg-accent-teal text-white rounded-lg 
+                   hover:bg-accent-teal/90 transition-all duration-300 
+                   text-body-sm font-semibold hover:shadow-lg transform hover:scale-105"
         >
           Resume
         </button>
@@ -109,19 +147,26 @@ export default function Header() {
 
       {/* Mobile Menu Button */}
       <div className="md:hidden">
-        <button onClick={() => setMobileMenuOpen(!mobileMenuOpen)}>
+        <button
+          onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
+          className="text-charcoal hover:text-accent-teal transition-colors duration-300"
+        >
           {mobileMenuOpen ? <HiX size={24} /> : <HiOutlineMenu size={24} />}
         </button>
       </div>
 
       {/* Mobile Menu Dropdown */}
       {mobileMenuOpen && (
-        <div className="absolute top-full left-0 w-full bg-white border-t border-gray-200 shadow-md rounded-b-2xl md:hidden z-40">
-          <div className="flex flex-col p-4 gap-4 text-sm font-medium">
+        <div
+          className="absolute top-full left-0 w-full bg-white border-t 
+                      border-neutral-200 shadow-xl rounded-b-2xl md:hidden z-40 
+                      animate-slide-up"
+        >
+          <div className="flex flex-col p-6 gap-4 text-body-sm font-medium">
             <Link
               to="/about"
               onClick={() => setMobileMenuOpen(false)}
-              className="text-gray-700 hover:text-blue-600"
+              className="text-neutral-700 hover:text-accent-teal transition-colors duration-300"
             >
               About
             </Link>
@@ -130,7 +175,7 @@ export default function Header() {
                 key={project.slug}
                 to={`/projects/${project.slug}`}
                 onClick={() => setMobileMenuOpen(false)}
-                className="text-gray-700 hover:text-blue-600"
+                className="text-neutral-700 hover:text-accent-teal transition-colors duration-300"
               >
                 {project.name}
               </Link>
@@ -139,13 +184,15 @@ export default function Header() {
               href="https://www.linkedin.com/in/kimiamostadam"
               target="_blank"
               rel="noopener noreferrer"
-              className="text-gray-500 hover:text-blue-600 flex items-center gap-2"
+              className="text-neutral-500 hover:text-accent-teal flex items-center gap-2 
+                       transition-colors duration-300"
             >
               <FiLinkedin /> LinkedIn
             </a>
             <a
               href="mailto:kimiamostadam@gmail.com"
-              className="text-gray-500 hover:text-blue-600 flex items-center gap-2"
+              className="text-neutral-500 hover:text-accent-teal flex items-center gap-2 
+                       transition-colors duration-300"
             >
               <FiMail /> Email
             </a>
@@ -154,7 +201,9 @@ export default function Header() {
                 setMobileMenuOpen(false);
                 handleResumeDownload();
               }}
-              className="w-full px-4 py-2 bg-blue-600 text-white rounded hover:bg-blue-700 transition"
+              className="w-full px-6 py-3 bg-accent-teal text-white rounded-lg 
+                       hover:bg-accent-teal/90 transition-all duration-300 
+                       font-semibold hover:shadow-lg transform hover:scale-105"
             >
               Resume
             </button>
