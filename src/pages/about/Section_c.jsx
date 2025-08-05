@@ -2,13 +2,14 @@ import React from "react";
 
 export default function Section_c() {
   return (
-    <section className="bg-[#fcf9f1] w-full py-5 md:py-32">
-      <div className="max-w-7xl mx-auto px-4 flex flex-col items-center">
-        <div className="flex flex-col md:flex-row gap-16 justify-center">
-          {/* Skills */}
-          <div>
-            <h3 className="text-2xl font-bold text-[#332f29] mb-2">SKILLS</h3>
-            <ul className="text-lg text-[#332f29] space-y-1">
+    <section className="w-full py-20 #f1e8da">
+      <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
+          
+          {/* Skills Card */}
+          <div className="bg-white bg-opacity-70 backdrop-blur-lg shadow-md rounded-xl p-8 text-center transition-transform hover:-translate-y-1 hover:shadow-lg">
+            <h3 className="text-3xl font-bold text-[#332f29] mb-4 tracking-wide">SKILLS</h3>
+            <ul className="text-lg text-[#332f29] space-y-2">
               <li>UX Design</li>
               <li>UI Design</li>
               <li>Prototyping</li>
@@ -17,10 +18,11 @@ export default function Section_c() {
               <li>Marketing</li>
             </ul>
           </div>
-          {/* Interests */}
-          <div>
-            <h3 className="text-2xl font-bold text-[#332f29] mb-2">Intersts</h3>
-            <ul className="text-lg text-[#332f29] space-y-1">
+
+          {/* Interests Card */}
+          <div className="bg-white bg-opacity-70 backdrop-blur-lg shadow-md rounded-xl p-8 text-center transition-transform hover:-translate-y-1 hover:shadow-lg">
+            <h3 className="text-3xl font-bold text-[#332f29] mb-4 tracking-wide">Intersts</h3>
+            <ul className="text-lg text-[#332f29] space-y-2">
               <li>🎹 Piano</li>
               <li>💃 Dancing</li>
               <li>🏊‍♂️ Swimming</li>
@@ -29,8 +31,13 @@ export default function Section_c() {
               <li>📺 Netflix</li>
             </ul>
           </div>
+
         </div>
       </div>
     </section>
   );
 }
+
+
+
+

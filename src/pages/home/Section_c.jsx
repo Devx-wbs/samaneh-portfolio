@@ -6,18 +6,18 @@ const Section_c = () => {
     <div className="min-h-96 bg-[#ececec] flex items-center justify-center px-4 py-16">
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-7xl w-full">
 
+     
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut" }}
-          viewport={{ once: true, amount: 0.2 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring", stiffness: 80, damping: 12, delay: 0.1 }}
+          viewport={{ once: false, amount: 0.2 }}
           className="relative w-full md:w-2/3 rounded-xl overflow-hidden flex flex-col items-center justify-center text-center px-6 py-14 bg-cover bg-center shadow-xl"
           style={{
             backgroundImage:
               "url('https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/09a9c613-d9fc-4fe6-92c6-528b5181dc0f/Group+1.png?format=2500w')",
           }}
         >
-
           <div className="bg-white/30 backdrop-blur-md px-6 py-4 rounded-lg shadow-md w-full max-w-sm">
             <h1 className="text-gray-800 text-xl sm:text-2xl font-grotesk tracking-wide">
               UX RESEARCH <br /> PROJECT
@@ -26,7 +26,6 @@ const Section_c = () => {
               DARK <br className="hidden sm:block" /> PATTERNS
             </p>
           </div>
-
 
           <div className="mt-10 flex justify-center items-end gap-6 sm:gap-10 relative z-10 flex-wrap">
             <img
@@ -37,17 +36,17 @@ const Section_c = () => {
           </div>
         </motion.div>
 
-
+        
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="w-full md:w-[320px] bg-purple-400 text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-96 hover:shadow-2xl transition-shadow duration-300"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="w-full md:w-[320px] bg-purple-400 text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-96 border border-gray-200 hover:shadow-2xl transition-shadow duration-300"
         >
-          <div className="">
+          <div>
             <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide uppercase">
-             DARK PATTERNS
+              DARK PATTERNS
             </h2>
             <p className="text-sm sm:text-base mb-10 leading-relaxed font-inter">
               A website that displays common dark visual design layout and patterns.
@@ -57,10 +56,10 @@ const Section_c = () => {
             VIEW PROJECT
           </button>
         </motion.div>
+
       </div>
     </div>
   );
 };
 
 export default Section_c;
-

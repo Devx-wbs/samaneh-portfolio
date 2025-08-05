@@ -6,13 +6,13 @@ const Section_b = () => {
     <section className="min-h-60 bg-[#f1f1f1] flex items-center justify-center px-4 py-16">
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-10">
 
-        {/* Left Panel - Description Card */}
+        {/* Left Card - Slide from Left */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-          viewport={{ once: true, amount: 0.2 }}
-          className="w-full md:w-[320px] bg-[#cc4ac0] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-96 hover:shadow-2xl transition-shadow duration-300"
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="w-full md:w-[320px] bg-[#FF8C3E] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-96 hover:shadow-2xl transition-shadow duration-300"
         >
           <div>
             <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide uppercase">
@@ -28,12 +28,12 @@ const Section_b = () => {
           </button>
         </motion.div>
 
-        {/* Right Panel - Image Block */}
+        {/* Right Section - Pop In with Spring */}
         <motion.div
-          initial={{ opacity: 0, y: 60 }}
-          whileInView={{ opacity: 1, y: 0 }}
-          transition={{ duration: 0.8, ease: "easeOut", delay: 0.1 }}
-          viewport={{ once: true, amount: 0.2 }}
+          initial={{ opacity: 0, scale: 0.8 }}
+          whileInView={{ opacity: 1, scale: 1 }}
+          transition={{ type: "spring", stiffness: 80, damping: 12, delay: 0.1 }}
+          viewport={{ once: false, amount: 0.2 }}
           className="relative w-full md:w-2/3 bg-[#FFCE9F] rounded-md px-6 py-10 flex flex-col items-center text-center shadow-xl"
         >
           <div className="bg-white/30 backdrop-blur-md px-6 py-4 rounded-lg shadow-md w-full max-w-sm">
@@ -58,8 +58,4 @@ const Section_b = () => {
 };
 
 export default Section_b;
-
-
-
-
 
