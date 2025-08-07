@@ -1,25 +1,31 @@
 import React from 'react';
+import { motion } from 'framer-motion';
 
 const Section_b = () => {
   return (
-    <div className="min-h-screen bg-[#F9F6EF] px-6 py-8 flex justify-center font-sans">
-      <div className="bg-white px-6 sm:px-10 py-12 rounded-md shadow-xl max-w-7xl w-full">
-        <h2 className="text-4xl sm:text-5xl font-extrabold text-[#2b2520] leading-none tracking-tight">
-          INSPIR<br />ATION
+    <div className=" min-h-[70vh] bg-gradient-to-b from-[#F9F6EF] to-[#EDEAE2] px-6 py-8 flex justify-center items-center font-sans">
+      <motion.div
+        whileHover={{ scale: 1.04 }}
+        transition={{ type: 'spring', stiffness: 300, damping: 20 }}
+        className="relative bg-white px-6 sm:px-10 py-12 rounded-xl shadow-xl max-w-6xl w-full border-l-8 border-blue-500"
+      >
+        <h2
+          className="text-[40px] sm:text-[48px] font-extrabold text-[#1e1e1e] leading-none tracking-tight"
+          style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+        >
+          INSPIRATION
         </h2>
 
-        <p className="mt-8 text-2xl sm:text-3xl font-extrabold text-[#2b2520] leading-[1.4] tracking-tight">
-          DYLAN BAKER’S INTERACTIVE<br />
-          WEBSITE INSPIRED US TO CREATE<br />
-          A RESEARCH BACKED PLATFORM<br />
-          WHICH IS NOT ONLY INTERACTIVE<br />
-          BUT ALSO EFFECTIVE IN<br />
-          DELIVERING THE INFORMATION<br />
-          SUCCESSFULLY.
+        <p
+          className="mt-6 text-[20px] sm:text-[24px] font-bold text-[#2b2520] leading-snug tracking-tight"
+          style={{ fontFamily: "'Inter', sans-serif" }}
+        >
+          DYLAN BAKER’S INTERACTIVE WEBSITE INSPIRED US TO CREATE A RESEARCH BACKED PLATFORM WHICH IS NOT ONLY INTERACTIVE BUT ALSO EFFECTIVE IN DELIVERING THE INFORMATION SUCCESSFULLY.
         </p>
-      </div>
+      </motion.div>
     </div>
   );
 };
 
 export default Section_b;
+

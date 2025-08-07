@@ -1,47 +1,106 @@
 import React from 'react';
+import { motion } from 'framer-motion';
+import { ShieldExclamationIcon, ClockIcon } from '@heroicons/react/24/solid';
+
+const conclusions = [
+  {
+    title: '• OLDER USERS ARE MORE CONCERNED WITH POSSIBLE FINANCIAL LOSS',
+    quote:
+      '“I get scared like they might be hacking my account especially when I’m doing personal finance.”',
+    author: 'Participant, Age 56',
+    icon: ShieldExclamationIcon,
+  },
+  {
+    title: '• THE YOUNGER GENERATION IS MORE CONCERNED ABOUT THEIR TIME',
+    quote:
+      '“TikTok is something I feel like (…) I know in the back of my head that time is wasted when I scroll too long.”',
+    author: 'Participant, Age 19',
+    icon: ClockIcon,
+  },
+];
+
+const textVariant = {
+  hidden: { opacity: 0, y: 30 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.3,
+      duration: 0.6,
+      ease: 'easeOut',
+    },
+  }),
+};
 
 const Section_e = () => {
   return (
-    <div className="min-h-screen bg-[#F9F6EF] flex justify-center  px-4 py-12 font-sans">
-      <div className="bg-white w-full max-w-7xl rounded-xl shadow-md p-8 sm:p-12 flex flex-col md:flex-row items-center gap-8">
-        
-        <div className="flex justify-center w-full md:w-1/2">
+    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 py-16 font-sans">
+      <motion.div
+        className="bg-white w-full max-w-7xl rounded-xl shadow-md p-8 sm:p-12 flex flex-col md:flex-row items-center gap-10"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        {/* Left Image */}
+        <motion.div
+          className="flex justify-center w-full md:w-1/2"
+          variants={textVariant}
+          custom={0}
+        >
           <img
             src="https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/dd9d0c17-e5aa-4fff-affc-eb9422bec1ad/64539a00aaa52922617f5c89_Group+436.png?format=750w"
-            alt="Illustration"
+            alt="Conclusion Illustration"
             className="max-w-[260px] w-full object-contain"
           />
-        </div>
+        </motion.div>
 
-        <div className="w-full md:w-1/2 text-left text-[#2B2520]">
-          <h2 className="text-3xl sm:text-4xl font-extrabold text-center md:text-left mb-6">
-            THE CONCLUSION
-          </h2>
+        {/* Right Content */}
+        <div className="w-full md:w-1/2 text-left text-[#2B2520] space-y-10">
+          {/* Heading */}
+          <motion.h2
+            className="text-4xl sm:text-5xl font-extrabold text-center md:text-left"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+            variants={textVariant}
+            custom={1}
+          >
+            THE <span className="text-blue-600">CONCLUSION</span>
+          </motion.h2>
 
-          <ul className="space-y-6 text-base sm:text-lg">
-            <li>
-              <span className="font-bold">
-                • OLDER USERS ARE MORE CONCERNED WITH POSSIBLE FINANCIAL LOSS
-              </span>
-              <br />
-              <span className="text-gray-700 block mt-1">
-                “I Get Scared Like They Might Be Hacking My Account Especially When I’m Doing Personal Finance.”
-                <span className="block mt-1">– Participant, Age 56</span>
-              </span>
-            </li>
-            <li>
-              <span className="font-bold">
-                • The Younger Generation Is More Concerned About Their Time
-              </span>
-              <br />
-              <span className="text-gray-700 block mt-1">
-                “TikTok Is Something I Feel Like (…) I Know In The Back Of My Head That Time Is Wasted When I Scroll Too Long.”
-                <span className="block mt-1">– Participant, Age 19</span>
-              </span>
-            </li>
-          </ul>
+          {/* Quotes */}
+          {conclusions.map((item, i) => {
+            const Icon = item.icon;
+            return (
+              <motion.div
+                key={i}
+                variants={textVariant}
+                custom={i + 2}
+                className="px-6 py-6 rounded-md shadow-md bg-[#f9fafb] border-l-4 border-[#6B4EFF]"
+              >
+                <div className="flex items-center gap-3 mb-3">
+                  <div className="w-10 h-10 rounded-full bg-[#E2E8F0] flex items-center justify-center shadow-sm">
+                    <Icon className="h-5 w-5 text-[#6B4EFF]" />
+                  </div>
+                  <h3
+                    className="text-md font-bold text-[#2B2520]"
+                    style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+                  >
+                    {item.title}
+                  </h3>
+                </div>
+                <p
+                  className="italic text-base text-gray-700 font-medium"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
+                  {item.quote}
+                </p>
+                <p className="mt-2 text-sm italic text-[#6B4EFF] font-bold">
+                  {item.author}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
-      </div>
+      </motion.div>
     </div>
   );
 };

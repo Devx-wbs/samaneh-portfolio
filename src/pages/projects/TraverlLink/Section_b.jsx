@@ -1,18 +1,59 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Section_b = () => {
+  const textVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
-    <section className="bg-[#F5F2EC] py-4 px-4 flex justify-center">
-      <div className="bg-white max-w-7xl w-full p-10 rounded-md shadow-sm">
-        <h2 className="text-3xl md:text-4xl font-extrabold text-[rgb(42,37,35)] mb-6">
+    <section className="bg-[#F5F2EC] py-16 px-4 flex justify-center font-sans">
+      <motion.div
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+        className="bg-white max-w-7xl w-full p-10 rounded-xl shadow-xl"
+      >
+        {/* Heading */}
+        <motion.h2
+          className="text-4xl sm:text-5xl font-extrabold text-[#2A2523] mb-8"
+          style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          variants={textVariant}
+          custom={0}
+        >
           PROBLEM
-        </h2>
-        <p className="text-lg leading-relaxed text-[#2A2523]">
-          Travel planning stress is the very first thing that come into our minds even before we plan anything for a trip.
-          Needing to use multiple tools to plan a trip (i.e. find housing & create a travel itinerary & comparing the costs).
-          Ensuring that the activities the user is interested in are within reasonable distance from housing accommodations.
-        </p>
-      </div>
+        </motion.h2>
+
+        {/* Description Box */}
+        <motion.div
+          variants={textVariant}
+          custom={1}
+          className="border-l-[5px] pl-5 border-[#E36414] bg-[#fff6f2] rounded-md shadow-sm py-4"
+        >
+          <p
+            className="text-base sm:text-lg text-[#2A2523] leading-relaxed"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
+            Travel planning stress is the very first thing that comes to mind
+            even before we plan anything for a trip. <br /><br />
+            People often need to use multiple tools to plan a trip—such as
+            finding housing, creating a travel itinerary, and comparing costs.
+            <br /><br />
+            Additionally, travelers must ensure that the activities they're
+            interested in are within a reasonable distance from housing accommodations.
+          </p>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

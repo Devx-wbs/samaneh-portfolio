@@ -1,44 +1,93 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const Section_c = () => {
+  const textVariant = {
+    hidden: { opacity: 0, y: 20 },
+    visible: (i) => ({
+      opacity: 1,
+      y: 0,
+      transition: {
+        delay: i * 0.2,
+        duration: 0.6,
+        ease: "easeOut",
+      },
+    }),
+  };
+
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
-      <h2 className="text-2xl sm:text-3xl md:text-[64px] font-extrabold text-center text-[#2E2B26] mb-6 tracking-tight">
-        PROBLEM:
-      </h2>
-      <div className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-6 flex flex-col items-center">
-        <h3 className="font-extrabold text-[22px] leading-[24px] md:text-[44px] md:leading-[50px] text-[#2E2B26] mb-4 text-left w-full">
-          PROBLEM <br /> STATEMENT
-        </h3>
-        <p className="mb-6 text-[18px] md:text-[22px] text-left w-full">
-          <ul className="list-disc pl-6 mt-4">
+    <section className="bg-[#f8f5ec] w-full px-4 py-16 font-sans">
+      <motion.div
+        transition={{ type: "spring", stiffness: 200, damping: 20 }}
+        className="max-w-7xl mx-auto bg-white p-8 sm:p-12 rounded-xl shadow-2xl flex flex-col gap-8"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.3 }}
+      >
+        {/* Title */}
+        <motion.h2
+          variants={textVariant}
+          custom={0}
+          className="text-4xl sm:text-5xl font-extrabold text-center text-[#2E2B26] tracking-tight mb-6"
+          style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+        >
+          PROBLEM
+        </motion.h2>
+
+        {/* Problem Statement */}
+        <motion.div
+          variants={textVariant}
+          custom={1}
+          className="border-l-4 pl-5 border-accent-teal bg-[#f9fafb] rounded-md shadow-sm py-4"
+        >
+          <h3
+            className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            • PROBLEM STATEMENT
+          </h3>
+          <ul
+            className="list-disc pl-6 text-base sm:text-lg text-[#444] leading-relaxed"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
             <li>
               Users report UX issues with PathWave Measurement Analytics despite
               its robust capabilities.
             </li>
             <li>
               Users frequently prefer alternative software like Excel, Tableau,
-              and Spotfire for data analysis and exploration tasks
+              and Spotfire for data analysis and exploration tasks.
             </li>
           </ul>
-        </p>
+        </motion.div>
 
-        <h3 className="font-extrabold text-[22px] leading-[24px] md:text-[44px] md:leading-[50px] text-[#2E2B26] mb-4 text-left w-full">
-          GOALS
-        </h3>
-        <p className="mb-6 text-[18px] md:text-[22px] text-left w-full">
-          <ul className="list-disc pl-6 mt-4">
+        {/* Goals */}
+        <motion.div
+          variants={textVariant}
+          custom={2}
+          className="border-l-4 pl-5 border-[#E36414] bg-[#fef9f5] rounded-md shadow-sm py-4"
+        >
+          <h3
+            className="text-2xl sm:text-4xl font-bold text-[#E36414] mb-3"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            • GOALS
+          </h3>
+          <ul
+            className="list-disc pl-6 text-base sm:text-lg text-[#444] leading-relaxed"
+            style={{ fontFamily: "'Inter', sans-serif" }}
+          >
             <li>
               Enhance PWMA’s user experience by understanding target users’
-              needs and behaviors
+              needs and behaviors.
             </li>
             <li>
               Identify barriers preventing users from gaining insight through
-              data in PWMA
+              data in PWMA.
             </li>
           </ul>
-        </p>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };
