@@ -7,8 +7,8 @@ const textVariant = {
     opacity: 1,
     y: 0,
     transition: {
-      delay: i * 0.1,
-      duration: 0.3,
+      delay: i * 0.05,
+      duration: 0.6,
       ease: "easeOut",
     },
   }),
@@ -19,7 +19,10 @@ const Section_d = () => {
     <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
       <div className="max-w-7xl mx-auto">
         {/* Main white container */}
-        <div className="bg-white rounded-lg shadow-lg p-12 sm:p-12">
+        <motion.div 
+          transition={{ type: "spring", stiffness: 200, damping: 20 }}
+          className="bg-white rounded-lg shadow-lg p-12 sm:p-12"
+        >
           <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-[#2E2B26] m-6 mt-3 tracking-tight">
             RESEARCH:
           </h2>
@@ -247,8 +250,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.01 }}
-            custom={7}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.001}
             className="bg-[#ede7f6] border-l-4 border-[#673ab7] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#673ab7'}}>
@@ -300,8 +303,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.01 }}
-            custom={9}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.002}
             className="bg-[#e0f2f1] border-l-4 border-[#009688] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#009688'}}>
@@ -325,8 +328,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.01}}
-            custom={10}
+            viewport={{ once: false, amount: 0.1}}
+            custom={7.003}
             className="bg-[#fffde7] border-l-4 border-[#ffd600] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ffd600'}}>
@@ -361,8 +364,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={11}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.004}
             className="bg-[#fbe9e7] border-l-4 border-[#ff7043] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ff7043'}}>
@@ -401,8 +404,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={12}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.005}
             className="bg-[#e3f2fd] border-l-4 border-[#1976d2] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1976d2'}}>
@@ -442,8 +445,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={13}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.006}
             className="bg-[#fce4ec] border-l-4 border-[#d81b60] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#d81b60'}}>
@@ -466,8 +469,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={14}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.007}
             className="bg-[#e8f5e9] border-l-4 border-[#43a047] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#43a047'}}>
@@ -492,8 +495,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={15}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.008}
             className="bg-[#fff3e0] border-l-4 border-[#ffb300] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ffb300'}}>
@@ -513,8 +516,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={16}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.009}
             className="bg-[#f1f8e9] border-l-4 border-[#8bc34a] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#8bc34a'}}>
@@ -557,8 +560,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={17}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.01}
             className="bg-[#e3f2fd] border-l-4 border-[#1976d2] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1976d2'}}>
@@ -583,8 +586,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={18}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.011}
             className="bg-[#fce4ec] border-l-4 border-[#d81b60] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#d81b60'}}>
@@ -607,8 +610,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={19}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.012}
             className="bg-[#fff3e0] border-l-4 border-[#ffb300] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ffb300'}}>
@@ -628,8 +631,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={20}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.013}
             className="bg-[#f3e5f5] border-l-4 border-[#ab47bc] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ab47bc'}}>
@@ -664,8 +667,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={21}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.014}
             className="bg-[#e3f2fd] border-l-4 border-[#1976d2] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1976d2'}}>
@@ -681,8 +684,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={22}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.015}
             className="bg-[#f1f8e9] border-l-4 border-[#8bc34a] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#8bc34a'}}>
@@ -738,8 +741,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={23}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.016}
             className="bg-[#fff3e0] border-l-4 border-[#ffb300] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ffb300'}}>
@@ -759,8 +762,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={24}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.017}
             className="bg-[#e3f2fd] border-l-4 border-[#1976d2] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1976d2'}}>
@@ -779,8 +782,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={25}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.018}
             className="bg-[#fbe9e7] border-l-4 border-[#ff7043] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ff7043'}}>
@@ -807,8 +810,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={26}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.019}
             className="bg-[#e6f7fa] border-l-4 border-[#1db3a6] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1db3a6'}}>
@@ -834,8 +837,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={27}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.02}
             className="bg-[#fff7e6] border-l-4 border-[#ff9800] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ff9800'}}>
@@ -860,8 +863,8 @@ const Section_d = () => {
             variants={textVariant}
             initial="hidden"
             whileInView="visible"
-            viewport={{ once: false, amount: 0.3 }}
-            custom={28}
+            viewport={{ once: false, amount: 0.1 }}
+            custom={7.021}
             className="bg-[#e6f7e6] border-l-4 border-[#4caf50] rounded-md shadow-md p-6 mb-10"
           >
             <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#4caf50'}}>
@@ -883,7 +886,7 @@ const Section_d = () => {
             </ul>
           </p>
           </motion.div>
-        </div>
+        </motion.div>
       </div>
     </section>
   );
