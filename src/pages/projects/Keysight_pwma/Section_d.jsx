@@ -1,27 +1,50 @@
 import React from "react";
+import { motion } from "framer-motion";
+
+const textVariant = {
+  hidden: { opacity: 0, y: 20 },
+  visible: (i) => ({
+    opacity: 1,
+    y: 0,
+    transition: {
+      delay: i * 0.1,
+      duration: 0.3,
+      ease: "easeOut",
+    },
+  }),
+};
 
 const Section_d = () => {
   return (
     <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
-      <h2 className="text-2xl sm:text-3xl md:text-[64px] font-extrabold text-center text-[#2E2B26] mb-6 tracking-tight">
-        RESEARCH:
-      </h2>
       <div className="max-w-7xl mx-auto">
-        {/* --- RESEARCH QUESTIONS --- */}
-        <div className="bg-[#e6f7fa] border-l-8 border-[#1db3a6] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+        {/* Main white container */}
+        <div className="bg-white rounded-lg shadow-lg p-12 sm:p-12">
+          <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-[#2E2B26] m-6 mt-3 tracking-tight">
+            RESEARCH:
+          </h2>
+          {/* --- RESEARCH QUESTIONS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={0}
+            className="bg-[#e6f7fa] border-l-4 border-[#1db3a6] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1db3a6'}}>
             RESEARCH
             <br /> QUESTIONS
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
-            We have two research questions that we aim to answer with the
-            research:
+            <p className="text-base sm:text-lg text-[#444]">
+              We have two research questions that we aim to answer with the research:
             <br />
             <br />
             <span>
               Q1: What are the challenges faced by the target users when
               interacting with PWMA?
             </span>
+            </p>
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>
                 How do users perceive the usability and user interface of PWMA
@@ -40,10 +63,10 @@ const Section_d = () => {
                 use Tableau or Excel over PWMA?
               </li>
             </ul>
-          </p>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Q2: What improvements can be made to PWMA to encourage users to adopt
             it as their primary tool for data visualization and analysis?
+            </p>
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>
                 What intuitive design principles and data visualization techniques
@@ -54,14 +77,18 @@ const Section_d = () => {
                 outlier detection techniques?
               </li>
             </ul>
-          </p>
-        </div>
-        {/* --- PROCESS --- */}
-        <div className="bg-[#fff7e6] border-l-8 border-[#ff9800] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
-            PROCESS
-          </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+          </motion.div>
+          {/* --- PROCESS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={1}
+            className="bg-[#fff7e6] border-l-4 border-[#ff9800] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ff9800'}}>PROCESS</h3>
+            <p className="text-base sm:text-lg text-[#444]">
             We conducted a literature review and competitive analysis, and based
             on our secondary research, we found that Keysight Technologies has a
             unique value proposition.
@@ -75,50 +102,71 @@ const Section_d = () => {
           </p>
           <div>
             <img
-              src="/project_a_img_d.png"
+                src="/project_a_img_d.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-        </div>
-        {/* --- MAIN RESEARCH METHOD --- */}
-        <div className="bg-[#e6f7e6] border-l-8 border-[#4caf50] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- MAIN RESEARCH METHOD --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={2}
+            className="bg-[#e6f7e6] border-l-4 border-[#4caf50] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#4caf50'}}>
             MAIN RESEARCH METHOD
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             We followed a set of research methodologies, which this project covers
             next.
           </p>
           <div>
             <img
-              src="/project_a_img_e.png"
+                src="/project_a_img_e.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-        </div>
-        {/* --- USER INTERVIEWS --- */}
-        <div className="bg-[#f3e6fa] border-l-8 border-[#9c27b0] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- USER INTERVIEWS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={3}
+            className="bg-[#f3e6fa] border-l-4 border-[#9c27b0] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#9c27b0'}}>
             USER INTERVIEWS
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Our first approach was to conduct user interviews
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>Remote via Zoom</li>
               <li>Internal Keysight Participants</li>
             </ul>
           </p>
-        </div>
-        {/* --- RECRUITMENT --- */}
-        <div className="bg-[#e6eaff] border-l-8 border-[#3f51b5] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- RECRUITMENT --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={4}
+            className="bg-[#e6eaff] border-l-4 border-[#3f51b5] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#3f51b5'}}>
             RECURUITMENT
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Since PWMA is an internal product, we recruited internal users from
             Keysight, and their selection was based on their experience and time
             spent on PWMA
@@ -127,17 +175,24 @@ const Section_d = () => {
               <li>Participants facilitated by sponsors </li>
               <li>
                 Participants were selected based on experience & time spent with
-                PWMA
+                  PWMA
               </li>
             </ul>
           </p>
-        </div>
-        {/* --- INTERVIEW SESSIONS --- */}
-        <div className="bg-[#e6f2ff] border-l-8 border-[#2196f3] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- INTERVIEW SESSIONS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={5}
+            className="bg-[#e6f2ff] border-l-4 border-[#2196f3] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#2196f3'}}>
             INTERVIEW SESSIONS
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Overall, we conducted 8 interview sessions with 5 internal users.
             <br />
             We had two interview rounds: a screener round to gauge the user issues
@@ -145,25 +200,39 @@ const Section_d = () => {
             screen on Zoom and walk us through their tasks and features where they
             may have encountered problems.
           </p>
-        </div>
-        {/* --- SCREENER ROUND --- */}
-        <div className="bg-[#fff0f6] border-l-8 border-[#e91e63] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- SCREENER ROUND --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={6}
+            className="bg-[#fff0f6] border-l-4 border-[#e91e63] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#e91e63'}}>
             SCREENER ROUND
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>30 mins of individual interviews with 5 participants</li>
               <li>Semi-structured questions</li>
             </ul>
           </p>
-        </div>
-        {/* --- OBSERVATION ROUND --- */}
-        <div className="bg-[#f9fbe7] border-l-8 border-[#cddc39] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- OBSERVATION ROUND --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={7}
+            className="bg-[#f9fbe7] border-l-4 border-[#cddc39] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#cddc39'}}>
             OBSERVATION ROUND
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>60 mins of individual interviews with 3 participants</li>
               <li>
@@ -172,21 +241,28 @@ const Section_d = () => {
               </li>
             </ul>
           </p>
-        </div>
-        {/* --- THEMATIC ANALYSIS --- */}
-        <div className="bg-[#ede7f6] border-l-8 border-[#673ab7] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- THEMATIC ANALYSIS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.01 }}
+            custom={7}
+            className="bg-[#ede7f6] border-l-4 border-[#673ab7] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#673ab7'}}>
             THEMATIC ANALYSIS
           </h3>
           <div>
             <img
-              src="/project_a_img_f.png"
+                src="/project_a_img_f.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             After conducting the interviews and gathering the transcripts it was
             time to analyze them and come up with some major categories of the
             user’s pain points to find the most common problems they had with the
@@ -194,37 +270,44 @@ const Section_d = () => {
           </p>
           <div>
             <img
-              src="/project_a_img_g.png"
+                src="/project_a_img_g.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Below is the list of categories we used to code the interview
             transcripts together with the number of occurrence in our analysis.
           </p>
           <div>
             <img
-              src="/project_a_img_h.png"
+                src="/project_a_img_h.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Later, we narrowed the categories down to come up with key findings
             and turn those into feasible design recommendations. The ones with the
             most received complaints were feature-specific challenges,
             intuitiveness problems, and lack of accessibility features.
           </p>
-        </div>
-        {/* --- USABILITY EVALUATION --- */}
-        <div className="bg-[#e0f2f1] border-l-8 border-[#009688] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- USABILITY EVALUATION --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.01 }}
+            custom={9}
+            className="bg-[#e0f2f1] border-l-4 border-[#009688] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#009688'}}>
             USABILITY EVALUATION
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             First, Heuristic Evaluation (HE) assesses a product’s interface to
             detect usability issues and identify ways to resolve them. We used 10
             heuristic criteria based on Nielsen's HE Principles.
@@ -236,21 +319,28 @@ const Section_d = () => {
               </li>
             </ul>
           </p>
-        </div>
-        {/* --- SCORING METRIC --- */}
-        <div className="bg-[#fffde7] border-l-8 border-[#ffd600] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- SCORING METRIC --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.01}}
+            custom={10}
+            className="bg-[#fffde7] border-l-4 border-[#ffd600] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ffd600'}}>
             SCORING METRIC
           </h3>
           <div>
             <img
-              src="/project_a_img_i.png"
+                src="/project_a_img_i.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             The HE helped us identify and prioritize the core usability issues.
             Further, the HE process reconfirmed and justified the issues
             identified by the interview participants. The HE and the secondary
@@ -259,19 +349,26 @@ const Section_d = () => {
           </p>
           <div>
             <img
-              src="/project_a_img_j.png"
+                src="/project_a_img_j.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-        </div>
-        {/* --- HEURISTIC EVALUATION RESULTS --- */}
-        <div className="bg-[#fbe9e7] border-l-8 border-[#ff7043] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- HEURISTIC EVALUATION RESULTS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={11}
+            className="bg-[#fbe9e7] border-l-4 border-[#ff7043] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ff7043'}}>
             HEURISTIC EVALUATION RESULTS
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Based on our evaluation, PWMA has a low usability score for Status
             Visibility, User Control, Error Prevention, and Flexibility.
             <br />
@@ -279,32 +376,39 @@ const Section_d = () => {
           </p>
           <div>
             <img
-              src="/project_a_img_k.png"
+                src="/project_a_img_k.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             The visualization below demonstrates that to get the final scores for
             each principle, we have performed two separate evaluations and
             aggregated the results at the end.
           </p>
           <div>
             <img
-              src="/project_a_img_l.png"
+                src="/project_a_img_l.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-        </div>
-        {/* --- 01: FEATURE-SPECIFIC CHALLENGES --- */}
-        <div className="bg-[#e3f2fd] border-l-8 border-[#1976d2] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- 01: FEATURE-SPECIFIC CHALLENGES --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={12}
+            className="bg-[#e3f2fd] border-l-4 border-[#1976d2] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1976d2'}}>
             01: FEATURE-SPECIFIC CHALLENGES
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             This theme focuses on:
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>
@@ -323,7 +427,7 @@ const Section_d = () => {
               </li>
             </ul>
           </p>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Here are some quotes from our Interview participants, where they
             mention that it takes bunch of clicks to create a chart, and the chart
             you get at the end is not what you wanted.
@@ -332,13 +436,20 @@ const Section_d = () => {
             Another participant mentioned that the plotting procedure is not
             transparent enough.
           </p>
-        </div>
-        {/* --- PARTICIPANT 4 --- */}
-        <div className="bg-[#fce4ec] border-l-8 border-[#d81b60] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- PARTICIPANT 4 --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={13}
+            className="bg-[#fce4ec] border-l-4 border-[#d81b60] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#d81b60'}}>
             PARTICIPANT 4
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             … you just did a bunch of clicks and potentially waited five seconds
             or something for the chart to load, and then you don't have the chart
             you want.
@@ -349,13 +460,20 @@ const Section_d = () => {
             5 mentions how confusing it is to have data being loaded with no
             indication.
           </p>
-        </div>
-        {/* --- PARTICIPANT 5 --- */}
-        <div className="bg-[#e8f5e9] border-l-8 border-[#43a047] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- PARTICIPANT 5 --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={14}
+            className="bg-[#e8f5e9] border-l-4 border-[#43a047] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#43a047'}}>
             PARTICIPANT 5
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             t takes time to load the data on the table view and that's really
             confusing for the user to figure out some processes going on at the
             back at the backend.
@@ -368,27 +486,41 @@ const Section_d = () => {
             communicates the current state, the progress, and the loading of its
             processes.
           </p>
-        </div>
-        {/* --- RECOMMENDATIONS --- */}
-        <div className="bg-[#fff3e0] border-l-8 border-[#ffb300] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- RECOMMENDATIONS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={15}
+            className="bg-[#fff3e0] border-l-4 border-[#ffb300] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ffb300'}}>
             RECOMENDATIONS
           </h3>
           <div>
             <img
-              src="/project_a_img_m.png"
+                src="/project_a_img_m.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-        </div>
-        {/* --- 02: INTUITIVENESS --- */}
-        <div className="bg-[#f1f8e9] border-l-8 border-[#8bc34a] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- 02: INTUITIVENESS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={16}
+            className="bg-[#f1f8e9] border-l-4 border-[#8bc34a] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#8bc34a'}}>
             02: INTUITIVENESS
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Our second key finding concerns UI intuitiveness - the ease with which
             users understand and navigate an interface without extensive
             guidelines.
@@ -419,13 +551,20 @@ const Section_d = () => {
             charts of PWMA, this action results in zooming in, contradicting the
             user's expectation.
           </p>
-        </div>
-        {/* --- PARTICIPANT 1 --- */}
-        <div className="bg-[#e3f2fd] border-l-8 border-[#1976d2] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- PARTICIPANT 1 --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={17}
+            className="bg-[#e3f2fd] border-l-4 border-[#1976d2] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1976d2'}}>
             PARTICIPANT 1
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             My intuition, my usual user experience says to me that when I click on
             the graph, the cursor here will be used as a selection tool, but
             instead of that, it works as the zoom cursor.
@@ -438,13 +577,20 @@ const Section_d = () => {
             Spotfire. This explains why some interview participants found it
             challenging to create a chart.
           </p>
-        </div>
-        {/* --- PARTICIPANT 2 --- */}
-        <div className="bg-[#fce4ec] border-l-8 border-[#d81b60] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- PARTICIPANT 2 --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={18}
+            className="bg-[#fce4ec] border-l-4 border-[#d81b60] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#d81b60'}}>
             PARTICIPANT 2
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Plotting of one parameter versus versus another parameter… It was not
             intuitive for me.
             <br />
@@ -455,27 +601,41 @@ const Section_d = () => {
             that aligns with the user's understanding instead of imposing
             unfamiliar habits.
           </p>
-        </div>
-        {/* --- RECOMMENDATIONS --- */}
-        <div className="bg-[#fff3e0] border-l-8 border-[#ffb300] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- RECOMMENDATIONS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={19}
+            className="bg-[#fff3e0] border-l-4 border-[#ffb300] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ffb300'}}>
             RECOMENDATIONS
           </h3>
           <div>
             <img
-              src="/project_a_img_n.png"
+                src="/project_a_img_n.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-        </div>
-        {/* --- 03: ACCESSIBILITY --- */}
-        <div className="bg-[#f3e5f5] border-l-8 border-[#ab47bc] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- 03: ACCESSIBILITY --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={20}
+            className="bg-[#f3e5f5] border-l-4 border-[#ab47bc] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ab47bc'}}>
             03: ACCESSIBILITY
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             This theme focuses on:
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>
@@ -498,23 +658,37 @@ const Section_d = () => {
             participants mentioned the tool’s navigation and workflow seemed
             consuming, which led to a steep learning curve.
           </p>
-        </div>
-        {/* --- PARTICIPANT 1 --- */}
-        <div className="bg-[#e3f2fd] border-l-8 border-[#1976d2] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- PARTICIPANT 1 --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={21}
+            className="bg-[#e3f2fd] border-l-4 border-[#1976d2] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1976d2'}}>
             PARTICIPANT 1
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Usually when I confirm, I have to remember the mean value for the
             cluster and the deviation.
           </p>
-        </div>
-        {/* --- CHARTABILITY --- */}
-        <div className="bg-[#f1f8e9] border-l-8 border-[#8bc34a] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- CHARTABILITY --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={22}
+            className="bg-[#f1f8e9] border-l-4 border-[#8bc34a] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#8bc34a'}}>
             CHARTABILITY
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             Chartability is the set of heuristics ensuring the tool is accessible.
             Figma, Tableau, and Excel have conducted these and implemented them.
             <br />
@@ -533,65 +707,86 @@ const Section_d = () => {
           </p>
           <div>
             <img
-              src="/project_a_img_o.png"
+                src="/project_a_img_o.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             To measure the Chartability of the PWMA charts, we conducted a
             chartability heuristic evaluation that resulted in an overall score of
             2.37/4, which is 59%.
           </p>
           <div>
             <img
-              src="/project_a_img_p.png"
+                src="/project_a_img_p.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             One example of the evaluation is the color contrast used for the
             charts: it should have at least 3:1 contrast. Thus, the color choice
             should be “colorblind safe” (distinguishable to people with color
             vision deficiencies).
           </p>
-        </div>
-        {/* --- RECOMMENDATIONS --- */}
-        <div className="bg-[#fff3e0] border-l-8 border-[#ffb300] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- RECOMMENDATIONS --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={23}
+            className="bg-[#fff3e0] border-l-4 border-[#ffb300] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ffb300'}}>
             RECOMMENDATIONS
           </h3>
           <div>
             <img
-              src="/project_a_img_q.png"
+                src="/project_a_img_q.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-        </div>
-        {/* --- SIMILARITIES INCLUDE: --- */}
-        <div className="bg-[#e3f2fd] border-l-8 border-[#1976d2] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- SIMILARITIES INCLUDE: --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={24}
+            className="bg-[#e3f2fd] border-l-4 border-[#1976d2] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1976d2'}}>
             SIMILARITIES INCLUDE:
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>The use of Supplementary Software,</li>
               <li>Experience using PWMA and,</li>
               <li>General Pain Points (i.e., Cognitive Load, and Feedback).</li>
             </ul>
           </p>
-        </div>
-        {/* --- DIFFERENCES INCLUDE: --- */}
-        <div className="bg-[#fbe9e7] border-l-8 border-[#ff7043] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- DIFFERENCES INCLUDE: --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={25}
+            className="bg-[#fbe9e7] border-l-4 border-[#ff7043] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ff7043'}}>
             DIFFERENCES INCLUDE:
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>Skill Sets,</li>
               <li>Educational And Professional Background and,</li>
@@ -600,19 +795,26 @@ const Section_d = () => {
           </p>
           <div>
             <img
-              src="/project_a_img_r.png"
+                src="/project_a_img_r.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-        </div>
-        {/* --- CUSTOMER EXPERIENCE MAP: --- */}
-        <div className="bg-[#e6f7fa] border-l-8 border-[#1db3a6] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- CUSTOMER EXPERIENCE MAP: --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={26}
+            className="bg-[#e6f7fa] border-l-4 border-[#1db3a6] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#1db3a6'}}>
             CUSTOMER EXPERIENCE MAP:
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             We also created a customer experience map to visualize the
             opportunities and the pain points in each stage of the tool’s
             workflow. Furthermore, we wanted to compare our suggestions to the
@@ -620,19 +822,26 @@ const Section_d = () => {
           </p>
           <div>
             <img
-              src="/project_a_img_s.png"
+                src="/project_a_img_s.png"
               alt="Keysight PWMA"
               className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
               style={{ objectFit: "contain" }}
             />
           </div>
-        </div>
-        {/* --- MAIN PAIN POINTS: --- */}
-        <div className="bg-[#fff7e6] border-l-8 border-[#ff9800] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- MAIN PAIN POINTS: --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={27}
+            className="bg-[#fff7e6] border-l-4 border-[#ff9800] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#ff9800'}}>
             MAIN PAIN POINTS:
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>Hard to familiarize yourself with the data</li>
               <li>
@@ -645,13 +854,20 @@ const Section_d = () => {
               <li>Visual/data set sharing options are limited</li>
             </ul>
           </p>
-        </div>
-        {/* --- POSSIBLE DESIGN OPPORTUNITIES --- */}
-        <div className="bg-[#e6f7e6] border-l-8 border-[#4caf50] rounded-md shadow-md p-6 mb-10">
-          <h3 className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3">
+          </motion.div>
+          {/* --- POSSIBLE DESIGN OPPORTUNITIES --- */}
+          <motion.div
+            variants={textVariant}
+            initial="hidden"
+            whileInView="visible"
+            viewport={{ once: false, amount: 0.3 }}
+            custom={28}
+            className="bg-[#e6f7e6] border-l-4 border-[#4caf50] rounded-md shadow-md p-6 mb-10"
+          >
+            <h3 className="text-2xl sm:text-4xl font-bold mb-3" style={{color:'#4caf50'}}>
             POSSIBLE DESIGN OPPORTUNITIES
           </h3>
-          <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-base sm:text-lg text-[#444]">
             <ul className="list-disc pl-6 mt-4 ms-8">
               <li>Support analysis of large data set structure.</li>
               <li>
@@ -666,6 +882,7 @@ const Section_d = () => {
               </li>
             </ul>
           </p>
+          </motion.div>
         </div>
       </div>
     </section>
