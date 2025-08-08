@@ -38,16 +38,29 @@ const Section_b = () => {
         <motion.div
           variants={textVariant}
           custom={1}
-          className="border-l-4 pl-5 border-accent-teal bg-[#f9fafb] rounded-md shadow-sm py-4"
+          className="border-l-4 pl-5 border-[#008080] bg-[#f9fafb] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3"
+            className="text-[28px] sm:text-[32px] font-bold text-[#008080] mb-3 flex items-center gap-2"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            • What is Keysight PWMA?
+            <svg
+              className="w-8 h-8 text-[#008080]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M13 16h-1v-4h-1m0-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            What is Keysight PWMA?
           </h3>
           <p
-            className="text-base sm:text-lg text-[#444] leading-relaxed"
+            className="text-base sm:text-lg text-[#333] leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             PathWave Measurement Analytics (PWMA) is a data visualization and
@@ -77,8 +90,27 @@ const Section_b = () => {
           custom={3}
           className="border-l-4 pl-5 border-[#E36414] bg-[#fff6f2] rounded-md shadow-sm py-4"
         >
+          <h3
+            className="text-[28px] sm:text-[32px] font-bold text-[#E36414] mb-3 flex items-center gap-2"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
+            <svg
+              className="w-8 h-8 text-[#E36414]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
+              />
+            </svg>
+            Workflow
+          </h3>
           <p
-            className="text-base sm:text-lg text-[#444] leading-relaxed"
+            className="text-base sm:text-lg text-[#333] leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Typically, the workflow of the test engineer is the following:
@@ -98,16 +130,29 @@ const Section_b = () => {
         <motion.div
           variants={textVariant}
           custom={4}
-          className="border-l-4 pl-5 border-[#6B4EFF] bg-[#f7f6ff] rounded-md shadow-sm py-4"
+          className="border-l-4 pl-5 border-[#008080] bg-[#f0f9f9] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-2xl sm:text-4xl font-bold text-[#6B4EFF] mb-3"
+            className="text-[28px] sm:text-[32px] font-bold text-[#008080] mb-3 flex items-center gap-2"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            • PROJECT STRUCTURE
+            <svg
+              className="w-8 h-8 text-[#008080]"
+              fill="none"
+              stroke="currentColor"
+              strokeWidth={2.5}
+              viewBox="0 0 24 24"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 6h16M4 12h16M4 18h16"
+              />
+            </svg>
+            Project Structure
           </h3>
           <p
-            className="text-base sm:text-lg text-[#444] leading-relaxed"
+            className="text-base sm:text-lg text-[#333] leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             We will start with defining the problem and goal, define our Research

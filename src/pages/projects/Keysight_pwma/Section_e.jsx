@@ -28,7 +28,7 @@ const Section_d = () => {
         <motion.h2
           variants={textVariant}
           custom={0}
-          className="text-4xl sm:text-5xl font-extrabold text-center text-[#2E2B26] tracking-tight mb-6"
+          className="text-xl sm:text-3xl font-bold text-center text-[#2E2B26] tracking-tight mb-6"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
           BLOCKERS & LIMITATIONS
@@ -41,7 +41,7 @@ const Section_d = () => {
           className="border-l-4 pl-5 border-accent-teal bg-[#f9fafb] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-2xl sm:text-4xl font-bold text-accent-teal mb-3"
+            className="text-xl sm:text-3xl font-bold text-accent-teal mb-3"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             • BLOCKERS
@@ -72,7 +72,7 @@ const Section_d = () => {
           className="border-l-4 pl-5 border-[#E36414] bg-[#fef9f5] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-2xl sm:text-4xl font-bold text-[#E36414] mb-3"
+            className="text-xl sm:text-3xl font-bold text-[#E36414] mb-3"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             • LIMITATIONS
