@@ -19,7 +19,7 @@ const Section_g = () => {
     <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 py-20 font-sans">
       <div className="bg-white rounded-xl shadow-xl max-w-7xl w-full px-6 py-12">
         
-        {/* Heading */}
+        {/* Heading (unchanged) */}
         <motion.h2
           className="text-4xl sm:text-5xl font-extrabold text-[#2B2520] text-center mb-12"
           variants={fadeUp}
@@ -50,7 +50,7 @@ const Section_g = () => {
             />
           </motion.div>
 
-          {/* Text */}
+          {/* Paragraph (enhanced styling) */}
           <motion.p
             className="text-[#2B2520] text-lg sm:text-xl font-medium leading-relaxed tracking-wide max-w-xl mx-auto lg:mx-0"
             variants={fadeUp}
@@ -59,9 +59,20 @@ const Section_g = () => {
             custom={2}
             viewport={{ once: false, amount: 0.3 }}
           >
-            As <span className="font-bold text-[#6B4EFF]">Future UX Professionals</span>, we’ve realized the true value of making 
-            <span className="text-[#6B4EFF] font-semibold"> ethical design decisions</span> — even when it goes against the 
-            <span className="italic text-[#6B4EFF]"> stakeholder’s expectations</span>. Good design isn’t just beautiful, it’s <span className="underline decoration-[#5C2E91]/60">responsible</span>.
+            As{' '}
+            <span className="font-bold text-[#6B4EFF] hover:text-[#7F5CFF] transition-colors duration-300">
+              Future UX Professionals
+            </span>, we’ve realized the true value of making{' '}
+            <span className="text-[#6B4EFF] font-semibold hover:text-[#8C6CFF] transition-colors duration-300">
+              ethical design decisions
+            </span>{' '}
+            — even when it goes against the{' '}
+            <span className="italic text-[#6B4EFF] hover:text-[#A282FF] transition-colors duration-300">
+              stakeholder’s expectations
+            </span>. Good design isn’t just beautiful, it’s{' '}
+            <span className="underline decoration-[#5C2E91]/60 decoration-2 underline-offset-4 hover:decoration-[#5C2E91] hover:text-[#5C2E91] transition-all duration-300">
+              responsible
+            </span>.
           </motion.p>
         </div>
       </div>
@@ -70,5 +81,3 @@ const Section_g = () => {
 };
 
 export default Section_g;
-
-

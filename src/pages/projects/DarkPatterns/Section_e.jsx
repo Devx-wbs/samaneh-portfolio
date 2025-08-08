@@ -69,16 +69,25 @@ const Section_e = () => {
           {/* Quotes */}
           {conclusions.map((item, i) => {
             const Icon = item.icon;
+
+            // Color sequence from Section_c
+            const styleSequence = [
+              { border: 'border-[#14B8A6]', bg: 'bg-[#f9fafb]', text: 'text-[#14B8A6]' },
+              { border: 'border-[#E36414]', bg: 'bg-[#fef9f5]', text: 'text-[#E36414]' },
+              { border: 'border-[#6B4EFF]', bg: 'bg-[#f7f6ff]', text: 'text-[#6B4EFF]' },
+            ];
+            const style = styleSequence[i % styleSequence.length];
+
             return (
               <motion.div
                 key={i}
                 variants={textVariant}
                 custom={i + 2}
-                className="px-6 py-6 rounded-md shadow-md bg-[#f9fafb] border-l-4 border-[#6B4EFF]"
+                className={`px-6 py-6 rounded-md shadow-md ${style.bg} ${style.border} border-l-4`}
               >
                 <div className="flex items-center gap-3 mb-3">
                   <div className="w-10 h-10 rounded-full bg-[#E2E8F0] flex items-center justify-center shadow-sm">
-                    <Icon className="h-5 w-5 text-[#6B4EFF]" />
+                    <Icon className={`h-5 w-5 ${style.text}`} />
                   </div>
                   <h3
                     className="text-md font-bold text-[#2B2520]"
@@ -93,7 +102,7 @@ const Section_e = () => {
                 >
                   {item.quote}
                 </p>
-                <p className="mt-2 text-sm italic text-[#6B4EFF] font-bold">
+                <p className={`mt-2 text-sm italic font-bold ${style.text}`}>
                   {item.author}
                 </p>
               </motion.div>

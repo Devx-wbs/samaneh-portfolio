@@ -62,28 +62,38 @@ const Section_d = () => {
 
         {/* Quotes */}
         <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-8 text-left">
-          {quotes.map((quote, index) => (
-            <motion.div
-              key={index}
-              custom={index + 2}
-              variants={textVariant}
-              className={`flex flex-col items-center px-6 py-6 rounded-md shadow-md bg-[#f9fafb] border-l-4 border-[#6B4EFF] text-[#2b2520]
-                ${index === 2 ? 'sm:col-span-2 sm:w-1/2 sm:mx-auto' : ''}`}
-            >
-              {/* Icon */}
-              <div className="w-12 h-12 mb-4 rounded-full bg-[#E2E8F0] flex items-center justify-center shadow-sm">
-                <UserIcon className="h-6 w-6 text-[#6B4EFF]" />
-              </div>
+          {quotes.map((quote, index) => {
+            // Assign border and background based on Section_c's pattern
+            const styles = [
+              { border: 'border-[#14B8A6]', bg: 'bg-[#f9fafb]', text: 'text-[#14B8A6]' },
+              { border: 'border-[#E36414]', bg: 'bg-[#fef9f5]', text: 'text-[#E36414]' },
+              { border: 'border-[#6B4EFF]', bg: 'bg-[#f7f6ff]', text: 'text-[#6B4EFF]' },
+            ];
+            const style = styles[index % styles.length];
 
-              {/* Quote */}
-              <p className="italic font-semibold text-base sm:text-lg leading-snug text-center">
-                {quote.text}
-              </p>
-              <p className="mt-2 italic font-bold text-sm text-[#6B4EFF] text-center">
-                {quote.author}
-              </p>
-            </motion.div>
-          ))}
+            return (
+              <motion.div
+                key={index}
+                custom={index + 2}
+                variants={textVariant}
+                className={`flex flex-col items-center px-6 py-6 rounded-md shadow-md ${style.bg} ${style.border} border-l-4 text-[#2b2520]
+                  ${index === 2 ? 'sm:col-span-2 sm:w-1/2 sm:mx-auto' : ''}`}
+              >
+                {/* Icon */}
+                <div className="w-12 h-12 mb-4 rounded-full bg-[#E2E8F0] flex items-center justify-center shadow-sm">
+                  <UserIcon className={`h-6 w-6 ${style.text}`} />
+                </div>
+
+                {/* Quote */}
+                <p className="italic font-semibold text-base sm:text-lg leading-snug text-center">
+                  {quote.text}
+                </p>
+                <p className={`mt-2 italic font-bold text-sm ${style.text} text-center`}>
+                  {quote.author}
+                </p>
+              </motion.div>
+            );
+          })}
         </div>
       </motion.div>
     </div>
