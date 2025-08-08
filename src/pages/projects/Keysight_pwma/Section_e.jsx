@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const Section_d = () => {
+const Section_e = () => {
   const textVariant = {
     hidden: { opacity: 0, y: 20 },
     visible: (i) => ({
@@ -16,10 +16,10 @@ const Section_d = () => {
   };
 
   return (
-    <section className="bg-[#f8f5ec] w-full px-4 py-16 font-sans">
+    <section className="bg-[#f8f5ec] w-full px-4 sm:px-6 md:px-10 py-12 sm:py-16 font-sans">
       <motion.div
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-        className="max-w-7xl mx-auto bg-white p-8 sm:p-12 rounded-xl shadow-2xl flex flex-col gap-8"
+        className="max-w-7xl mx-auto bg-white px-6 py-8 sm:px-10 sm:py-12 rounded-xl shadow-2xl flex flex-col gap-8"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
@@ -28,7 +28,7 @@ const Section_d = () => {
         <motion.h2
           variants={textVariant}
           custom={0}
-          className="text-xl sm:text-3xl font-bold text-center text-[#2E2B26] tracking-tight mb-6"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#2E2B26] tracking-tight mb-4 sm:mb-6"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
           BLOCKERS & LIMITATIONS
@@ -38,16 +38,16 @@ const Section_d = () => {
         <motion.div
           variants={textVariant}
           custom={1}
-          className="border-l-4 pl-5 border-accent-teal bg-[#f9fafb] rounded-md shadow-sm py-4"
+          className="border-l-4 pl-4 sm:pl-5 border-accent-teal bg-[#f9fafb] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-xl sm:text-3xl font-bold text-accent-teal mb-3"
+            className="text-[22px] sm:text-[28px] md:text-[32px] font-bold text-accent-teal mb-3 px-0"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             • BLOCKERS
           </h3>
           <p
-            className="text-base sm:text-lg text-[#444] leading-relaxed mb-4"
+            className="text-sm sm:text-base md:text-lg text-[#444] leading-relaxed mb-4"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             In our project journey, various challenges have arisen, including
@@ -56,7 +56,7 @@ const Section_d = () => {
             thoroughly.
           </p>
           <ul
-            className="list-disc pl-6 ms-4 text-base sm:text-lg text-[#444] leading-relaxed"
+            className="list-disc pl-5 sm:pl-6 text-sm sm:text-base md:text-lg text-[#444] leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <li>Budget: less analyzing features in Dovetail</li>
@@ -69,16 +69,16 @@ const Section_d = () => {
         <motion.div
           variants={textVariant}
           custom={2}
-          className="border-l-4 pl-5 border-[#E36414] bg-[#fef9f5] rounded-md shadow-sm py-4"
+          className="border-l-4 pl-4 sm:pl-5 border-[#E36414] bg-[#fef9f5] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-xl sm:text-3xl font-bold text-[#E36414] mb-3"
+            className="text-[22px] sm:text-[28px] md:text-[32px] font-bold text-[#E36414] mb-3 px-0"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             • LIMITATIONS
           </h3>
           <p
-            className="text-base sm:text-lg text-[#444] leading-relaxed mb-4"
+            className="text-sm sm:text-base md:text-lg text-[#444] leading-relaxed mb-4"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             We faced some limitations, as we had minimal recruitment options and a
@@ -86,7 +86,7 @@ const Section_d = () => {
             diversity in our persona generation.
           </p>
           <ul
-            className="list-disc pl-6 ms-4 text-base sm:text-lg text-[#444] leading-relaxed mb-4"
+            className="list-disc pl-5 sm:pl-6 text-sm sm:text-base md:text-lg text-[#444] leading-relaxed mb-4"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             <li>Minimal recruitment options</li>
@@ -95,7 +95,7 @@ const Section_d = () => {
             <li>Lack of diversity in participants for user personas</li>
           </ul>
           <p
-            className="text-base sm:text-lg text-[#444] leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-[#444] leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             The limitations may add bias to the interview findings. Thus, we may
@@ -109,4 +109,10 @@ const Section_d = () => {
   );
 };
 
-export default Section_d;
+export default Section_e;
+
+
+
+
+
+

@@ -36,7 +36,7 @@ const Section_e = () => {
   return (
     <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 py-16 font-sans">
       <motion.div
-        className="bg-white w-full max-w-7xl rounded-xl shadow-md p-8 sm:p-12 flex flex-col md:flex-row items-center gap-10"
+        className="bg-white w-full max-w-7xl rounded-xl shadow-xl p-6 sm:p-10 md:p-12 flex flex-col md:flex-row items-center gap-10"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
@@ -58,7 +58,7 @@ const Section_e = () => {
         <div className="w-full md:w-1/2 text-left text-[#2B2520] space-y-10">
           {/* Heading */}
           <motion.h2
-            className="text-4xl sm:text-5xl font-extrabold text-center md:text-left"
+            className="text-[28px] sm:text-4xl md:text-5xl font-extrabold text-center md:text-left"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             variants={textVariant}
             custom={1}
@@ -70,11 +70,9 @@ const Section_e = () => {
           {conclusions.map((item, i) => {
             const Icon = item.icon;
 
-            // Color sequence from Section_c
             const styleSequence = [
               { border: 'border-[#14B8A6]', bg: 'bg-[#f9fafb]', text: 'text-[#14B8A6]' },
               { border: 'border-[#E36414]', bg: 'bg-[#fef9f5]', text: 'text-[#E36414]' },
-              { border: 'border-[#6B4EFF]', bg: 'bg-[#f7f6ff]', text: 'text-[#6B4EFF]' },
             ];
             const style = styleSequence[i % styleSequence.length];
 
@@ -90,19 +88,22 @@ const Section_e = () => {
                     <Icon className={`h-5 w-5 ${style.text}`} />
                   </div>
                   <h3
-                    className="text-md font-bold text-[#2B2520]"
+                    className="text-sm sm:text-base font-bold text-[#2B2520]"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     {item.title}
                   </h3>
                 </div>
                 <p
-                  className="italic text-base text-gray-700 font-medium"
+                  className="italic text-sm sm:text-base text-gray-700 font-medium"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {item.quote}
                 </p>
-                <p className={`mt-2 text-sm italic font-bold ${style.text}`}>
+                <p
+                  className={`mt-2 text-sm italic font-bold ${style.text}`}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
                   {item.author}
                 </p>
               </motion.div>

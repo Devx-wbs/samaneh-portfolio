@@ -34,14 +34,14 @@ const Section_d = () => {
   return (
     <div className="min-h-screen bg-[#F9F6EF] px-4 sm:px-8 py-16 flex justify-center font-sans">
       <motion.div
-        className="bg-white p-8 sm:p-12 rounded-xl shadow-xl max-w-7xl w-full text-center"
+        className="bg-white p-6 sm:p-10 md:p-12 rounded-xl shadow-xl max-w-7xl w-full text-center"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
       >
         {/* Heading */}
         <motion.h2
-          className="text-4xl sm:text-5xl font-extrabold text-[#2b2520] tracking-tight"
+          className="text-[28px] sm:text-4xl md:text-5xl font-extrabold text-[#1e1e1e] tracking-tight"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           variants={textVariant}
           custom={0}
@@ -51,7 +51,7 @@ const Section_d = () => {
 
         {/* Subheading */}
         <motion.p
-          className="text-lg sm:text-xl font-bold mt-4 mb-10 text-[#B9A896]"
+          className="text-base sm:text-lg md:text-xl font-semibold mt-4 mb-10 text-[#B9A896]"
           variants={textVariant}
           custom={1}
           style={{ fontFamily: "'Inter', sans-serif" }}
@@ -61,9 +61,8 @@ const Section_d = () => {
         </motion.p>
 
         {/* Quotes */}
-        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-12 gap-x-8 text-left">
+        <div className="grid grid-cols-1 sm:grid-cols-2 gap-y-10 gap-x-8 text-left">
           {quotes.map((quote, index) => {
-            // Assign border and background based on Section_c's pattern
             const styles = [
               { border: 'border-[#14B8A6]', bg: 'bg-[#f9fafb]', text: 'text-[#14B8A6]' },
               { border: 'border-[#E36414]', bg: 'bg-[#fef9f5]', text: 'text-[#E36414]' },
@@ -84,11 +83,19 @@ const Section_d = () => {
                   <UserIcon className={`h-6 w-6 ${style.text}`} />
                 </div>
 
-                {/* Quote */}
-                <p className="italic font-semibold text-base sm:text-lg leading-snug text-center">
+                {/* Quote Text */}
+                <p
+                  className="italic font-medium text-sm sm:text-base md:text-lg leading-snug text-center"
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
                   {quote.text}
                 </p>
-                <p className={`mt-2 italic font-bold text-sm ${style.text} text-center`}>
+
+                {/* Author */}
+                <p
+                  className={`mt-2 italic font-bold text-xs sm:text-sm ${style.text} text-center`}
+                  style={{ fontFamily: "'Inter', sans-serif" }}
+                >
                   {quote.author}
                 </p>
               </motion.div>

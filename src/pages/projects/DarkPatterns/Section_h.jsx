@@ -16,12 +16,13 @@ const fadeUp = {
 
 const Section_h = () => {
   return (
-    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 py-20 font-sans">
-      <div className="bg-white rounded-xl shadow-xl max-w-7xl w-full px-6 py-12 text-center">
+    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 py-16 sm:py-20 font-sans">
+      <div className="bg-white rounded-xl shadow-xl max-w-7xl w-full px-6 sm:px-10 md:px-16 py-12 flex flex-col items-center gap-12">
 
         {/* Animated Heading */}
         <motion.h2
-          className="text-4xl sm:text-5xl font-extrabold text-[#2B2520] mb-12"
+          className="text-[28px] sm:text-5xl font-extrabold text-[#2B2520] text-center"
+          style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           variants={fadeUp}
           initial="hidden"
           whileInView="visible"
@@ -31,7 +32,7 @@ const Section_h = () => {
           FINAL <span className="text-blue-600">PROTOTYPE</span>
         </motion.h2>
 
-        {/* Animated Iframe */}
+        {/* Animated Embed (Image behaving like prototype/video) */}
         <motion.div
           className="w-full flex justify-center"
           variants={fadeUp}
@@ -40,18 +41,18 @@ const Section_h = () => {
           custom={1}
           viewport={{ once: false, amount: 0.3 }}
         >
-          <iframe
-            title="Final Prototype"
-            className="w-full sm:w-[640px] h-[360px] border rounded-md shadow-md"
-            src="https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/00ea4201-eedd-42f9-bc20-51d84147ef30/Rectangle+140.png?format=2500w"
-            allowFullScreen
-          />
+          <div className="w-full max-w-4xl aspect-[16/9] rounded-lg overflow-hidden shadow-md border">
+            <img
+              src="https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/00ea4201-eedd-42f9-bc20-51d84147ef30/Rectangle+140.png?format=2500w"
+              alt="Final Prototype"
+              className="w-full h-full object-cover"
+              loading="lazy"
+            />
+          </div>
         </motion.div>
-
       </div>
     </div>
   );
 };
 
 export default Section_h;
-
