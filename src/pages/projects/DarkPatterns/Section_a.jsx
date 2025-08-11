@@ -12,8 +12,7 @@ const Section_a = () => {
       </style>
 
       <section className="min-h-screen bg-gradient-to-b from-[#F4F4F2] to-[#E8E8E3] text-[#1F1F1F] px-6 md:px-16 py-24 font-sans">
-        <div className="max-w-7xl mx-auto">
-
+        <div className="max-w-7xl mx-auto ">
           {/* Heading & Subheading */}
           <motion.div
             initial={{ opacity: 0, y: 40 }}
@@ -21,7 +20,7 @@ const Section_a = () => {
             viewport={{ once: true, amount: 0 }}
             transition={{ duration: 0.7 }}
           >
-            <div className="flex items-start gap-4 pt-10">
+            <div className="flex items-start gap-4 pt-10 ">
               <div className="w-1 h-12 md:h-14 bg-blue-500 rounded-sm"></div>
               <h1
                 className="text-[28px] sm:text-[36px] md:text-[48px] font-extrabold leading-tight tracking-tight"
@@ -49,7 +48,6 @@ const Section_a = () => {
 
           {/* Cards */}
           <div className="mt-16 grid gap-10 sm:grid-cols-2">
-
             {/* TEAM Card */}
             <motion.div
               initial={{ opacity: 0, y: 40 }}

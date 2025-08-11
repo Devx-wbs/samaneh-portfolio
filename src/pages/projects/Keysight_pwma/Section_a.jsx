@@ -16,10 +16,10 @@ const Section_a = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 sm:px-6 md:px-10 py-12 sm:py-16 font-sans">
+    <div className="min-h-screen  flex justify-center px-4 sm:px-6 md:px-10 py-12 sm:py-16 font-sans ">
       <motion.div
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-        className="bg-white px-6 py-8 sm:px-10 sm:py-12 rounded-xl shadow-2xl w-full max-w-7xl flex flex-col lg:flex-row gap-10"
+        className="mt-[60px] px-6 py-8 sm:px-10 sm:py-12 rounded-xl shadow-2xl w-full max-w-7xl flex flex-col lg:flex-row gap-10"
       >
         {/* Left Text Content */}
         <motion.div
@@ -54,8 +54,8 @@ const Section_a = () => {
               className="text-sm sm:text-base md:text-lg text-[#444] leading-relaxed"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
-              MHCI CAPSTONE PROJECT TO IMPROVE THE USER EXPERIENCE OF THE KEYSIGHT
-              PATHWAVE MEASUREMENT ANALYTICS (PWMA) TOOL.
+              MHCI CAPSTONE PROJECT TO IMPROVE THE USER EXPERIENCE OF THE
+              KEYSIGHT PATHWAVE MEASUREMENT ANALYTICS (PWMA) TOOL.
             </p>
           </motion.div>
 
