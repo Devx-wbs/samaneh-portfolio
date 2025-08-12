@@ -29,7 +29,7 @@ const Section_h = () => {
           custom={0}
           viewport={{ once: false, amount: 0.3 }}
         >
-          FINAL <span className="text-blue-600">PROTOTYPE</span>
+          FINAL <span className="text-[#6B4EFF]">PROTOTYPE</span>
         </motion.h2>
 
         {/* Animated Embed (Image behaving like prototype/video) */}

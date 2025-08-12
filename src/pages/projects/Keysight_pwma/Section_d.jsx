@@ -22,9 +22,11 @@ const Section_d = () => {
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
           className="bg-white rounded-lg shadow-lg p-8 sm:p-12"
         >
-          <h2 className="text-4xl sm:text-5xl font-extrabold text-center text-[#2E2B26] mt-3 tracking-tight">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#2E2B26] mt-3 tracking-tight">
             RESEARCH:
           </h2>
+
+
 
           {/* --- RESEARCH QUESTIONS --- */}
           <motion.div
@@ -38,7 +40,7 @@ const Section_d = () => {
             {/* Heading with icon */}
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-8 h-8 text-accent-teal"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-accent-teal"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.5}
@@ -50,13 +52,13 @@ const Section_d = () => {
                   d="M8.228 9a3.771 3.771 0 117.542 0c0 1.657-1.286 2.571-2.057 3.143-.76.563-1.143 1.097-1.143 1.857M12 17h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-accent-teal">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-accent-teal">
                 Research Questions
               </h3>
             </div>
 
             {/* Paragraph + Q1 */}
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               We have two research questions that we aim to answer with the research:
               <br />
               <br />
@@ -67,7 +69,7 @@ const Section_d = () => {
             </p>
 
             {/* List for Q1 */}
-            <ul className="list-disc pl-6 mt-4 ms-8 text-[#444] text-base sm:text-lg">
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
               <li>
                 How do users perceive the usability and user interface of PWMA
                 compared to alternative tools?
@@ -89,13 +91,13 @@ const Section_d = () => {
             <br />
 
             {/* Q2 */}
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               Q2: What improvements can be made to PWMA to encourage users to adopt
               it as their primary tool for data visualization and analysis?
             </p>
 
             {/* List for Q2 */}
-            <ul className="list-disc pl-6 mt-4 ms-8 text-[#444] text-base sm:text-lg">
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
               <li>
                 What intuitive design principles and data visualization techniques
                 can be applied to PWMA?
@@ -106,6 +108,7 @@ const Section_d = () => {
               </li>
             </ul>
           </motion.div>
+
 
 
 
@@ -121,7 +124,7 @@ const Section_d = () => {
             {/* Heading with icon */}
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-8 h-8 text-[#E36414]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#E36414]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.5}
@@ -133,10 +136,10 @@ const Section_d = () => {
                   d="M12 6v6l4 2m6-2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#E36414]">Process</h3>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#E36414]">Process</h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               We conducted a literature review and competitive analysis, and based
               on our secondary research, we found that Keysight Technologies has a
               unique value proposition.
@@ -153,8 +156,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_d.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: "contain" }}
+              className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
@@ -174,7 +176,7 @@ const Section_d = () => {
             {/* Heading with icon */}
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-8 h-8 text-[#6B4EFF]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#6B4EFF]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.5}
@@ -187,14 +189,14 @@ const Section_d = () => {
                 />
               </svg>
               <h3
-                className="text-xl sm:text-3xl font-bold text-[#6B4EFF]"
+                className="text-lg sm:text-xl md:text-2xl font-bold text-[#6B4EFF]"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 Main Research Method
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               We followed a set of research methodologies, which this project covers
               next.
             </p>
@@ -203,8 +205,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_e.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: "contain" }}
+              className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
@@ -223,7 +224,7 @@ const Section_d = () => {
             {/* Heading with microphone icon */}
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-8 h-8 text-[#9c27b0]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#9c27b0]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.2}
@@ -236,18 +237,18 @@ const Section_d = () => {
                 />
               </svg>
               <h3
-                className="text-xl sm:text-3xl font-bold"
+                className="text-lg sm:text-xl md:text-2xl font-bold"
                 style={{ color: "#9c27b0", fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 User Interviews
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               Our first approach was to conduct user interviews
             </p>
 
-            <ul className="list-disc pl-6 mt-4 ms-8 text-base sm:text-lg text-[#444]">
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
               <li>Remote via Zoom</li>
               <li>Internal Keysight Participants</li>
             </ul>
@@ -268,7 +269,7 @@ const Section_d = () => {
             {/* Heading with recruitment icon */}
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-8 h-8 text-[#3f51b5]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#3f51b5]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.2}
@@ -281,20 +282,20 @@ const Section_d = () => {
                 />
               </svg>
               <h3
-                className="text-xl sm:text-3xl font-bold"
+                className="text-lg sm:text-xl md:text-2xl font-bold"
                 style={{ color: "#3f51b5", fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 Recruitment
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               Since PWMA is an internal product, we recruited internal users from
               Keysight, and their selection was based on their experience and time
               spent on PWMA
             </p>
 
-            <ul className="list-disc pl-6 mt-4 ms-8 text-base sm:text-lg text-[#444]">
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
               <li>Sponsor-student meetings directed the project goals</li>
               <li>Participants facilitated by sponsors</li>
               <li>
@@ -318,7 +319,7 @@ const Section_d = () => {
             {/* Heading with chat icon */}
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-8 h-8 text-[#2196f3]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#2196f3]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.2}
@@ -331,14 +332,14 @@ const Section_d = () => {
                 />
               </svg>
               <h3
-                className="text-xl sm:text-3xl font-bold"
+                className="text-lg sm:text-xl md:text-2xl font-bold"
                 style={{ color: "#2196f3", fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 Interview Sessions
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               Overall, we conducted 8 interview sessions with 5 internal users.
               <br />
               We had two interview rounds: a screener round to gauge the user issues
@@ -362,7 +363,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-7 h-8 text-[#e91e63]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#e91e63]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.2}
@@ -374,13 +375,13 @@ const Section_d = () => {
                   d="M9 12l2 2 4-4M9 5h6m2 0a2 2 0 012 2v12a2 2 0 01-2 2H7a2 2 0 01-2-2V7a2 2 0 012-2h10z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#e91e63]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#e91e63]">
                 Screener Round
               </h3>
             </div>
 
             <p className="text-base sm:text-lg text-[#444]">
-              <ul className="list-disc pl-6 mt-4 ms-8">
+              <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
                 <li>30 mins of individual interviews with 5 participants</li>
                 <li>Semi-structured questions</li>
               </ul>
@@ -400,7 +401,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-7 h-7 text-[#cddc39]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#cddc39]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.2}
@@ -412,13 +413,13 @@ const Section_d = () => {
                   d="M15 10l4.553-2.276A1 1 0 0121 8.618v6.764a1 1 0 01-1.447.894L15 14M4 6h8M4 10h8m-8 4h5"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#cddc39]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#cddc39]">
                 Observation Round
               </h3>
             </div>
 
             <p className="text-base sm:text-lg text-[#444]">
-              <ul className="list-disc pl-6 mt-4 ms-8">
+              <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
                 <li>60 mins of individual interviews with 3 participants</li>
                 <li>
                   Task flow questions followed by observing the user’s interaction
@@ -440,7 +441,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-7 h-7 text-[#673ab7]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#673ab7]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2.2}
@@ -452,7 +453,7 @@ const Section_d = () => {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#673ab7]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#673ab7]">
                 Thematic Analysis
               </h3>
             </div>
@@ -461,12 +462,11 @@ const Section_d = () => {
               <img
                 src="/project_a_img_f.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: "contain" }}
+               className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               After conducting the interviews and gathering the transcripts it was
               time to analyze them and come up with some major categories of the
               user’s pain points to find the most common problems they had with the
@@ -477,12 +477,11 @@ const Section_d = () => {
               <img
                 src="/project_a_img_g.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: "contain" }}
+              className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               Below is the list of categories we used to code the interview
               transcripts together with the number of occurrence in our analysis.
             </p>
@@ -491,12 +490,11 @@ const Section_d = () => {
               <img
                 src="/project_a_img_h.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: "contain" }}
+             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               Later, we narrowed the categories down to come up with key findings
               and turn those into feasible design recommendations. The ones with the
               most received complaints were feature-specific challenges,
@@ -517,7 +515,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-7 h-7 text-accent-teal"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-accent-teal"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -529,16 +527,16 @@ const Section_d = () => {
                   d="M9 11l3 3L22 4M2 12h4m-4 4h4m-4-8h4"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-accent-teal">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-accent-teal">
                 Usability Evaluation
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               First, Heuristic Evaluation (HE) assesses a product’s interface to detect usability
               issues and identify ways to resolve them. We used 10 heuristic criteria based on
               Nielsen's HE Principles.
-              <ul className="list-disc pl-6 mt-4 ms-8">
+              <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
                 <li>Conducted by two team evaluators</li>
                 <li>Followed a scoring scale of 0-4</li>
                 <li>Each score explains the severity of the usability of the tool</li>
@@ -560,7 +558,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-7 h-7 text-[#ffd600]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#ffd600]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -572,7 +570,7 @@ const Section_d = () => {
                   d="M4 21V10M12 21V3M20 21v-6"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold" style={{ color: '#ffd600' }}>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: '#ffd600' }}>
                 Scoring Metric
               </h3>
             </div>
@@ -581,12 +579,11 @@ const Section_d = () => {
               <img
                 src="/project_a_img_i.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: 'contain' }}
+             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               The HE helped us identify and prioritize the core usability issues.
               Further, the HE process reconfirmed and justified the issues
               identified by the interview participants. The HE and the secondary
@@ -598,8 +595,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_j.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: 'contain' }}
+             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
@@ -617,7 +613,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#ff7043]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#ff7043]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -629,12 +625,12 @@ const Section_d = () => {
                   d="M13 16h-1v-4h-1m1 8a1 1 0 100-2 1 1 0 000 2zm.293-14.707a1 1 0 00-1.586 0L3.293 9.293A1 1 0 004 11h16a1 1 0 00.707-1.707l-7-7z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold" style={{ color: '#ff7043' }}>
+              <h3 className="text-lg sm:text-xl md:text-2xl  font-bold" style={{ color: '#ff7043' }}>
                 Heuristic Evaluation Results
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               Based on our evaluation, PWMA has a low usability score for Status
               Visibility, User Control, Error Prevention, and Flexibility.
               <br />
@@ -645,12 +641,11 @@ const Section_d = () => {
               <img
                 src="/project_a_img_k.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: 'contain' }}
+               className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               The visualization below demonstrates that to get the final scores for
               each principle, we have performed two separate evaluations and
               aggregated the results at the end.
@@ -660,8 +655,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_l.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: 'contain' }}
+             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
@@ -679,7 +673,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#1976d2]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#1976d2]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -691,14 +685,14 @@ const Section_d = () => {
                   d="M9.75 3v2.25M14.25 3v2.25M3 9.75h18M4.5 21h15a1.5 1.5 0 001.5-1.5v-9.75H3v9.75A1.5 1.5 0 004.5 21z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold" style={{ color: '#1976d2' }}>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: '#1976d2' }}>
                 01: Feature-Specific Challenges
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               This theme focuses on:
-              <ul className="list-disc pl-6 mt-4 ms-8">
+              <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
                 <li>
                   Identifying and addressing specific challenges related to the
                   features and functionalities of the PWMA
@@ -715,8 +709,9 @@ const Section_d = () => {
                 </li>
               </ul>
             </p>
+            <br />
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               Here are some quotes from our Interview participants, where they
               mention that it takes bunch of clicks to create a chart, and the chart
               you get at the end is not what you wanted.
@@ -740,7 +735,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#d81b60]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#d81b60]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -752,12 +747,12 @@ const Section_d = () => {
                   d="M5.121 17.804A3 3 0 007 21h10a3 3 0 002.828-3.804l-3-10A3 3 0 0014.97 5H9.03a3 3 0 00-2.857 2.196l-3 10z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold" style={{ color: '#d81b60' }}>
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: '#d81b60' }}>
                 Participant 4
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               … you just did a bunch of clicks and potentially waited five seconds
               or something for the chart to load, and then you don't have the chart
               you want.
@@ -783,7 +778,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-accent-teal"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-accent-teal"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -795,12 +790,12 @@ const Section_d = () => {
                   d="M5.121 17.804A3 3 0 007 21h10a3 3 0 002.828-3.804l-3-10A3 3 0 0014.97 5H9.03a3 3 0 00-2.857 2.196l-3 10z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-accent-teal">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-accent-teal">
                 Participant 5
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               It takes time to load the data on the table view and that's really
               confusing for the user to figure out some processes going on at the
               backend.
@@ -829,7 +824,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#6B4EFF]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#6B4EFF]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -841,7 +836,7 @@ const Section_d = () => {
                   d="M12 20h9M12 4H3m9 0v16"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#6B4EFF]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#6B4EFF]">
                 Recommendations
               </h3>
             </div>
@@ -868,7 +863,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#8bc34a]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#8bc34a]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -880,34 +875,38 @@ const Section_d = () => {
                   d="M4 6h16M4 12h16M4 18h16"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#8bc34a]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#8bc34a]">
                 02: Intuitiveness
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               Our second key finding concerns UI intuitiveness — the ease with which
               users understand and navigate an interface without extensive guidelines.
               <br />
               <br />
               This theme focuses on:
-              <ul className="list-disc pl-6 mt-4 ms-8">
-                <li>
-                  Identifying intuitiveness challenges when interacting with the PWMA interface
-                </li>
-                <li>
-                  Identify if the task completion flow matches the mental model of
-                  the same tasks in other analytics tools
-                </li>
-              </ul>
-              <br />
+            </p>
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
+              <li>
+                Identifying intuitiveness challenges when interacting with the PWMA interface
+              </li>
+              <li>
+                Identify if the task completion flow matches the mental model of
+                the same tasks in other analytics tools
+              </li>
+            </ul>
+            <br />
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               Users approach our software with prior knowledge, expecting familiar
               elements like shapes, positioning, and interaction patterns to function
               as usual. We examined two areas of this intuition: general interaction
               with modern GUIs and more specific interaction with other data
               visualization software relevant to our target users.
-              <br />
-              <br />
+            </p>
+            <br />
+
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               Based on our findings, one instance of a user’s intuition with a GUI not
               working is that the users expect a click-and-drag across a chart to
               select values, as experienced in browsers or Excel. However, in the
@@ -930,7 +929,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#1976d2]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#1976d2]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -942,12 +941,12 @@ const Section_d = () => {
                   d="M15.172 7l-6.586 6.586a2 2 0 002.828 2.828L18 9.828M5 19h14"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#1976d2]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1976d2]">
                 Participant 1
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               My intuition, my usual user experience says to me that when I click on
               the graph, the cursor here will be used as a selection tool, but instead
               of that, it works as the zoom cursor.
@@ -974,7 +973,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#d81b60]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#d81b60]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -986,12 +985,12 @@ const Section_d = () => {
                   d="M11 3a7 7 0 00-2 13.7V19a1 1 0 001 1h4a1 1 0 001-1v-2.3A7 7 0 0011 3z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#d81b60]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#d81b60]">
                 Participant 2
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               Plotting of one parameter versus another parameter… It was not intuitive
               for me.
               <br />
@@ -1016,7 +1015,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#ffb300]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#ffb300]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1028,7 +1027,7 @@ const Section_d = () => {
                   d="M13 16h-1v-4h-1m1-4h.01M12 9v2m0 4h.01M12 3a9 9 0 100 18 9 9 0 000-18z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#ffb300]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#ffb300]">
                 Recommendations
               </h3>
             </div>
@@ -1043,6 +1042,8 @@ const Section_d = () => {
             </div>
           </motion.div>
 
+
+
           {/* --- 03: ACCESSIBILITY --- */}
           <motion.div
             variants={textVariant}
@@ -1054,7 +1055,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#ab47bc]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#ab47bc]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1066,26 +1067,27 @@ const Section_d = () => {
                   d="M12 4a2 2 0 110 4 2 2 0 010-4zm-2 4.5a2 2 0 014 0v2h4m-4 0h-4v-2a2 2 0 014 0v2zm-1 3h2l3 9m-8 0l3-9m-4 0h6"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#ab47bc]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#ab47bc]">
                 03: Accessibility
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               This theme focuses on:
-              <ul className="list-disc pl-6 mt-4 ms-8">
-                <li>
-                  Addressing accessibility issues that prevent users from fully engaging with the software.
-                </li>
-                <li>
-                  Following chartability methodology principles to ensure an inclusive data experience.
-                </li>
-                <li>
-                  How the lack of clear affordances could lead to confusion or misinterpretation, so proper affordances are crucial for accessibility.
-                </li>
-              </ul>
-              <br />
-              Some participants complained about memorizing unnecessary information such as the mean value for the cluster or standard deviation. Other participants mentioned the tool’s navigation and workflow seemed consuming, which led to a steep learning curve.
+            </p>
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
+              <li>
+                Addressing accessibility issues that prevent users from fully engaging with the software.
+              </li>
+              <li>
+                Following chartability methodology principles to ensure an inclusive data experience.
+              </li>
+              <li>
+                How the lack of clear affordances could lead to confusion or misinterpretation, so proper affordances are crucial for accessibility.
+              </li>
+            </ul>
+            <br />
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">Some participants complained about memorizing unnecessary information such as the mean value for the cluster or standard deviation. Other participants mentioned the tool’s navigation and workflow seemed consuming, which led to a steep learning curve.
             </p>
           </motion.div>
 
@@ -1102,7 +1104,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#1976d2]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#1976d2]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1114,12 +1116,12 @@ const Section_d = () => {
                   d="M5 13l4 4L19 7"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#1976d2]">
+              <h3 className="text-lg sm:text-xl md:text-2xl text-[#1976d2]">
                 Participant 1
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               Usually when I confirm, I have to remember the mean value for the
               cluster and the deviation.
             </p>
@@ -1138,7 +1140,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#8bc34a]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#8bc34a]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1150,12 +1152,12 @@ const Section_d = () => {
                   d="M15 12H9m12 0A9 9 0 1112 3a9 9 0 019 9z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#8bc34a]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#8bc34a]">
                 Chartability
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               Chartability is the set of heuristics ensuring the tool is accessible.
               Figma, Tableau, and Excel have conducted these and implemented them.
               <br />
@@ -1177,12 +1179,11 @@ const Section_d = () => {
               <img
                 src="/project_a_img_o.png"
                 alt="Colorblind View"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: "contain" }}
+               className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               To measure the Chartability of the PWMA charts, we conducted a
               chartability heuristic evaluation that resulted in an overall score of
               2.37/4, which is 59%.
@@ -1192,12 +1193,11 @@ const Section_d = () => {
               <img
                 src="/project_a_img_p.png"
                 alt="Chartability Score"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: "contain" }}
+             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               One example of the evaluation is the color contrast used for the
               charts: it should have at least 3:1 contrast. Thus, the color choice
               should be “colorblind safe” (distinguishable to people with color
@@ -1218,7 +1218,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#ffb300]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#ffb300]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1231,7 +1231,7 @@ const Section_d = () => {
                 />
               </svg>
               <h3
-                className="text-xl sm:text-3xl font-bold text-[#ffb300]"
+                className="text-lg sm:text-xl md:text-2xl font-bold text-[#ffb300]"
                 style={{ fontFamily: 'Space Grotesk, sans-serif' }}
               >
                 Recommendations
@@ -1260,7 +1260,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#1976d2]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#1976d2]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1272,12 +1272,12 @@ const Section_d = () => {
                   d="M8 16l-4-4m0 0l4-4m-4 4h16"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#1976d2]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1976d2]">
                 Similarities Include:
               </h3>
             </div>
 
-            <ul className="list-disc pl-6 mt-4 ms-8 text-base sm:text-lg text-[#444]">
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
               <li>The use of Supplementary Software,</li>
               <li>Experience using PWMA and,</li>
               <li>General Pain Points (i.e., Cognitive Load, and Feedback).</li>
@@ -1298,7 +1298,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#ff7043]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#ff7043]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1310,12 +1310,12 @@ const Section_d = () => {
                   d="M19 9l-7 7-7-7"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#ff7043]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#ff7043]">
                 Differences Include:
               </h3>
             </div>
 
-            <ul className="list-disc pl-6 mt-4 ms-8 text-base sm:text-lg text-[#444]">
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
               <li>Skill Sets,</li>
               <li>Educational And Professional Background and,</li>
               <li>General Goals</li>
@@ -1325,9 +1325,8 @@ const Section_d = () => {
               <img
                 src="/project_a_img_r.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: "contain" }}
-              />
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+            />
             </div>
           </motion.div>
 
@@ -1344,7 +1343,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#1db3a6]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#1db3a6]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1356,12 +1355,12 @@ const Section_d = () => {
                   d="M3 10h11M9 21V3m4 18l7-7-7-7"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#1db3a6]">
+              <h3 className="text-lg sm:text-xl md:text-2xl  font-bold text-[#1db3a6]">
                 Customer experience map
               </h3>
             </div>
 
-            <p className="text-base sm:text-lg text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
               We also created a customer experience map to visualize the opportunities and the pain points in each stage of the tool’s workflow. Furthermore, we wanted to compare our suggestions to the interviewers' recommendations.
             </p>
 
@@ -1369,8 +1368,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_s.png"
                 alt="Keysight PWMA"
-                className="md:max-w-[930px] max-w-full mx-auto my-10 rounded"
-                style={{ objectFit: "contain" }}
+               className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
@@ -1387,7 +1385,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#ff9800]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#ff9800]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1399,12 +1397,12 @@ const Section_d = () => {
                   d="M12 9v2m0 4h.01M21 12c0 4.97-4.03 9-9 9s-9-4.03-9-9 4.03-9 9-9 9 4.03 9 9z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#ff9800]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#ff9800]">
                 Main pain points
               </h3>
             </div>
 
-            <ul className="list-disc pl-6 mt-4 ms-8 text-base sm:text-lg text-[#444]">
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
               <li>Hard to familiarize yourself with the data</li>
               <li>It takes a lot of steps to create a chart with multiple fields</li>
               <li>The user has to remember some characteristics (e.g., mean) to use them.</li>
@@ -1425,7 +1423,7 @@ const Section_d = () => {
           >
             <div className="flex items-center gap-2 mb-3">
               <svg
-                className="w-6 h-6 text-[#4caf50]"
+                className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#4caf50]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
@@ -1437,12 +1435,12 @@ const Section_d = () => {
                   d="M13 10V3L4 14h7v7l9-11h-7z"
                 />
               </svg>
-              <h3 className="text-xl sm:text-3xl font-bold text-[#4caf50]">
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#4caf50]">
                 Possible design opportunities
               </h3>
             </div>
 
-            <ul className="list-disc pl-6 mt-4 ms-8 text-base sm:text-lg text-[#444]">
+            <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
               <li>Support analysis of large data set structure.</li>
               <li>Minimize task steps for quick and accessible chart/explain features.</li>
               <li>Remove ambiguity by providing direct and clear system feedback.</li>
@@ -1452,7 +1450,7 @@ const Section_d = () => {
 
         </motion.div>
       </div>
-    </section>
+    </section >
   );
 };
 

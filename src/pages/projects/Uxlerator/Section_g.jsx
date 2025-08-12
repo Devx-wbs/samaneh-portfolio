@@ -1,28 +1,78 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { FaLightbulb } from "react-icons/fa";
 
 const Section_g = () => {
+  const fadeUp = {
+    hidden: { opacity: 0, y: 30 },
+    visible: (i = 1) => ({
+      opacity: 1,
+      y: 0,
+      transition: { delay: i * 0.2, duration: 0.6, ease: "easeOut" },
+    }),
+  };
+
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
-      <div className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-6 flex flex-col md:flex-row items-center">
-        <div className="div w-1/2">
-          <h3 className="font-extrabold text-[22px] leading-[24px] md:text-[44px] md:leading-[50px] text-[#2E2B26] mb-4 text-left w-full">
+    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-4">
+      <motion.div
+        className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-6"
+        initial="hidden"
+        whileInView="visible"
+        viewport={{ once: false, amount: 0.2 }}
+      >
+        {/* Left content */}
+        <motion.div
+          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
+          variants={fadeUp}
+          custom={1}
+        >
+          {/* Heading */}
+          <h2
+            className="font-extrabold text-3xl sm:text-4xl md:text-5xl tracking-wide text-black mb-6"
+            style={{ fontFamily: "'Space Grotesk', sans-serif" }}
+          >
             SOLUTION
-          </h3>
-          <p className="mb-6 text-[18px] md:text-[22px] text-left w-full">
-            We at UXelerator are determined to help people who are in any stage
-            of their UX career not only seek guidance for their careers but also
-            make meaningful connections with other professionals in the field.
-          </p>
-        </div>
-        <div className="img_div w-1/2">
-          <img
-            src="/project_b_img_h.png" // <-- Replace with your image path
+          </h2>
+
+          {/* Creative Paragraph */}
+          <motion.div
+            className="relative w-full max-w-[700px] flex items-start gap-4 bg-gradient-to-r from-[#f3f1ff] to-[#ece9ff] border-l-4 border-[#6B4EFF] p-6 rounded-lg shadow-sm"
+            initial={{ opacity: 0, x: -20 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6, ease: "easeOut" }}
+          >
+            <FaLightbulb className="text-[#6B4EFF] text-3xl mt-1 flex-shrink-0 drop-shadow-md" />
+            <p className="text-base md:text-lg leading-relaxed">
+              At <span className="font-bold text-[#6B4EFF]">UXelerator</span>, we’re committed
+              to helping people at every stage of their UX career — from finding
+              direction, to building portfolios, to creating meaningful professional
+              connections that truly last.
+            </p>
+          </motion.div>
+        </motion.div>
+
+        {/* Right image */}
+        <motion.div
+          className="w-full md:w-1/2 flex justify-center"
+          variants={fadeUp}
+          custom={2}
+        >
+          <motion.img
+            src="/project_b_img_h.png"
             alt="Keysight PWMA"
-            className="md:max-w-[930px] max-h-[600px] max-w-full mx-auto my-10 rounded"
+            className="max-h-[600px] max-w-[95%] rounded-lg shadow-lg"
             style={{ objectFit: "contain" }}
+            initial={{ opacity: 0, y: 20 }}
+            whileInView={{ opacity: 1, y: 0 }}
+            animate={{ y: [0, -10, 0] }}
+            transition={{
+              y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
+              opacity: { duration: 0.8 },
+            }}
+            whileHover={{ scale: 1.05 }}
           />
-        </div>
-      </div>
+        </motion.div>
+      </motion.div>
     </section>
   );
 };

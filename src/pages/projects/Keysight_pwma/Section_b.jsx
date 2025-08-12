@@ -41,11 +41,11 @@ const Section_b = () => {
           className="border-l-4 pl-4 sm:pl-5 border-[#008080] bg-[#f9fafb] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-[22px] sm:text-[28px] md:text-[32px] font-bold text-[#008080] mb-3 flex items-center gap-2"
+            className="text-lg sm:text-xl md:text-2xl  font-bold text-[#008080] mb-3 flex items-center gap-2"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             <svg
-              className="w-6 sm:w-8 h-6 sm:h-8 text-[#008080]"
+              className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#008080]"
               fill="none"
               stroke="currentColor"
               strokeWidth={2.5}
@@ -90,11 +90,11 @@ const Section_b = () => {
           className="border-l-4 pl-4 sm:pl-5 border-[#E36414] bg-[#fff6f2] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-[22px] sm:text-[28px] md:text-[32px] font-bold text-[#E36414] mb-3 flex items-center gap-2"
+            className="text-lg sm:text-xl md:text-2xl  font-bold text-[#E36414] mb-3 flex items-center gap-2"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             <svg
-              className="w-6 sm:w-8 h-6 sm:h-8 text-[#E36414]"
+              className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#E36414]"
               fill="none"
               stroke="currentColor"
               strokeWidth={2.5}
@@ -129,11 +129,11 @@ const Section_b = () => {
           className="border-l-4 pl-4 sm:pl-5 border-[#008080] bg-[#f0f9f9] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-[22px] sm:text-[28px] md:text-[32px] font-bold text-[#008080] mb-3 flex items-center gap-2"
+            className="text-lg sm:text-xl md:text-2xl  font-bold text-[#008080] mb-3 flex items-center gap-2"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             <svg
-              className="w-6 sm:w-8 h-6 sm:h-8 text-[#008080]"
+              className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] text-[#008080] flex-shrink-0"
               fill="none"
               stroke="currentColor"
               strokeWidth={2.5}

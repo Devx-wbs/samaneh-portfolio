@@ -35,14 +35,14 @@ const Section_c = () => {
             variants={textVariant}
             custom={0}
           >
-            PROJECT <span className="text-blue-600">MOTIVATION</span>
+            PROJECT <span className="text-[#6B4EFF]">MOTIVATION</span>
           </motion.h2>
 
           {/* EDUCATION */}
           <motion.div
             variants={textVariant}
             custom={1}
-            className="mb-6 sm:mb-8 border-l-4 pl-4 border-[#14b8a6] bg-[#f9fafb] rounded-md"
+            className="mb-6 sm:mb-8 border-l-4 pl-4 border-[#14b8a6] bg-[#f9fafb] rounded-md py-4"
           >
             <h3
               className="text-lg sm:text-xl md:text-2xl font-extrabold mb-2 text-[#6B4EFF]"
@@ -62,7 +62,7 @@ const Section_c = () => {
           <motion.div
             variants={textVariant}
             custom={2}
-            className="mb-6 sm:mb-8 border-l-4 pl-4 border-[#E36414] bg-[#fef9f5] rounded-md"
+            className="mb-6 sm:mb-8 border-l-4 pl-4 border-[#E36414] bg-[#fef9f5] rounded-md py-4"
           >
             <h3
               className="text-lg sm:text-xl md:text-2xl font-extrabold mb-2 text-[#E36414]"
@@ -82,7 +82,7 @@ const Section_c = () => {
           <motion.div
             variants={textVariant}
             custom={3}
-            className="border-l-4 pl-4 border-[#6B4EFF] bg-[#f7f6ff] rounded-md"
+            className="border-l-4 pl-4 border-[#6B4EFF] bg-[#f7f6ff] rounded-md py-4"
           >
             <h3
               className="text-lg sm:text-xl md:text-2xl font-extrabold mb-2 text-[#6B4EFF]"

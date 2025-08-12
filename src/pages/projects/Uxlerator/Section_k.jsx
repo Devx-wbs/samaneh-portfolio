@@ -1,37 +1,103 @@
 import React from "react";
+import { motion } from "framer-motion";
+import { LuTimer } from "react-icons/lu";
+
+const fadeUp = {
+  hidden: { opacity: 0, y: 20 },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
+};
+
+const points = [
+  { text: "Time constraints only allowed us to interview our peers, limiting the diversity of collected data.", border: "#FF6B4E", bg: "#FFF2EE" },
+  { text: "Our peers still brought diverse cultural and professional backgrounds to the research.", border: "#4E9EFF", bg: "#F3F9FF" },
+  { text: "We must be mindful of the similarity in their language ability, education level, and financial background.", border: "#4EFF91", bg: "#F0FFF7" },
+  { text: "All participants were fluent in English, studying for master’s degrees, and able to afford tuition in the U.S.", border: "#FFC44E", bg: "#FFFBF2" }
+];
+
 
 const Section_K = () => {
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
-      <div className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-6 flex flex-col md:flex-row items-center">
-        <div className="img_div w-1/2">
-          <img
-            src="/project_b_img_o.png" // <-- Replace with your image path
+    <section className="bg-[#f8f5ec] w-full py-[80px] px-4 overflow-hidden">
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-xl p-10 flex flex-col md:flex-row items-center gap-12">
+
+        {/* Left Image */}
+        <motion.div
+          className="w-full md:w-1/2 flex justify-center"
+          initial={{ opacity: 0, scale: 0.95, y: 30 }}
+          whileInView={{ opacity: 1, scale: 1, y: 0 }}
+          viewport={{ once: false, amount: 0.3 }}
+          transition={{ duration: 0.8, ease: "easeOut" }}
+        >
+          <motion.img
+            src="/project_b_img_o.png"
             alt="Keysight PWMA"
-            className="md:max-w-[530px] max-w-full mx-auto my-10 rounded"
+            className="max-w-full rounded-xl shadow-2xl cursor-pointer"
             style={{ objectFit: "contain" }}
+            whileHover={{ scale: 1.05 }}
+            transition={{ duration: 0.3 }}
           />
-        </div>
-        <div className="div w-1/2">
-          <h3 className="font-extrabold text-[22px] leading-[24px] md:text-[44px] md:leading-[50px] text-[#2E2B26] mb-4 text-left w-full">
+        </motion.div>
+
+        {/* Right Content */}
+        <motion.div
+          className="w-full md:w-1/2"
+          initial="hidden"
+          whileInView="visible"
+          viewport={{ once: false, amount: 0.3 }}
+          variants={{
+            hidden: {},
+            visible: { transition: { staggerChildren: 0.15 } },
+          }}
+        >
+          <motion.h2
+            className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-[#2E2B26] mb-6 flex items-center gap-3"
+            variants={fadeUp}
+          >
+            <motion.span
+              initial={{ rotate: -8 }}
+              animate={{ rotate: [0, -8, 0] }}
+              transition={{ duration: 2, repeat: Infinity, ease: "easeInOut" }}
+              className="flex items-center"
+            >
+              <LuTimer className="text-[#6B4EFF] text-3xl sm:text-4xl md:text-5xl" />
+            </motion.span>
             TIME:
-          </h3>
-          <p className="mb-6 text-[18px] md:text-[22px] text-left w-full">
-            Time constraints only allowed us to interview our peers, sacrificing
-            the diversity of the collected data to some extent. Our peers'
-            diverse cultural and professional backgrounds do ensure some degree
-            of diversity. However, when interpreting the research finding, we
-            must be mindful of the similarity in their language ability,
-            educational level, and the financial capability of their family
-            (considering the participants are all fluent in English, studying
-            for master’s degrees, and be able to afford the tuition of the
-            higher education of the United States).
-          </p>
-        </div>
+          </motion.h2>
+
+          <div className="space-y-5">
+            {points.map((point, index) => (
+              <motion.p
+                key={index}
+                className="text-sm sm:text-base md:text-lg font-normal leading-relaxed p-4 rounded-lg shadow-sm border-l-4"
+                style={{
+                  borderColor: point.border,
+                  backgroundColor: point.bg,
+                  color: "#2E2B26"
+                }}
+                variants={fadeUp}
+              >
+                {point.text}
+              </motion.p>
+            ))}
+          </div>
+        </motion.div>
       </div>
-      <p className="max-w-7xl m-auto mt-12 text-[18px] md:text-[44px] font-bold text-center w-full">
+
+      {/* Thank You Line */}
+      <motion.h2
+        className="max-w-7xl m-auto mt-12 text-3xl sm:text-4xl md:text-5xl font-bold text-center text-[#6B4EFF]"
+        initial={{ opacity: 0, scale: 0.8 }}
+        whileInView={{ opacity: 1, scale: 1 }}
+        viewport={{ once: false, amount: 0.2 }}
+        transition={{
+          duration: 0.6,
+          type: "spring",
+          stiffness: 200,
+          damping: 12,
+        }}
+      >
         THANK YOU FOR READING!
-      </p>
+      </motion.h2>
     </section>
   );
 };

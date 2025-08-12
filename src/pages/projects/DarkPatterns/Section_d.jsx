@@ -46,7 +46,7 @@ const Section_d = () => {
           variants={textVariant}
           custom={0}
         >
-          RESEARCH <span className="text-blue-600">OUTCOMES</span>
+          RESEARCH <span className="text-[#6B4EFF]">OUTCOMES</span>
         </motion.h2>
 
         {/* Subheading */}
@@ -93,7 +93,7 @@ const Section_d = () => {
 
                 {/* Author */}
                 <p
-                  className={`mt-2 italic font-bold text-xs sm:text-sm ${style.text} text-center`}
+                  className={`mt-2 italic font-bold text-sm sm:text-base md:text-lg ${style.text} text-center`}
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {quote.author}

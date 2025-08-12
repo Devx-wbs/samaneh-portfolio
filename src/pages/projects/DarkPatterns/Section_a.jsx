@@ -21,7 +21,7 @@ const Section_a = () => {
             transition={{ duration: 0.7 }}
           >
             <div className="flex items-start gap-4 pt-10 ">
-              <div className="w-1 h-12 md:h-14 bg-blue-500 rounded-sm"></div>
+              <div className="w-1 h-12 md:h-14 bg-[#6B4EFF] rounded-sm"></div>
               <h1
                 className="text-[28px] sm:text-[36px] md:text-[48px] font-extrabold leading-tight tracking-tight"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
@@ -33,7 +33,7 @@ const Section_a = () => {
             </div>
 
             <p
-              className="mt-6 text-[16px] sm:text-[20px] md:text-[24px] font-semibold leading-snug text-[#333333]"
+              className="mt-6 text-sm sm:text-base md:text-lg  font-semibold leading-snug text-[#333333]"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               A WEBSITE THAT DISPLAYS
@@ -58,13 +58,13 @@ const Section_a = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-amber-100 opacity-0 group-hover:opacity-10 rounded-2xl transition duration-300 pointer-events-none" />
               <h2
-                className="text-[18px] sm:text-[24px] md:text-[28px] font-extrabold text-blue-600 mb-4"
+                className="text-[18px] sm:text-[24px] md:text-[28px] font-extrabold text-[#6B4EFF] mb-4"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 TEAM
               </h2>
               <ul
-                className="text-[14px] sm:text-[16px] md:text-[18px] text-[#444] font-medium space-y-1"
+                className="text-sm sm:text-base md:text-lg  text-[#444] font-medium space-y-1"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 <li>KRISTINA</li>
@@ -86,13 +86,13 @@ const Section_a = () => {
             >
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-amber-100 opacity-0 group-hover:opacity-10 rounded-2xl transition duration-300 pointer-events-none" />
               <h2
-                className="text-[18px] sm:text-[24px] md:text-[28px] font-extrabold text-blue-600 mb-4"
+                className="text-[18px] sm:text-[24px] md:text-[28px] font-extrabold text-[#6B4EFF] mb-4"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 TOOLS
               </h2>
               <ul
-                className="text-[14px] sm:text-[16px] md:text-[18px] text-[#444] font-medium space-y-1"
+                className="text-sm sm:text-base md:text-lg  text-[#444] font-medium space-y-1"
                 style={{ fontFamily: "'Inter', sans-serif" }}
               >
                 <li>PROCREATE</li>

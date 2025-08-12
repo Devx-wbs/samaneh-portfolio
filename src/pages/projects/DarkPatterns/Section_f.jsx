@@ -42,10 +42,10 @@ const Section_f = () => {
             className="text-[28px] sm:text-4xl md:text-5xl font-extrabold mb-4"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
-            THE <span className="text-blue-600">DESIGN</span>
+            THE <span className="text-[#6B4EFF]">DESIGN</span>
           </h2>
           <p
-            className="text-sm sm:text-base text-gray-700 leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-gray-700 leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Our final design integrates simplicity, interactivity, and clarity to help users of all ages recognize and resist dark patterns in everyday digital interfaces.

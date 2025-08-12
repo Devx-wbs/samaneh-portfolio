@@ -22,13 +22,13 @@ const Section_a = () => {
     >
       <motion.div
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-        className="bg-white p-8 sm:p-12 rounded-xl shadow-2xl max-w-7xl w-full flex flex-col md:flex-row gap-10 mt-16"
+        className="bg-white p-8 sm:p-12 rounded-xl shadow-2xl max-w-7xl w-full flex flex-col lg:flex-row gap-10 mt-16"
       >
         {/* Left Side */}
-        <div className="flex-1 text-[#2A2523]">
+        <div className="flex-1 text-[#2A2523] w-full">
           {/* Main Title */}
           <motion.h1
-            className="text-4xl sm:text-6xl font-extrabold mb-12 text-center md:text-left leading-tight"
+            className="text-[28px] sm:text-[36px] md:text-[48px] font-extrabold mb-12 text-center lg:text-left leading-tight"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             variants={textVariant}
             initial="hidden"
@@ -36,7 +36,7 @@ const Section_a = () => {
             viewport={{ once: false, amount: 0 }}
             custom={0}
           >
-            TRAVEL <br /> LINK
+            TRAVEL <br /> <span className="text-[#6B4EFF]">LINK</span>
           </motion.h1>
 
           {/* Project Description */}
@@ -49,13 +49,13 @@ const Section_a = () => {
             className="mb-10 border-l-[5px] pl-5 border-[#373A69] bg-[#f2f3fc] rounded-md shadow-sm py-4"
           >
             <h3
-              className="text-xl sm:text-2xl font-bold text-[#373A69] mb-2 border-b border-[#373A69] pb-1 tracking-wide"
+              className="text-lg sm:text-xl md:text-2xl font-bold text-[#373A69] mb-2 border-b border-[#373A69] pb-1 tracking-wide"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
               • PROJECT
             </h3>
             <p
-              className="text-base sm:text-lg text-[#444] leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-[#444] leading-relaxed"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               A PLATFORM WHERE YOU WILL FIND EVERYTHING TO PLAN A TRIP.
@@ -72,13 +72,13 @@ const Section_a = () => {
             className="mb-6 border-l-[5px] pl-5 border-[#E36414] bg-[#fff6f2] rounded-md shadow-sm py-4"
           >
             <h3
-              className="text-xl sm:text-2xl font-bold text-[#E36414] mb-2 border-b border-[#E36414] pb-1 tracking-wide"
+              className="text-lg sm:text-xl md:text-2xl font-bold text-[#E36414] mb-2 border-b border-[#E36414] pb-1 tracking-wide"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
               • MY ROLE
             </h3>
             <p
-              className="text-base sm:text-lg text-[#444] leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-[#444] leading-relaxed"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               UX — Researcher / Designer
@@ -95,13 +95,13 @@ const Section_a = () => {
             className="border-l-[5px] pl-5 border-[#006D77] bg-[#ebf8f9] rounded-md shadow-sm py-4"
           >
             <h3
-              className="text-xl sm:text-2xl font-bold text-[#006D77] mb-2 border-b border-[#006D77] pb-1 tracking-wide"
+              className="text-lg sm:text-xl md:text-2xl font-bold text-[#006D77] mb-2 border-b border-[#006D77] pb-1 tracking-wide"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
               • TOOLS
             </h3>
             <p
-              className="text-base sm:text-lg text-[#444] leading-relaxed"
+              className="text-sm sm:text-base md:text-lg text-[#444] leading-relaxed"
               style={{ fontFamily: "'Inter', sans-serif" }}
             >
               Figma, Invision
@@ -111,7 +111,7 @@ const Section_a = () => {
 
         {/* Right Image */}
         <motion.div
-          className="flex-1 flex items-center justify-center"
+          className="flex-1 flex items-center justify-center w-full lg:w-auto"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           viewport={{ once: false, amount: 0 }}
@@ -142,24 +142,3 @@ const Section_a = () => {
 };
 
 export default Section_a;
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-

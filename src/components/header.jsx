@@ -45,7 +45,7 @@ export default function Header() {
     <header
       className={`fixed top-4 left-1/2 -translate-x-1/2 z-50 w-[95%] px-6  
         flex items-center justify-between rounded-2xl transition-all duration-300 
-        border ${isScrolled ? "bg-white/70 shadow-lg" : "bg-white/40 shadow-sm"} 
+        border ${isScrolled ? "bg-neutral-100 shadow-lg" : "bg-white/40 shadow-sm"} 
         backdrop-blur-md border-neutral-200/40`}
     >
       {/* Logo */}
@@ -229,6 +229,16 @@ export default function Header() {
     </header>
   );
 }
+
+
+
+
+
+
+
+
+
+
 
 
 

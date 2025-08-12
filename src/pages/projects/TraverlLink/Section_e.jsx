@@ -11,7 +11,7 @@ const Section_e = () => {
         viewport={{ once: true }}
         className="max-w-7xl mx-auto bg-white p-6 sm:p-14 rounded-3xl shadow-2xl text-center relative overflow-hidden"
       >
-        {/* Decorative floating circle */}
+        {/* Decorative floating circles */}
         <motion.div
           className="absolute -top-10 -left-10 w-40 h-40 bg-[#8075DB]/10 rounded-full blur-3xl z-0"
           animate={{ scale: [1, 1.2, 1], opacity: [0.3, 0.6, 0.3] }}
@@ -28,24 +28,24 @@ const Section_e = () => {
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ delay: 0.2, duration: 0.8 }}
-          className="text-4xl md:text-5xl font-extrabold leading-tight text-[#2A2523] z-10 relative"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight text-[#2A2523] z-10 relative"
         >
           CUSTOMER{" "}
-          <span className="text-blue-600 relative inline-block">
+          <span className="text-[#6B4EFF]">
             JOURNEY
-            <span className="absolute left-0 bottom-0 w-full h-1 bg-blue-600 rounded-full"></span>
+
           </span>
         </motion.h2>
 
-        {/* Image with shadow and subtle hover interaction */}
+        {/* Image with scale animation on scroll */}
         <motion.img
-          initial={{ opacity: 0, y: 30, scale: 0.95 }}
-          whileInView={{ opacity: 1, y: 0, scale: 1 }}
-          transition={{ delay: 0.6, duration: 0.9 }}
-          viewport={{ once: true }}
+          initial={{ scale: 0.85, opacity: 0 }}
+          whileInView={{ scale: 1, opacity: 1 }}
+          transition={{ duration: 0.6, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.3 }}
           src="https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/d66306f1-bd1f-498d-b8ce-834e286f17f9/64533be1e1ed7f732215933d_Picture.png?format=2500w"
           alt="Customer Journey Visual"
-          className="w-full h-auto rounded-2xl mt-10 shadow-lg hover:scale-[1.015] transition-transform duration-300"
+          className="w-full h-auto rounded-2xl mt-10 shadow-lg"
         />
       </motion.div>
     </section>
@@ -53,6 +53,3 @@ const Section_e = () => {
 };
 
 export default Section_e;
-
-
-

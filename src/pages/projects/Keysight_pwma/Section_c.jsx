@@ -26,14 +26,14 @@ const Section_c = () => {
         viewport={{ once: false, amount: 0.3 }}
       >
         {/* Title */}
-        <motion.h3
+        <motion.h2
           variants={textVariant}
           custom={0}
           className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#2E2B26] tracking-tight mb-4 sm:mb-6"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
         >
           PROBLEM
-        </motion.h3>
+        </motion.h2>
 
         {/* Problem Statement */}
         <motion.div
@@ -42,9 +42,9 @@ const Section_c = () => {
           className="border-l-4 pl-4 sm:pl-5 border-accent-teal bg-[#f9fafb] rounded-md shadow-sm py-4"
         >
           <div className="flex items-center gap-2 sm:gap-3 mb-3">
-            <AlertTriangle className="text-accent-teal w-6 sm:w-8 h-6 sm:h-8" />
+            <AlertTriangle className="text-accent-teal w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0" />
             <h3
-              className="text-[22px] sm:text-[28px] md:text-[32px] font-bold text-accent-teal"
+              className="text-lg sm:text-xl md:text-2xl  font-bold text-accent-teal"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
               Problem Statement
@@ -70,9 +70,9 @@ const Section_c = () => {
           className="border-l-4 pl-4 sm:pl-5 border-[#E36414] bg-[#fef9f5] rounded-md shadow-sm py-4"
         >
           <div className="flex items-center gap-2 sm:gap-3 mb-3">
-            <Target className="text-[#E36414] w-6 sm:w-8 h-6 sm:h-8" />
+            <Target className="text-[#E36414] w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0" />
             <h3
-              className="text-[22px] sm:text-[28px] md:text-[32px] font-bold text-[#E36414]"
+              className="text-lg sm:text-xl md:text-2xl  font-bold text-[#E36414]"
               style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             >
               Goals

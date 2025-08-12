@@ -21,7 +21,7 @@ const Section_g = () => {
 
         {/* Heading */}
         <motion.h2
-          className="text-[28px] sm:text-5xl font-extrabold text-[#2B2520] text-center"
+          className="text-[28px] sm:text-4xl md:text-5xl font-extrabold text-[#2B2520] text-center"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           variants={fadeUp}
           initial="hidden"
@@ -29,7 +29,7 @@ const Section_g = () => {
           custom={0}
           viewport={{ once: false, amount: 0.3 }}
         >
-          MAIN <span className="text-blue-600">TAKEAWAY</span>
+          MAIN <span className="text-[#6B4EFF]">TAKEAWAY</span>
         </motion.h2>
 
         {/* Content */}
@@ -53,7 +53,7 @@ const Section_g = () => {
 
           {/* Text */}
           <motion.p
-            className="text-[#2B2520] text-sm sm:text-lg md:text-xl font-medium leading-relaxed tracking-wide max-w-xl mx-auto lg:mx-0"
+            className="text-[#2B2520] text-sm sm:text-base md:text-lg font-medium leading-relaxed tracking-wide max-w-xl mx-auto lg:mx-0"
             style={{ fontFamily: "'Inter', sans-serif" }}
             variants={fadeUp}
             initial="hidden"

@@ -41,7 +41,7 @@ const Section_e = () => {
           className="border-l-4 pl-4 sm:pl-5 border-accent-teal bg-[#f9fafb] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-[22px] sm:text-[28px] md:text-[32px] font-bold text-accent-teal mb-3 px-0"
+            className="text-lg sm:text-xl md:text-2xl font-bold text-accent-teal mb-3 px-0"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             • BLOCKERS
@@ -72,7 +72,7 @@ const Section_e = () => {
           className="border-l-4 pl-4 sm:pl-5 border-[#E36414] bg-[#fef9f5] rounded-md shadow-sm py-4"
         >
           <h3
-            className="text-[22px] sm:text-[28px] md:text-[32px] font-bold text-[#E36414] mb-3 px-0"
+            className="text-lg sm:text-xl md:text-2xl font-bold text-[#E36414] mb-3 px-0"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             • LIMITATIONS

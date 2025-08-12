@@ -26,7 +26,7 @@ const Section_b = () => {
       >
         {/* Heading */}
         <motion.h2
-          className="text-4xl sm:text-5xl font-extrabold text-[#2A2523] mb-8"
+          className="text-[28px] sm:text-4xl md:text-5xl font-extrabold text-[#2A2523] mb-8 text-center lg:text-left"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           variants={textVariant}
           custom={0}
@@ -41,7 +41,7 @@ const Section_b = () => {
           className="border-l-[5px] pl-5 border-[#E36414] bg-[#fff6f2] rounded-md shadow-sm py-4"
         >
           <p
-            className="text-base sm:text-lg text-[#2A2523] leading-relaxed"
+            className="text-sm sm:text-base md:text-lg text-[#2A2523] leading-relaxed"
             style={{ fontFamily: "'Inter', sans-serif" }}
           >
             Travel planning stress is the very first thing that comes to mind
@@ -59,3 +59,6 @@ const Section_b = () => {
 };
 
 export default Section_b;
+
+
+

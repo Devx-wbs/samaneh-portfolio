@@ -8,7 +8,6 @@ import Section_f from "./Uxlerator/Section_f";
 import Section_g from "./Uxlerator/sECTION_G.JSX";
 import Section_h from "./Uxlerator/Section_h";
 import Section_i from "./Uxlerator/Section_i";
-import Section_j from "./Uxlerator/Section_j";
 import Section_K from "./Uxlerator/Section_k";
 
 function Uxlerator() {
@@ -23,7 +22,6 @@ function Uxlerator() {
       <Section_g />
       <Section_h />
       <Section_i />
-      <Section_j />
       <Section_K />
     </div>
   );

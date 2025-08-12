@@ -39,19 +39,19 @@ const Section_c = () => {
   return (
     <section id="section_c" className="bg-[#F5F2EC] py-20 px-6 flex justify-center scroll-mt-24">
       <motion.div
-        className="bg-white max-w-7xl w-full p-6 sm:p-10 rounded-xl grid md:grid-cols-2 gap-12 shadow-2xl"
+        className="bg-white max-w-7xl w-full p-6 sm:p-10 rounded-xl flex flex-col lg:grid lg:grid-cols-2 gap-12 shadow-2xl"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
         {/* Left Content */}
-        <motion.div variants={textVariant} custom={0}>
+        <motion.div variants={textVariant} custom={0} className="w-full">
           <h2
-            className="text-4xl sm:text-5xl font-extrabold text-[#2A2523] mb-12 leading-tight"
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2A2523] mb-12 leading-tight text-center lg:text-left"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             WHY CARE ABOUT <br className="hidden sm:block" />
-            <span className="text-blue-600">TRAVEL PLANNING</span>
+            <span className="text-[#6B4EFF]">TRAVEL PLANNING</span>
           </h2>
 
           <div className="space-y-10">
@@ -63,20 +63,20 @@ const Section_c = () => {
                 custom={i + 1}
               >
                 <h3
-                  className={`text-xl sm:text-2xl font-bold ${item.text} mb-2 tracking-wide`}
+                  className={`text-lg sm:text-xl md:text-2xl font-bold ${item.text} mb-2 tracking-wide`}
                   style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                 >
                   {item.title}
                 </h3>
                 <p
-                  className="text-base sm:text-lg text-[#444] leading-relaxed"
+                  className="text-sm sm:text-base md:text-lg text-[#444] leading-relaxed"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {item.description}
                 </p>
                 {item.source && (
                   <p
-                    className="text-sm text-[#888] mt-1"
+                    className="text-sm sm:text-base md:text-lg text-[#888] mt-1"
                     style={{ fontFamily: "'Inter', sans-serif" }}
                   >
                     {item.source}
@@ -89,7 +89,7 @@ const Section_c = () => {
 
         {/* Right Image */}
         <motion.div
-          className="flex justify-center items-center"
+          className="flex justify-center items-center w-full lg:w-auto"
           initial={{ opacity: 0, x: 40 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.6 }}

@@ -63,7 +63,7 @@ const Section_e = () => {
             variants={textVariant}
             custom={1}
           >
-            THE <span className="text-blue-600">CONCLUSION</span>
+            THE <span className="text-[#6B4EFF]">CONCLUSION</span>
           </motion.h2>
 
           {/* Quotes */}
@@ -88,20 +88,20 @@ const Section_e = () => {
                     <Icon className={`h-5 w-5 ${style.text}`} />
                   </div>
                   <h3
-                    className="text-sm sm:text-base font-bold text-[#2B2520]"
+                    className="text-sm sm:text-base md:text-lg font-bold text-[#2B2520]"
                     style={{ fontFamily: "'Space Grotesk', sans-serif" }}
                   >
                     {item.title}
                   </h3>
                 </div>
                 <p
-                  className="italic text-sm sm:text-base text-gray-700 font-medium"
+                  className="italic text-sm sm:text-base md:text-lg text-gray-700 font-medium"
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {item.quote}
                 </p>
                 <p
-                  className={`mt-2 text-sm italic font-bold ${style.text}`}
+                  className={`mt-2 text-sm sm:text-base md:text-lg italic font-bold ${style.text}`}
                   style={{ fontFamily: "'Inter', sans-serif" }}
                 >
                   {item.author}

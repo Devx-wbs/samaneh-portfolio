@@ -18,14 +18,14 @@ const Section_b = () => {
         {/* Heading with Icon */}
         <div className="flex items-center gap-3 sm:gap-4 relative z-10">
           <LightBulbIcon className="w-8 h-8 sm:w-10 sm:h-10 text-purple-500" />
-          <h2
-            className="text-[28px] sm:text-[40px] md:text-[48px] font-extrabold text-[#1e1e1e] leading-tight tracking-tight"
+          <h3
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#1e1e1e] leading-tight tracking-tight"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           >
             <span className="bg-gradient-to-r from-blue-500 to-purple-500 text-transparent bg-clip-text">
               INSPIRATION
             </span>
-          </h2>
+          </h3>
         </div>
 
         {/* Paragraph */}
