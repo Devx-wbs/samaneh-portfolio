@@ -15,7 +15,7 @@ const Section_g = () => {
   return (
     <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-4">
       <motion.div
-        className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-6"
+        className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-6 justify-around"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
@@ -43,17 +43,17 @@ const Section_g = () => {
           >
             <FaLightbulb className="text-[#6B4EFF] text-3xl mt-1 flex-shrink-0 drop-shadow-md" />
             <p className="text-base md:text-lg leading-relaxed">
-              At <span className="font-bold text-[#6B4EFF]">UXelerator</span>, we’re committed
-              to helping people at every stage of their UX career — from finding
-              direction, to building portfolios, to creating meaningful professional
-              connections that truly last.
+              At <span className="font-bold text-[#6B4EFF]">UXelerator</span>,
+              we’re committed to helping people at every stage of their UX
+              career — from finding direction, to building portfolios, to
+              creating meaningful professional connections that truly last.
             </p>
           </motion.div>
         </motion.div>
 
         {/* Right image */}
         <motion.div
-          className="w-full md:w-1/2 flex justify-center"
+          className="w-full md:w-1/4 flex justify-center "
           variants={fadeUp}
           custom={2}
         >
