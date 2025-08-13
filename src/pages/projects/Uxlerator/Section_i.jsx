@@ -23,7 +23,7 @@ const Section_i = () => {
           initial="hidden"
           whileInView="visible"
           variants={fadeUp}
-          viewport={{ amount: 0.2 }} // triggers multiple times
+          viewport={{ amount: 0.2 }}
         >
           MID-FI <span className="text-[#6B4EFF]">PROTOTYPES</span>
         </motion.h3>
@@ -33,12 +33,18 @@ const Section_i = () => {
           initial="hidden"
           whileInView="visible"
           variants={fadeUp}
-          viewport={{ amount: 0.2 }} // triggers multiple times
+          viewport={{ amount: 0.2 }}
         >
           <motion.img
             src="/project_b_img_m.png"
             alt="Keysight PWMA"
-            className="md:max-w-[930px] max-h-[600px] max-w-full mx-auto my-10 rounded-xl shadow-md"
+            className="
+              w-full max-w-[320px]    
+              sm:max-w-[600px]        
+              md:max-w-[750px]        
+              lg:max-w-[930px]      
+              max-h-[600px] mx-auto my-10 rounded-xl shadow-md
+            "
             style={{ objectFit: "contain" }}
             whileHover={{ scale: 1.03 }}
             transition={{ type: "spring", stiffness: 200 }}

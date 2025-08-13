@@ -42,9 +42,10 @@ const Section_d = () => {
         >
           {/* Glass Card */}
           <div className="bg-white/30 backdrop-blur-md px-6 py-4 rounded-lg shadow-md w-full max-w-sm">
-            <h1 className="text-gray-800 text-xl sm:text-2xl font-grotesk tracking-wide">
+            <h3 className="text-gray-800 text-lg sm:text-xl md:text-2xl font-grotesk tracking-wide">
               Travel Link
-            </h1>
+            </h3>
+      
             <p className="text-gray-900 text-2xl sm:text-4xl font-grotesk font-bold tracking-tight mt-2 leading-tight">
               UX RESEARCH <br className="hidden sm:block" /> PROJECT
             </p>

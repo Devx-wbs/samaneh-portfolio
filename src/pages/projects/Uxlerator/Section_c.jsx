@@ -44,7 +44,7 @@ const Section_c = () => {
           <img
             src="/project_b_img_a.png"
             alt="Keysight PWMA"
-            className="md:max-w-[930px] max-w-full rounded-xl shadow-lg"
+            className=" lg:max-w-[930px] md:max-w-[700px] max-w-full rounded-xl shadow-lg"
             style={{ objectFit: "contain" }}
           />
         </motion.div>

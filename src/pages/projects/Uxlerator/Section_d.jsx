@@ -14,84 +14,66 @@ const container = {
 
 const fadeUpSmooth = {
   hidden: { opacity: 0, y: 40 },
-  visible: { opacity: 1, y: 0, transition: { duration: 0.8, ease: "easeOut" } },
+  visible: { opacity: 1, y: 0, transition: { duration: 0.6, ease: "easeOut" } },
 };
-
-// Floating animation for pills
-const floatAnimation = (delay) => ({
-  y: [0, -8, 0], // small vertical motion
-  transition: {
-    duration: 4,
-    repeat: Infinity,
-    ease: "easeInOut",
-    delay, // staggered wave
-  },
-});
 
 const Section_d = () => {
   return (
     <section className="relative bg-[#f8f5ec] w-full py-[80px] px-4 overflow-hidden">
-      {/* Decorative blobs */}
-
-      <div className="max-w-7xl mx-auto bg-white rounded-2xl border border-[#eee] p-12 flex flex-col md:flex-row items-center gap-14 relative backdrop-blur-md">
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl border border-[#eee] p-8 sm:p-10 lg:p-12 flex flex-col xl:flex-row items-center gap-10 xl:gap-14 relative backdrop-blur-md">
         
-        {/* Left Content */}
+        {/* Text Section */}
         <motion.div
-          className="w-full md:w-1/2 flex flex-col items-center text-center md:items-start md:text-left px-8 relative"
+          className="w-full xl:w-1/2 flex flex-col items-center text-center xl:items-start xl:text-left px-4 sm:px-6 md:px-8 relative"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
           variants={container}
         >
           <motion.h2
-            className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-[#2E2B26] mb-8 uppercase tracking-wide"
+            className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-[#2E2B26] mb-6 uppercase tracking-wide"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             variants={fadeUpSmooth}
           >
             RESEARCH <span className="text-[#6B4EFF]">METHODS</span>
           </motion.h2>
 
-          <motion.h3
-            className="mb-10 text-lg sm:text-xl md:text-2xl font-semibold leading-relaxed max-w-xl text-gray-700"
-            variants={fadeUpSmooth}
-          >
+          {/* h3 without motion */}
+          <h3 className="mb-8 text-lg sm:text-xl md:text-2xl font-semibold leading-relaxed max-w-2xl text-gray-700">
             Our research methods include the followings:
-          </motion.h3>
+          </h3>
 
-          <div className="flex flex-wrap gap-5 max-w-xl justify-center md:justify-start">
+          <motion.div
+            className="flex flex-wrap gap-4 sm:gap-5 max-w-2xl justify-center xl:justify-start"
+            variants={container}
+          >
             {researchMethods.map((method, index) => (
               <motion.span
                 key={index}
-                className="bg-gradient-to-r from-[#6B4EFF] to-[#E36414] text-white px-6 py-3 rounded-full font-semibold text-sm sm:text-base md:text-lg cursor-default shadow-md"
+                className="bg-gradient-to-r from-[#6B4EFF] to-[#E36414] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-full font-normal text-sm sm:text-base md:text-lg cursor-default shadow-md"
                 variants={fadeUpSmooth}
-                animate={floatAnimation(index * 0.5)} // wave delay
-                whileHover={{ scale: 1.05 }}
               >
                 {method}
               </motion.span>
             ))}
-          </div>
+          </motion.div>
         </motion.div>
 
-        {/* Right Image */}
+        {/* Image Section */}
         <motion.div
-          className="w-full md:w-1/2 relative flex justify-center"
+          className="w-full xl:w-1/2 relative flex justify-center mt-8 xl:mt-0"
           initial={{ opacity: 0, y: 40 }}
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
         >
-          {/* Gradient overlay behind image */}
-          <div className="absolute w-[90%] h-[90%] bg-gradient-to-tr from-[#6B4EFF33] to-[#E3641433] rounded-2xl blur-xl"></div>
+          <div className="absolute w-[85%] h-[85%] bg-gradient-to-tr from-[#6B4EFF33] to-[#E3641433] rounded-2xl blur-xl"></div>
 
           <motion.img
             src="/project_b_img_b.png"
             alt="Keysight PWMA"
             className="max-w-full rounded-2xl relative z-10"
             style={{ objectFit: "contain" }}
-            whileHover={{ scale: 1.05 }}
-            transition={{ duration: 0.3 }}
-            whileInView={{ scale: [1, 1.02] }}
           />
         </motion.div>
       </div>
@@ -100,4 +82,3 @@ const Section_d = () => {
 };
 
 export default Section_d;
-

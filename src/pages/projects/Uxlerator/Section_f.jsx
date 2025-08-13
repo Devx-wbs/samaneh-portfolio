@@ -15,7 +15,6 @@ const Section_f = () => {
     }),
   };
 
-  // Pastel colors for list items
   const challengeColors = [
     { bg: "#f2f3fc", border: "#373A69" },
     { bg: "#fcefee", border: "#E36414" },
@@ -47,19 +46,20 @@ const Section_f = () => {
   ];
 
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
+    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[60px] px-3">
       <motion.div
         className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-6 flex flex-col items-center"
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
         initial="hidden"
         whileInView="visible"
-        viewport={{ once: false, amount: 0.2 }}
+        viewport={{ once: true, amount: 0.2 }}
       >
         {/* Main Title */}
         <motion.h2
-          className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-[#2E2B26] mb-8 uppercase tracking-wide text-center"
+          className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-[#2E2B26] mb-6 uppercase tracking-wide text-center"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           variants={fadeUp}
+          viewport={{ once: true }}
         >
           KEY <span className="text-[#6B4EFF]">FINDINGS</span>
         </motion.h2>
@@ -68,30 +68,31 @@ const Section_f = () => {
         <motion.div
           variants={fadeUp}
           custom={1}
-          className="w-full flex justify-center"
+          className="w-full flex justify-center mb-10"
+          viewport={{ once: true }}
         >
           <motion.img
             src="/project_b_img_g.png"
             alt="Keysight PWMA"
-            className="md:max-w-[930px] max-w-full mx-auto my-10 rounded shadow-lg"
-            style={{ objectFit: "contain" }}
+            className="md:max-w-[930px] max-w-full mx-auto my-8 rounded-lg shadow-lg"
+            style={{
+              objectFit: "contain",
+              boxShadow: "0 0 25px rgba(107, 78, 255, 0.15)",
+            }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}
-            animate={{ y: [0, -10, 0] }}
-            transition={{
-              y: { duration: 3, repeat: Infinity, ease: "easeInOut" },
-              opacity: { duration: 0.8 },
-            }}
-            whileHover={{ scale: 1.05 }}
+            transition={{ opacity: { duration: 0.8 } }}
+            viewport={{ once: true }}
           />
         </motion.div>
 
         {/* Subtitle */}
-        <motion.h3
-          className="relative text-lg sm:text-xl md:text-2xl font-extrabold mb-6 text-center leading-tight tracking-wide bg-gradient-to-r from-[#006D77] via-[#E36414] to-[#6B4EFF] bg-clip-text text-transparent drop-shadow-sm"
+        <motion.h2
+          className="relative text-3xl sm:text-4xl md:text-5xl font-extrabold mb-4 text-center leading-tight tracking-wide bg-gradient-to-r from-[#006D77] via-[#E36414] to-[#6B4EFF] bg-clip-text text-transparent drop-shadow-sm"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           variants={fadeUp}
           custom={2}
+          viewport={{ once: true }}
         >
           Awkwardness in networking:
           <motion.span
@@ -99,71 +100,60 @@ const Section_f = () => {
             initial={{ width: 0 }}
             whileInView={{ width: "60%" }}
             transition={{ duration: 0.6, delay: 0.3 }}
+            viewport={{ once: true }}
           />
-        </motion.h3>
+        </motion.h2>
 
         {/* Lists */}
-        <motion.div
-          className="flex flex-col md:flex-row gap-5 w-full"
-          variants={fadeUp}
-          custom={3}
-        >
+        <div className="flex flex-col lg:flex-row gap-5 w-full mt-8 sm:mt-10 md:mt-12">
           {/* Left List */}
-          <motion.div
-            className="w-full md:w-1/2 rounded-md shadow-sm p-5"
-            initial={{ opacity: 0, x: -40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#373A69] mb-3">
+          <div className="w-full lg:w-1/2 rounded-md shadow-lg p-5 bg-[#f9f9f9]">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#373A69] mb-5">
               Challenges
             </h3>
-            <ul className="space-y-3 text-sm sm:text-base md:text-lg text-[#444]">
+            <ul className="w-full space-y-3 text-sm sm:text-base md:text-lg text-[#444]">
               {challenges.map((item, index) => (
-                <motion.li
+                <li
                   key={index}
-                  className="p-3 rounded-md shadow-sm"
+                  className="p-3 rounded-md shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
                   style={{
-                    backgroundColor: challengeColors[index % challengeColors.length].bg,
-                    borderLeft: `5px solid ${challengeColors[index % challengeColors.length].border}`,
+                    backgroundColor:
+                      challengeColors[index % challengeColors.length].bg,
+                    borderLeft: `5px solid ${
+                      challengeColors[index % challengeColors.length].border
+                    }`,
                   }}
-                  whileHover={{ scale: 1.02, y: -2 }}
-                  transition={{ duration: 0.2 }}
                 >
                   {item}
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
+          </div>
 
           {/* Right List */}
-          <motion.div
-            className="w-full md:w-1/2 rounded-md shadow-sm p-5"
-            initial={{ opacity: 0, x: 40 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-          >
-            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#E36414] mb-3">
+          <div className="w-full lg:w-1/2 rounded-md shadow-lg p-5 bg-[#f9f9f9]">
+            <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#E36414] mb-5">
               Expectations
             </h3>
-            <ul className="space-y-3 text-sm sm:text-base md:text-lg text-[#444]">
+            <ul className="w-full space-y-3 text-sm sm:text-base md:text-lg text-[#444]">
               {expectations.map((item, index) => (
-                <motion.li
+                <li
                   key={index}
-                  className="p-3 rounded-md shadow-sm"
+                  className="p-3 rounded-md shadow-sm transition-all duration-300 hover:shadow-lg hover:scale-[1.02]"
                   style={{
-                    backgroundColor: expectationColors[index % expectationColors.length].bg,
-                    borderLeft: `5px solid ${expectationColors[index % expectationColors.length].border}`,
+                    backgroundColor:
+                      expectationColors[index % expectationColors.length].bg,
+                    borderLeft: `5px solid ${
+                      expectationColors[index % expectationColors.length].border
+                    }`,
                   }}
-                  whileHover={{ scale: 1.02, y: -2 }}
-                  transition={{ duration: 0.2 }}
                 >
                   {item}
-                </motion.li>
+                </li>
               ))}
             </ul>
-          </motion.div>
-        </motion.div>
+          </div>
+        </div>
       </motion.div>
     </section>
   );

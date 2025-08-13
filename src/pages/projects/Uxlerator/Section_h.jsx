@@ -15,8 +15,8 @@ const images = [
 
 const Section_h = () => {
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
-      <div className="max-w-7xl mx-auto bg-white p-6">
+    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-3 sm:px-4 md:px-6">
+      <div className="max-w-7xl mx-auto bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-md">
         {/* Heading */}
         <motion.h2
           className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-center text-black mb-12 tracking-wide"
@@ -29,11 +29,11 @@ const Section_h = () => {
         </motion.h2>
 
         {/* Row of phone mockups */}
-        <div className="flex flex-wrap justify-center gap-8">
+        <div className="flex flex-wrap justify-center gap-6 sm:gap-8">
           {images.map((src, idx) => (
             <motion.div
               key={idx}
-              className="w-[250px] md:w-[280px] h-[550px] flex justify-center items-center"
+              className="w-[150px] h-[320px] sm:w-[200px] sm:h-[420px] md:w-[250px] md:h-[500px] lg:w-[280px] lg:h-[550px] flex justify-center items-center"
               animate={{
                 y: idx % 2 === 0 ? [0, -20, 0] : [0, 20, 0],
               }}

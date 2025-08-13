@@ -22,14 +22,14 @@ const Section_a = () => {
           >
             <div className="flex items-start gap-4 pt-10 ">
               <div className="w-1 h-12 md:h-14 bg-[#6B4EFF] rounded-sm"></div>
-              <h1
-                className="text-[28px] sm:text-[36px] md:text-[48px] font-extrabold leading-tight tracking-tight"
+              <h2
+                className="text-3xl sm:text-4xl md:text-5xl font-extrabold leading-tight tracking-tight"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 DARK
                 <br />
                 PATTERNS
-              </h1>
+              </h2>
             </div>
 
             <p
@@ -57,12 +57,12 @@ const Section_a = () => {
               className="relative bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all duration-300 group"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-amber-100 opacity-0 group-hover:opacity-10 rounded-2xl transition duration-300 pointer-events-none" />
-              <h2
-                className="text-[18px] sm:text-[24px] md:text-[28px] font-extrabold text-[#6B4EFF] mb-4"
+              <h3
+                className="text-lg sm:text-xl md:text-2xl font-extrabold text-[#6B4EFF] mb-4"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 TEAM
-              </h2>
+              </h3>
               <ul
                 className="text-sm sm:text-base md:text-lg  text-[#444] font-medium space-y-1"
                 style={{ fontFamily: "'Inter', sans-serif" }}
@@ -85,12 +85,12 @@ const Section_a = () => {
               className="relative bg-white rounded-2xl shadow-md p-6 hover:shadow-xl transition-all duration-300 group"
             >
               <div className="absolute inset-0 bg-gradient-to-br from-transparent to-amber-100 opacity-0 group-hover:opacity-10 rounded-2xl transition duration-300 pointer-events-none" />
-              <h2
-                className="text-[18px] sm:text-[24px] md:text-[28px] font-extrabold text-[#6B4EFF] mb-4"
+              <h3
+                className="text-lg sm:text-xl md:text-2xl font-extrabold text-[#6B4EFF] mb-4"
                 style={{ fontFamily: "'Space Grotesk', sans-serif" }}
               >
                 TOOLS
-              </h2>
+              </h3>
               <ul
                 className="text-sm sm:text-base md:text-lg  text-[#444] font-medium space-y-1"
                 style={{ fontFamily: "'Inter', sans-serif" }}

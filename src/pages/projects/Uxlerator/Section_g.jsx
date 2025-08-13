@@ -13,16 +13,16 @@ const Section_g = () => {
   };
 
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-4">
+    <section className="bg-[#f8f5ec] w-full pb-[60px] pt-[60px] px-4 sm:px-6 md:px-8">
       <motion.div
-        className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-8 flex flex-col md:flex-row items-center gap-6 justify-around"
+        className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8 md:gap-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}
       >
         {/* Left content */}
         <motion.div
-          className="w-full md:w-1/2 flex flex-col items-center md:items-start text-center md:text-left"
+          className="w-full md:w-2/3 flex flex-col items-center md:items-start text-center md:text-left"
           variants={fadeUp}
           custom={1}
         >
@@ -36,13 +36,13 @@ const Section_g = () => {
 
           {/* Creative Paragraph */}
           <motion.div
-            className="relative w-full max-w-[700px] flex items-start gap-4 bg-gradient-to-r from-[#f3f1ff] to-[#ece9ff] border-l-4 border-[#6B4EFF] p-6 rounded-lg shadow-sm"
+            className="relative w-full max-w-[700px] flex flex-col sm:flex-row items-center sm:items-start gap-4 bg-gradient-to-r from-[#f3f1ff] to-[#ece9ff] border-l-4 border-[#6B4EFF] p-4 sm:p-6 rounded-lg shadow-sm"
             initial={{ opacity: 0, x: -20 }}
             whileInView={{ opacity: 1, x: 0 }}
             transition={{ duration: 0.6, ease: "easeOut" }}
           >
-            <FaLightbulb className="text-[#6B4EFF] text-3xl mt-1 flex-shrink-0 drop-shadow-md" />
-            <p className="text-base md:text-lg leading-relaxed">
+            <FaLightbulb className="text-[#6B4EFF] text-3xl sm:text-4xl mt-1 flex-shrink-0 drop-shadow-md" />
+            <p className="text-sm sm:text-base md:text-lg leading-relaxed">
               At <span className="font-bold text-[#6B4EFF]">UXelerator</span>,
               we’re committed to helping people at every stage of their UX
               career — from finding direction, to building portfolios, to
@@ -53,14 +53,14 @@ const Section_g = () => {
 
         {/* Right image */}
         <motion.div
-          className="w-full md:w-1/4 flex justify-center "
+          className="w-full md:w-1/3 flex justify-center"
           variants={fadeUp}
           custom={2}
         >
           <motion.img
             src="/project_b_img_h.png"
             alt="Keysight PWMA"
-            className="max-h-[600px] max-w-[95%] rounded-lg shadow-lg"
+            className="max-h-[400px] sm:max-h-[500px] max-w-full sm:max-w-[80%] md:max-w-full rounded-lg shadow-lg"
             style={{ objectFit: "contain" }}
             initial={{ opacity: 0, y: 20 }}
             whileInView={{ opacity: 1, y: 0 }}

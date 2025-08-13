@@ -18,7 +18,7 @@ const Section_b = () => {
             <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide uppercase">
               KEYSIGHT PWMA
             </h2>
-            <p className="text-sm sm:text-base mb-10 leading-relaxed font-inter">
+            <p className="text-sm sm:text-base md:text-lg mb-10 leading-relaxed font-inter">
               Design improvements for Keysight's analytics software, Pathwave
               Measurement Analytics.
             </p>
@@ -37,9 +37,9 @@ const Section_b = () => {
           className="relative w-full md:w-2/3 bg-[#FFCE9F] rounded-md px-6 py-10 flex flex-col items-center text-center shadow-xl"
         >
           <div className="bg-white/30 backdrop-blur-md px-6 py-4 rounded-lg shadow-md w-full max-w-sm">
-            <h1 className="text-gray-800 text-xl sm:text-2xl font-grotesk tracking-wide">
+            <h3 className="text-gray-800 text-lg sm:text-xl md:text-2xl font-grotesk tracking-wide">
               UX DESIGN/RESEARCH<br />
-            </h1>
+            </h3>
             <p className="text-gray-900 text-2xl sm:text-4xl font-grotesk font-bold tracking-tight mt-2 leading-tight">
               KEYSIGHT PWMA <br className="hidden sm:block" />
             </p>

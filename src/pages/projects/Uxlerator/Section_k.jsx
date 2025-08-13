@@ -14,20 +14,19 @@ const points = [
   { text: "All participants were fluent in English, studying for master’s degrees, and able to afford tuition in the U.S.", border: "#FFC44E", bg: "#FFFBF2" }
 ];
 
-
 const Section_K = () => {
   return (
     <section className="bg-[#f8f5ec] w-full py-[80px] px-4 overflow-hidden">
-      <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-xl p-10 flex flex-col md:flex-row items-center gap-12">
-
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-xl p-10 flex flex-col lg:flex-row items-center gap-12">
+        
         {/* Left Image */}
         <motion.div
-          className="w-full md:w-1/2 flex justify-center"
+          className="w-full lg:w-1/2 flex justify-center"
           initial={{ opacity: 0, scale: 0.95, y: 30 }}
           whileInView={{ opacity: 1, scale: 1, y: 0 }}
           viewport={{ once: false, amount: 0.3 }}
           transition={{ duration: 0.8, ease: "easeOut" }}
-        >
+          >
           <motion.img
             src="/project_b_img_o.png"
             alt="Keysight PWMA"
@@ -40,7 +39,7 @@ const Section_K = () => {
 
         {/* Right Content */}
         <motion.div
-          className="w-full md:w-1/2"
+          className="w-full lg:w-1/2"
           initial="hidden"
           whileInView="visible"
           viewport={{ once: false, amount: 0.3 }}
@@ -64,11 +63,11 @@ const Section_K = () => {
             TIME:
           </motion.h2>
 
-          <div className="space-y-5">
+          <div className="space-y-5 w-full">
             {points.map((point, index) => (
               <motion.p
                 key={index}
-                className="text-sm sm:text-base md:text-lg font-normal leading-relaxed p-4 rounded-lg shadow-sm border-l-4"
+                className="w-full text-sm sm:text-base md:text-lg font-normal leading-relaxed p-4 rounded-lg shadow-sm border-l-4"
                 style={{
                   borderColor: point.border,
                   backgroundColor: point.bg,

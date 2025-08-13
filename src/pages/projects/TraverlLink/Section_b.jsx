@@ -26,7 +26,7 @@ const Section_b = () => {
       >
         {/* Heading */}
         <motion.h2
-          className="text-[28px] sm:text-4xl md:text-5xl font-extrabold text-[#2A2523] mb-8 text-center lg:text-left"
+          className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-[#2A2523] mb-8 text-center lg:text-left"
           style={{ fontFamily: "'Space Grotesk', sans-serif" }}
           variants={textVariant}
           custom={0}

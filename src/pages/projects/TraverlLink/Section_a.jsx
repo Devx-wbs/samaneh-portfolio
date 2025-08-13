@@ -27,8 +27,8 @@ const Section_a = () => {
         {/* Left Side */}
         <div className="flex-1 text-[#2A2523] w-full">
           {/* Main Title */}
-          <motion.h1
-            className="text-[28px] sm:text-[36px] md:text-[48px] font-extrabold mb-12 text-center lg:text-left leading-tight"
+          <motion.h2
+            className="text-3xl sm:text-4xl md:text-5xl font-extrabold mb-12 text-center lg:text-left leading-tight"
             style={{ fontFamily: "'Space Grotesk', sans-serif" }}
             variants={textVariant}
             initial="hidden"
@@ -37,7 +37,7 @@ const Section_a = () => {
             custom={0}
           >
             TRAVEL <br /> <span className="text-[#6B4EFF]">LINK</span>
-          </motion.h1>
+          </motion.h2>
 
           {/* Project Description */}
           <motion.div
