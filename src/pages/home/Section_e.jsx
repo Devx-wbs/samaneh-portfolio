@@ -5,12 +5,16 @@ const Section_e = () => {
   return (
     <div className="min-h-96 bg-[#ececec] flex items-center justify-center px-4 py-16">
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-7xl w-full">
-
         {/* Left Panel - Now uses scale + spring like Section_c */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 80, damping: 12, delay: 0.1 }}
+          transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 12,
+            delay: 0.1,
+          }}
           viewport={{ once: false, amount: 0.2 }}
           className="relative w-full md:w-2/3 rounded-xl overflow-hidden flex flex-col items-center justify-center text-center px-6 py-14 bg-cover bg-center shadow-xl"
           style={{
@@ -47,7 +51,7 @@ const Section_e = () => {
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.2 }}
-          className="w-full md:w-[320px] bg-[#55b197] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-96 hover:shadow-2xl transition-shadow duration-300"
+          className="w-full md:w-[320px] bg-[#55b197] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-[240px] md:h-96 hover:shadow-2xl transition-shadow duration-300"
         >
           <div>
             <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide">
@@ -68,5 +72,3 @@ const Section_e = () => {
 };
 
 export default Section_e;
-
-

@@ -5,14 +5,13 @@ const Section_b = () => {
   return (
     <section className="min-h-60 bg-[#f1f1f1] flex items-center justify-center px-4 py-16">
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-10">
-
         {/* Left Card - Slide from Left */}
         <motion.div
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
           transition={{ duration: 0.9, ease: "easeOut" }}
           viewport={{ once: false, amount: 0.2 }}
-          className="w-full md:w-[320px] bg-[#FF8C3E] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-96 hover:shadow-2xl transition-shadow duration-300"
+          className="w-full md:w-[320px] bg-[#FF8C3E] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-[240px] md:h-96 hover:shadow-2xl transition-shadow duration-300"
         >
           <div>
             <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide uppercase">
@@ -32,13 +31,19 @@ const Section_b = () => {
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
-          transition={{ type: "spring", stiffness: 80, damping: 12, delay: 0.1 }}
+          transition={{
+            type: "spring",
+            stiffness: 80,
+            damping: 12,
+            delay: 0.1,
+          }}
           viewport={{ once: false, amount: 0.2 }}
           className="relative w-full md:w-2/3 bg-[#FFCE9F] rounded-md px-6 py-10 flex flex-col items-center text-center shadow-xl"
         >
           <div className="bg-white/30 backdrop-blur-md px-6 py-4 rounded-lg shadow-md w-full max-w-sm">
             <h3 className="text-gray-800 text-lg sm:text-xl md:text-2xl font-grotesk tracking-wide">
-              UX DESIGN/RESEARCH<br />
+              UX DESIGN/RESEARCH
+              <br />
             </h3>
             <p className="text-gray-900 text-2xl sm:text-4xl font-grotesk font-bold tracking-tight mt-2 leading-tight">
               KEYSIGHT PWMA <br className="hidden sm:block" />
@@ -51,11 +56,9 @@ const Section_b = () => {
             className="h-48 sm:h-56 md:h-64 drop-shadow-lg rounded-lg hover:scale-105 transition duration-300 mt-10"
           />
         </motion.div>
-
       </div>
     </section>
   );
 };
 
 export default Section_b;
-

@@ -92,7 +92,3 @@ const Section_f = () => {
 };
 
 export default Section_f;
-
-
-
-
