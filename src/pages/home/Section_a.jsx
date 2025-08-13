@@ -41,7 +41,7 @@ const Section_a = () => {
       </div>
 
       {/* Content Card - Centered with boxy style */}
-      <div className="relative z-10 w-full flex justify-center px-6">
+      <div className="relative z-10 w-full flex justify-center px-6 py-[100px]">
         <div
           className="bg-black/90 backdrop-blur-sm rounded-none shadow-2xl p-8 md:p-12 
                      border border-gray-800 animate-fade-in max-w-2xl relative"
@@ -54,11 +54,11 @@ const Section_a = () => {
 
             {/* Name with accent background bar - extending beyond card */}
             <div
-              className="relative -mx-20 md:-mx-32 animate-slide-up"
+              className="relative animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="bg-accent-teal py-4 inline-block transform hover:scale-105 transition-transform duration-300">
-                <h1 className="text-4xl md:text-5xl font-bold font-space text-black min-w-[400px] md:min-w-[500px]">
+              <div className="bg-accent-teal py-4 inline-block transform hover:scale-105 transition-transform duration-300 min-h-[120px] md:min-h-0 text-center  flex items-center justify-center">
+                <h1 className="text-4xl md:text-5xl font-bold font-space text-black text-center">
                   {displayText}
                   <span className="animate-pulse">|</span>
                 </h1>
