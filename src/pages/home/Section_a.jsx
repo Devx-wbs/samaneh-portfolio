@@ -57,7 +57,7 @@ const Section_a = () => {
               className="relative animate-slide-up"
               style={{ animationDelay: "0.2s" }}
             >
-              <div className="bg-accent-teal py-4 inline-block transform hover:scale-105 transition-transform duration-300 min-h-[120px] md:min-h-0 text-center  flex items-center justify-center">
+              <div className="bg-accent-teal py-4 transform hover:scale-105 transition-transform duration-300 min-h-[120px] md:min-h-0 text-center flex items-center justify-center">
                 <h1 className="text-4xl md:text-5xl font-bold font-space text-black text-center">
                   {displayText}
                   <span className="animate-pulse">|</span>
