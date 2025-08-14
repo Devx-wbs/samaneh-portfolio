@@ -845,7 +845,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_m.png"
                 alt="Keysight PWMA"
-                className="w-full max-w-[600px] rounded object-contain"
+                className="w-full max-w-[550px] rounded object-contain"
                 style={{ objectFit: "contain" }}
               />
             </div>
@@ -1036,7 +1036,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_n.png"
                 alt="Keysight PWMA"
-                className="w-full max-w-[600px] rounded object-contain"
+                className="w-full max-w-[550px] rounded object-contain"
                 style={{ objectFit: 'contain' }}
               />
             </div>
@@ -1242,7 +1242,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_q.png"
                 alt="Keysight PWMA"
-                className="w-full max-w-[600px] rounded-lg shadow-sm object-contain"
+                className="w-full max-w-[550px] rounded-lg shadow-sm object-contain"
               />
             </div>
           </motion.div>

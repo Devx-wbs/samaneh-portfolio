@@ -11,10 +11,10 @@ function Home() {
     <>
       <Section_a />
       <Section_b />
-      <Section_c/>
-      <Section_d/>
-      <Section_e/>
-      <Section_f/>
+      <Section_c />
+      <Section_d />
+      <Section_e />
+      <Section_f />
     </>
   );
 }

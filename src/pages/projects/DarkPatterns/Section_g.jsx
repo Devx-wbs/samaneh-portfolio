@@ -59,7 +59,7 @@ const Section_g = () => {
             initial="hidden"
             whileInView="visible"
             custom={2}
-            viewport={{ once: false, amount: 0.3 }}
+            viewport={{ once: false, amount: 0.1 }}
           >
             As{' '}
             <span className="font-bold text-[#6B4EFF] hover:text-[#7F5CFF] transition-colors duration-300">

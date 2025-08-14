@@ -109,7 +109,7 @@ const Section_f = () => {
           {/* Left List */}
           <div className="w-full lg:w-1/2 rounded-md shadow-lg p-5 bg-[#f9f9f9]">
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#373A69] mb-5">
-              Challenges
+              Challenges:-
             </h3>
             <ul className="w-full space-y-3 text-sm sm:text-base md:text-lg text-[#444]">
               {challenges.map((item, index) => (
@@ -133,7 +133,7 @@ const Section_f = () => {
           {/* Right List */}
           <div className="w-full lg:w-1/2 rounded-md shadow-lg p-5 bg-[#f9f9f9]">
             <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#E36414] mb-5">
-              Expectations
+              Expectations:-
             </h3>
             <ul className="w-full space-y-3 text-sm sm:text-base md:text-lg text-[#444]">
               {expectations.map((item, index) => (

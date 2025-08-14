@@ -3,9 +3,31 @@ import { motion } from "framer-motion";
 
 const Section_e = () => {
   return (
-    <div className="min-h-96 bg-[#ececec] flex items-center justify-center px-4 py-16">
+    <div className="bg-[#ececec] flex items-center justify-center px-4 py-16">
       <div className="flex flex-col md:flex-row items-center gap-10 max-w-7xl w-full">
-        {/* Left Panel - Now uses scale + spring like Section_c */}
+        {/* Small Card - Moved to LEFT with slide animation */}
+        <motion.div
+          initial={{ opacity: 0, x: -80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="w-full md:w-[320px] bg-[#55b197] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-[240px] md:h-96 hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div>
+            <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide">
+              UXLERATOR
+            </h2>
+            <p className="text-sm sm:text-base mb-10 leading-relaxed font-inter">
+              A mobile app for UX job seekers to connect with experienced
+              mentors, seek career guidance and establish networks.
+            </p>
+          </div>
+          <button className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-md text-sm w-full md:w-auto transition-all duration-300 shadow-sm font-inter">
+            VIEW PROJECT
+          </button>
+        </motion.div>
+
+        {/* Image Panel - Moved to RIGHT with spring animation */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}
@@ -16,7 +38,7 @@ const Section_e = () => {
             delay: 0.1,
           }}
           viewport={{ once: false, amount: 0.2 }}
-          className="relative w-full md:w-2/3 rounded-xl overflow-hidden flex flex-col items-center justify-center text-center px-6 py-14 bg-cover bg-center shadow-xl"
+          className="relative w-full md:w-2/3 rounded-xl overflow-hidden flex flex-col items-center justify-center text-center px-6 py-10 bg-cover bg-center shadow-xl"
           style={{
             backgroundImage:
               "url('https://images.squarespace-cdn.com/content/v1/657a22e2f7e9cd0df1d35893/df350a30-81c7-46bc-a0f4-340cf6590c8b/6454a11ecd601a2264d2bb48_Group+2.png?format=2500w')",
@@ -43,28 +65,6 @@ const Section_e = () => {
               className="h-48 sm:h-56 md:h-64 drop-shadow-lg rounded-lg hover:scale-105 transition duration-300"
             />
           </div>
-        </motion.div>
-
-        {/* Right Panel - Slide in from right (x: 80) like Section_c */}
-        <motion.div
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.2 }}
-          className="w-full md:w-[320px] bg-[#55b197] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-[240px] md:h-96 hover:shadow-2xl transition-shadow duration-300"
-        >
-          <div>
-            <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide">
-              UXLERATOR
-            </h2>
-            <p className="text-sm sm:text-base mb-10 leading-relaxed font-inter">
-              A mobile app for UX job seekers to connect with experienced
-              mentors, seek career guidance and establish networks.
-            </p>
-          </div>
-          <button className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-md text-sm w-full md:w-auto transition-all duration-300 shadow-sm font-inter">
-            VIEW PROJECT
-          </button>
         </motion.div>
       </div>
     </div>
