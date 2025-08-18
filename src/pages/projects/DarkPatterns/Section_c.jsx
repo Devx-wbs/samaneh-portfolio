@@ -17,7 +17,7 @@ const Section_c = () => {
   };
 
   return (
-    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 sm:px-6 py-10 sm:py-16 font-sans">
+    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 sm:px-6 py-8 sm:py-16 font-sans">
       <motion.div
         transition={{ type: 'spring', stiffness: 200, damping: 20 }}
         className="bg-white p-5 sm:p-8 md:p-12 rounded-xl shadow-xl max-w-7xl w-full flex flex-col lg:flex-row gap-10"
@@ -119,3 +119,6 @@ const Section_c = () => {
 };
 
 export default Section_c;
+
+
+

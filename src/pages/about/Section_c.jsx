@@ -2,7 +2,7 @@ import React from "react";
 
 export default function Section_c() {
   return (
-    <section className="w-full py-20">
+    <section className="w-full py-12 md:py-18">
       <div className="max-w-6xl mx-auto px-4 flex flex-col items-center">
         <div className="grid grid-cols-1 md:grid-cols-2 gap-10 w-full">
 
@@ -43,3 +43,4 @@ export default function Section_c() {
     </section>
   );
 }
+

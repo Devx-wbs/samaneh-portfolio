@@ -4,8 +4,8 @@ import { FiExternalLink } from "react-icons/fi";
 
 const Section_l = () => {
   return (
-    <section className="relative bg-gradient-to-br from-indigo-100 via-white to-purple-50 py-16 px-4">
-      <div className="max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 text-center lg:text-left bg-white py-20 px-6 sm:px-10 rounded-xl shadow-lg">
+    <section className="relative bg-[#F5F2EC] sm:py-16 py-8 px-4">
+      <div className=" bg-gradient-to-br from-indigo-100 via-white to-purple-50 max-w-7xl mx-auto flex flex-col lg:flex-row items-center justify-between gap-10 text-center lg:text-left bg-white py-20 px-6 sm:px-10 rounded-xl shadow-lg">
         
         {/* Logo with floating animation */}
         <motion.div

@@ -99,7 +99,7 @@ export default function Section_b() {
   ];
 
   return (
-    <section className="bg-[#fafafa] w-full py-20">
+    <section className="bg-[#fafafa] w-full py-12 md:py-20">
       <div className="max-w-7xl mx-auto px-4 flex flex-col items-center justify-center gap-8 md:gap-16 text-center">
         
         {/* Animated Heading with Center-Out Underline */}

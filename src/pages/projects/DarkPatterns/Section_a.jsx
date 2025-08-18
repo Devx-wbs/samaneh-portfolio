@@ -11,7 +11,7 @@ const Section_a = () => {
         `}
       </style>
 
-      <section className="min-h-screen bg-gradient-to-b from-[#F4F4F2] to-[#E8E8E3] text-[#1F1F1F] px-6 md:px-16 py-24 font-sans">
+      <section className="min-h-screen bg-gradient-to-b from-[#F4F4F2] to-[#E8E8E3] text-[#1F1F1F] px-6 md:px-16 sm:py-24 pt-20 pb-8 font-sans">
         <div className="max-w-7xl mx-auto ">
           {/* Heading & Subheading */}
           <motion.div

@@ -13,8 +13,8 @@ const fadeUp = {
 
 const Section_i = () => {
   return (
-    <section className="bg-gradient-to-b from-[#f8f5ec] to-[#f0ece3] w-full py-[80px] px-4">
-      <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-lg p-8 md:p-12">
+    <section className="bg-gradient-to-b from-[#f8f5ec] to-[#f0ece3] w-full sm:py-[80px] py-8 px-4">
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-2xl p-8 md:p-12">
         
         {/* Heading */}
         <motion.h3

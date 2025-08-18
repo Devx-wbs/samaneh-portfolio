@@ -14,8 +14,8 @@ const images = [
 
 const Section_k = () => {
   return (
-    <section className="bg-[#f6f3ee] py-12 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto text-center bg-white px-10 py-8 rounded-md">
+    <section className="bg-[#f6f3ee] sm:py-16 py-8 px-4 md:px-10">
+      <div className="max-w-7xl mx-auto text-center bg-white px-10 py-8 rounded-md shadow-2xl ">
         <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-gray-900 mb-10">
           MOBILE HIGH <span className="text-[#6B4EFF]">FIDELITY</span>
         </h2>
@@ -24,14 +24,13 @@ const Section_k = () => {
           {images.map(({ src, alt }, idx) => (
             <motion.div
               key={idx}
-              className="relative rounded-2xl overflow-hidden bg-white shadow-lg cursor-pointer"
+              className="relative rounded-2xl overflow-hidden bg-white cursor-pointer"
               initial={{ opacity: 0, scale: 0.9 }}
               whileInView={{ opacity: 1, scale: 1 }}
               viewport={{ once: true, amount: 0.3 }}
               transition={{ duration: 0.7, ease: "easeOut" }}
               whileHover={{
-                scale: 1.05,
-                boxShadow: "0 25px 40px rgba(0,0,0,0.2)",
+                scale: 1.03,
               }}
             >
               {/* Animated border using an absolutely positioned div */}
@@ -57,3 +56,6 @@ const Section_k = () => {
 };
 
 export default Section_k;
+
+
+

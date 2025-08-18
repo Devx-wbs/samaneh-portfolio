@@ -16,7 +16,7 @@ const Section_f = () => {
   };
 
   return (
-    <section className="bg-[#f8f5ec] w-full px-4 sm:px-6 md:px-10 py-12 sm:py-16 font-sans">
+    <section className="bg-[#f8f5ec] w-full px-4 sm:px-6 md:px-10 py-8 sm:py-16 font-sans">
       <motion.div
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
         className="max-w-7xl mx-auto bg-white px-6 py-8 sm:px-10 sm:py-12 rounded-xl shadow-2xl flex flex-col gap-8"

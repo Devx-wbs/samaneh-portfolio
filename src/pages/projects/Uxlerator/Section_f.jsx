@@ -46,9 +46,9 @@ const Section_f = () => {
   ];
 
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[60px] px-3">
+    <section className="bg-[#f8f5ec] w-full sm:pb-[70px] pt-[60px] py-8 px-3">
       <motion.div
-        className="max-w-7xl mx-auto bg-white rounded-md shadow-md p-6 flex flex-col items-center"
+        className="max-w-7xl mx-auto bg-white rounded-md shadow-2xl p-6 flex flex-col items-center"
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
         initial="hidden"
         whileInView="visible"

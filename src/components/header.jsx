@@ -165,7 +165,7 @@ export default function Header() {
             transition={{ duration: 0.3, ease: "easeInOut" }}
             className="fixed top-0 right-0 max-h-screen h-auto 
                        w-[85%] sm:w-[80%] bg-gray-50 
-                       rounded-l-3xl shadow-xl overflow-y-auto z-50 
+                       rounded-[6.5px] shadow-xl overflow-y-auto z-50 
                        border-l border-gray-200"
           >
             <div className="flex flex-col">

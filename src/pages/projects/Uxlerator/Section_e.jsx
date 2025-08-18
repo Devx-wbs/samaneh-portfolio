@@ -25,7 +25,7 @@ const Section_e = () => {
   ];
 
   return (
-    <section className="bg-[#F5F2EC] px-4 py-20">
+    <section className="bg-[#F5F2EC] px-4 sm:py-20 py-8">
       <div className="max-w-7xl mx-auto">
        
        {/* Image cards */}

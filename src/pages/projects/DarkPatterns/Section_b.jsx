@@ -4,13 +4,13 @@ import { LightBulbIcon } from '@heroicons/react/24/solid';
 
 const Section_b = () => {
   return (
-    <div className="min-h-[70vh] bg-gradient-to-b from-[#F9F6EF] to-[#EDEAE2] px-4 sm:px-6 py-12 sm:py-16 flex justify-center items-center font-sans">
+    <div className="min-h-[70vh] bg-gradient-to-b from-[#F9F6EF] to-[#EDEAE2] px-4 sm:px-6 py-8 sm:py-16 flex justify-center items-center font-sans">
       <motion.div
         initial={{ opacity: 0, y: 50 }}
         whileInView={{ opacity: 1, y: 0 }}
         viewport={{ once: true, amount: 0.4 }}
         transition={{ duration: 0.8, ease: 'easeOut' }}
-        className="relative bg-white px-5 sm:px-8 md:px-10 py-10 sm:py-12 rounded-xl shadow-xl max-w-6xl w-full border-l-4 border-purple-500 overflow-hidden"
+        className="relative bg-white px-5 sm:px-8 md:px-10 py-8 sm:py-12 rounded-xl shadow-xl max-w-6xl w-full border-l-4 border-purple-500 overflow-hidden"
       >
         {/* Floating Dot Grid Background */}
         <div className="absolute -top-6 -left-6 w-24 h-24 bg-[radial-gradient(#c7d2fe_1px,transparent_1px)] bg-[length:8px_8px] opacity-20 rounded-full pointer-events-none z-0" />

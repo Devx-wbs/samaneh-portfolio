@@ -32,7 +32,7 @@ const textVariant = {
 
 const Section_d = () => {
   return (
-    <div className="min-h-screen bg-[#F9F6EF] px-4 sm:px-8 py-16 flex justify-center font-sans">
+    <div className="min-h-screen bg-[#F9F6EF] px-4 sm:px-6 sm:py-16 py-8 flex justify-center font-sans">
       <motion.div
         className="bg-white p-6 sm:p-10 md:p-12 rounded-xl shadow-xl max-w-7xl w-full text-center"
         initial="hidden"
@@ -108,3 +108,6 @@ const Section_d = () => {
 };
 
 export default Section_d;
+
+
+

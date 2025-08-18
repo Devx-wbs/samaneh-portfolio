@@ -3,9 +3,9 @@ import { motion } from "framer-motion";
 
 const Section_b = () => {
   return (
-    <section className="min-h-60 bg-[#f1f1f1] flex items-center justify-center px-4 py-16">
+    <section className="min-h-60 bg-[#f1f1f1] flex items-center justify-center px-4 sm:py-16 py-8">
       <div className="max-w-7xl w-full flex flex-col md:flex-row items-center gap-10">
-        {/* Left Card - Slide from Left */}
+
         <motion.div
           initial={{ opacity: 0, x: -80 }}
           whileInView={{ opacity: 1, x: 0 }}
@@ -27,7 +27,6 @@ const Section_b = () => {
           </button>
         </motion.div>
 
-        {/* Right Section - Pop In with Spring */}
         <motion.div
           initial={{ opacity: 0, scale: 0.8 }}
           whileInView={{ opacity: 1, scale: 1 }}

@@ -37,7 +37,7 @@ const textVariant = {
 
 const Section_c = () => {
   return (
-    <section id="section_c" className="bg-[#F5F2EC] py-20 px-6 flex justify-center scroll-mt-24">
+    <section id="section_c" className="bg-[#F5F2EC] sm:py-20 px-6 py-8 flex justify-center scroll-mt-24">
       <motion.div
         className="bg-white max-w-7xl w-full p-6 sm:p-10 rounded-xl flex flex-col lg:grid lg:grid-cols-2 gap-12 shadow-2xl"
         initial="hidden"

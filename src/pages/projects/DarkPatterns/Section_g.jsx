@@ -16,7 +16,7 @@ const fadeUp = {
 
 const Section_g = () => {
   return (
-    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 py-16 sm:py-20 font-sans">
+    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 sm:py-16 sm:px-6 py-8 font-sans">
       <div className="bg-white rounded-xl shadow-xl max-w-7xl w-full px-6 sm:px-10 md:px-16 py-12 flex flex-col gap-12">
 
         {/* Heading */}

@@ -46,7 +46,7 @@ const Section_j = () => {
   return (
     <section
       id="section_j"
-      className="min-h-screen bg-[#fefcfb] flex justify-center px-6 py-16 font-sans scroll-mt-24"
+      className="min-h-screen bg-[#F5F2EC] flex justify-center px-6 sm:py-16 py-8 font-sans scroll-mt-24"
     >
       <motion.div
         transition={{ type: "spring", stiffness: 200, damping: 20 }}

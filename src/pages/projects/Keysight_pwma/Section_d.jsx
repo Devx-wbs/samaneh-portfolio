@@ -15,12 +15,12 @@ const textVariant = {
 
 const Section_d = () => {
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-2">
+    <section className="bg-[#f8f5ec] w-full sm:pb-[70px] sm:pt-[80px] py-8 px-4 sm:px-6 md:px-10">
       <div className="max-w-7xl mx-auto">
         {/* Main white container */}
         <motion.div
           transition={{ type: "spring", stiffness: 200, damping: 20 }}
-          className="bg-white rounded-lg shadow-lg p-8 sm:p-12"
+          className="bg-white rounded-xl shadow-2xl p-8 sm:p-12"
         >
           <h2 className="text-3xl sm:text-4xl md:text-5xl font-extrabold text-center text-[#2E2B26] mt-3 tracking-tight">
             RESEARCH:
@@ -156,7 +156,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_d.png"
                 alt="Keysight PWMA"
-              className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
@@ -205,7 +205,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_e.png"
                 alt="Keysight PWMA"
-              className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
@@ -462,7 +462,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_f.png"
                 alt="Keysight PWMA"
-               className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
@@ -477,7 +477,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_g.png"
                 alt="Keysight PWMA"
-              className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
@@ -490,7 +490,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_h.png"
                 alt="Keysight PWMA"
-             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
@@ -557,19 +557,20 @@ const Section_d = () => {
             className="bg-[#fffef7] border-l-4 border-[#ffd600] rounded-md shadow-md p-6 mb-10"
           >
             <div className="flex items-center gap-2 mb-3">
+              {/* 📈 Line Chart Icon */}
               <svg
+                role="img"
+                aria-label="Line chart icon"
                 className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#ffd600]"
                 fill="none"
                 stroke="currentColor"
                 strokeWidth={2}
                 viewBox="0 0 24 24"
               >
-                <path
-                  strokeLinecap="round"
-                  strokeLinejoin="round"
-                  d="M4 21V10M12 21V3M20 21v-6"
-                />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 17l6-6 4 4 6-8" />
+                <path strokeLinecap="round" strokeLinejoin="round" d="M4 21h16" />
               </svg>
+
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: '#ffd600' }}>
                 Scoring Metric
               </h3>
@@ -578,8 +579,8 @@ const Section_d = () => {
             <div>
               <img
                 src="/project_a_img_i.png"
-                alt="Keysight PWMA"
-             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                alt="Scoring metric visualization"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
@@ -594,11 +595,12 @@ const Section_d = () => {
             <div>
               <img
                 src="/project_a_img_j.png"
-                alt="Keysight PWMA"
-             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                alt="Scoring metric evaluation results"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
+
 
 
 
@@ -612,7 +614,10 @@ const Section_d = () => {
             className="bg-[#fef7f6] border-l-4 border-[#ff7043] rounded-md shadow-md p-6 mb-10"
           >
             <div className="flex items-center gap-2 mb-3">
+              {/* 📊 Bar Chart Icon */}
               <svg
+                role="img"
+                aria-label="Bar chart icon"
                 className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#ff7043]"
                 fill="none"
                 stroke="currentColor"
@@ -622,10 +627,11 @@ const Section_d = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M13 16h-1v-4h-1m1 8a1 1 0 100-2 1 1 0 000 2zm.293-14.707a1 1 0 00-1.586 0L3.293 9.293A1 1 0 004 11h16a1 1 0 00.707-1.707l-7-7z"
+                  d="M4 21V10m6 11V3m6 18v-6m6 6V8"
                 />
               </svg>
-              <h3 className="text-lg sm:text-xl md:text-2xl  font-bold" style={{ color: '#ff7043' }}>
+
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: '#ff7043' }}>
                 Heuristic Evaluation Results
               </h3>
             </div>
@@ -640,8 +646,8 @@ const Section_d = () => {
             <div>
               <img
                 src="/project_a_img_k.png"
-                alt="Keysight PWMA"
-               className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                alt="Heuristic evaluation results - chart"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
@@ -654,8 +660,8 @@ const Section_d = () => {
             <div>
               <img
                 src="/project_a_img_l.png"
-                alt="Keysight PWMA"
-             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                alt="Heuristic evaluation results - visualization"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
@@ -686,7 +692,7 @@ const Section_d = () => {
                 />
               </svg>
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold" style={{ color: '#1976d2' }}>
-                01: Feature-Specific Challenges
+                Feature-Specific Challenges
               </h3>
             </div>
 
@@ -721,7 +727,6 @@ const Section_d = () => {
               transparent enough.
             </p>
           </motion.div>
-
 
 
           {/* --- PARTICIPANT 4 --- */}
@@ -811,9 +816,8 @@ const Section_d = () => {
           </motion.div>
 
 
+
           {/* --- RECOMMENDATIONS --- */}
-
-
           <motion.div
             variants={textVariant}
             initial="hidden"
@@ -850,6 +854,8 @@ const Section_d = () => {
               />
             </div>
           </motion.div>
+
+
 
 
           {/* --- 02: INTUITIVENESS --- */}
@@ -1179,7 +1185,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_o.png"
                 alt="Colorblind View"
-               className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
@@ -1193,7 +1199,7 @@ const Section_d = () => {
               <img
                 src="/project_a_img_p.png"
                 alt="Chartability Score"
-             className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
 
@@ -1259,7 +1265,10 @@ const Section_d = () => {
             className="bg-[#f5fafe] border-l-4 border-[#1976d2] rounded-md shadow-md p-6 mb-10"
           >
             <div className="flex items-center gap-2 mb-3">
+              {/* ✅ Check Circle Icon */}
               <svg
+                role="img"
+                aria-label="Check circle icon"
                 className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#1976d2]"
                 fill="none"
                 stroke="currentColor"
@@ -1269,9 +1278,10 @@ const Section_d = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M8 16l-4-4m0 0l4-4m-4 4h16"
+                  d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z"
                 />
               </svg>
+
               <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1976d2]">
                 Similarities Include:
               </h3>
@@ -1326,7 +1336,7 @@ const Section_d = () => {
                 src="/project_a_img_r.png"
                 alt="Keysight PWMA"
                 className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
-            />
+              />
             </div>
           </motion.div>
 
@@ -1342,6 +1352,7 @@ const Section_d = () => {
             className="bg-[#f6fdfd] border-l-4 border-[#1db3a6] rounded-md shadow-md p-6 mb-10"
           >
             <div className="flex items-center gap-2 mb-3">
+              {/* 📍 Map Icon (raw SVG) */}
               <svg
                 className="w-[18px] h-[18px] sm:w-[22px] sm:h-[22px] md:w-[26px] md:h-[26px] flex-shrink-0 text-[#1db3a6]"
                 fill="none"
@@ -1352,15 +1363,16 @@ const Section_d = () => {
                 <path
                   strokeLinecap="round"
                   strokeLinejoin="round"
-                  d="M3 10h11M9 21V3m4 18l7-7-7-7"
+                  d="M9 20l-5.447-2.724A1 1 0 013 16.382V5.618a1 1 0 01.553-.894L9 2m0 18l6-3m-6 3V2m6 15l5.447 2.724A1 1 0 0021 18.382V7.618a1 1 0 00-.553-.894L15 4m0 13V4"
                 />
               </svg>
-              <h3 className="text-lg sm:text-xl md:text-2xl  font-bold text-[#1db3a6]">
+
+              <h3 className="text-lg sm:text-xl md:text-2xl font-bold text-[#1db3a6]">
                 Customer experience map
               </h3>
             </div>
 
-            <p className="text-sm sm:text-base md:text-lg  text-[#444]">
+            <p className="text-sm sm:text-base md:text-lg text-[#444]">
               We also created a customer experience map to visualize the opportunities and the pain points in each stage of the tool’s workflow. Furthermore, we wanted to compare our suggestions to the interviewers' recommendations.
             </p>
 
@@ -1368,10 +1380,11 @@ const Section_d = () => {
               <img
                 src="/project_a_img_s.png"
                 alt="Keysight PWMA"
-               className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
+                className="w-full max-w-full md:max-w-[930px] h-auto mx-auto my-10 rounded object-contain"
               />
             </div>
           </motion.div>
+
 
 
           {/* --- MAIN PAIN POINTS: --- */}
@@ -1403,14 +1416,12 @@ const Section_d = () => {
             </div>
 
             <ul className="list-disc pl-4 sm:pl-6 mt-4 text-[#444] text-sm sm:text-base md:text-lg">
-              <li>Hard to familiarize yourself with the data</li>
-              <li>It takes a lot of steps to create a chart with multiple fields</li>
+              <li>Hard to familiarize yourself with the data.</li>
+              <li>It takes a lot of steps to create a chart with multiple fields.</li>
               <li>The user has to remember some characteristics (e.g., mean) to use them.</li>
-              <li>Visual/data set sharing options are limited</li>
+              <li>Visual/data set sharing options are limited.</li>
             </ul>
           </motion.div>
-
-
 
           {/* --- POSSIBLE DESIGN OPPORTUNITIES --- */}
           <motion.div

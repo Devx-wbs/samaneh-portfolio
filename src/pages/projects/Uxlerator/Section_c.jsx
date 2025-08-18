@@ -13,8 +13,8 @@ const Section_c = () => {
   };
 
   return (
-    <section className="bg-[#f8f5ec] w-full py-20 px-4 relative overflow-hidden">
-      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-10 flex flex-col items-center relative">
+    <section className="bg-[#f8f5ec] w-full sm:py-20 py-8 px-4 relative overflow-hidden">
+      <div className="max-w-7xl mx-auto bg-white rounded-xl shadow-2xl p-10 flex flex-col items-center relative">
         
         {/* Centered Heading with consistent motion */}
         <motion.h2

@@ -13,9 +13,9 @@ const Section_g = () => {
   };
 
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[60px] pt-[60px] px-4 sm:px-6 md:px-8">
+    <section className="bg-[#f8f5ec] w-full sm:pb-[60px] sm:pt-[60px] py-8 px-4 sm:px-6 md:px-8">
       <motion.div
-        className="max-w-7xl mx-auto bg-white rounded-xl shadow-lg p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8 md:gap-12"
+        className="max-w-7xl mx-auto bg-white rounded-xl shadow-2xl p-6 sm:p-8 flex flex-col md:flex-row items-center gap-8 md:gap-12"
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.2 }}

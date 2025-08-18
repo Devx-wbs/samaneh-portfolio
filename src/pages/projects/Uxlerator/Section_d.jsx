@@ -19,9 +19,9 @@ const fadeUpSmooth = {
 
 const Section_d = () => {
   return (
-    <section className="relative bg-[#f8f5ec] w-full py-[80px] px-4 overflow-hidden">
-      <div className="max-w-7xl mx-auto bg-white rounded-2xl border border-[#eee] p-8 sm:p-10 lg:p-12 flex flex-col xl:flex-row items-center gap-10 xl:gap-14 relative backdrop-blur-md">
-        
+    <section className="relative bg-[#f8f5ec] w-full sm:py-[80px] py-8 px-4 overflow-hidden ">
+      <div className="max-w-7xl mx-auto bg-white rounded-2xl border border-[#eee] p-8 sm:p-10 lg:p-12 flex flex-col xl:flex-row items-center gap-10 xl:gap-14 relative backdrop-blur-md shadow-2xl">
+
         {/* Text Section */}
         <motion.div
           className="w-full xl:w-1/2 flex flex-col items-center text-center xl:items-start xl:text-left px-4 sm:px-6 md:px-8 relative"
@@ -38,7 +38,6 @@ const Section_d = () => {
             RESEARCH <span className="text-[#6B4EFF]">METHODS</span>
           </motion.h2>
 
-          {/* h3 without motion */}
           <h3 className="mb-8 text-lg sm:text-xl md:text-2xl font-semibold leading-relaxed max-w-2xl text-gray-700">
             Our research methods include the followings:
           </h3>
@@ -50,7 +49,7 @@ const Section_d = () => {
             {researchMethods.map((method, index) => (
               <motion.span
                 key={index}
-                className="bg-gradient-to-r from-[#6B4EFF] to-[#E36414] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-full font-normal text-sm sm:text-base md:text-lg cursor-default shadow-md"
+                className="bg-gradient-to-r from-[#6B4EFF] to-[#E36414] text-white px-5 sm:px-6 py-2 sm:py-3 rounded-full font-normal text-sm sm:text-base md:text-lg cursor-default shadow-md text-center w-full sm:w-[400px]" 
                 variants={fadeUpSmooth}
               >
                 {method}
@@ -82,18 +81,5 @@ const Section_d = () => {
 };
 
 export default Section_d;
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 

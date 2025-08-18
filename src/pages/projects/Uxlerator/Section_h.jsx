@@ -15,8 +15,8 @@ const images = [
 
 const Section_h = () => {
   return (
-    <section className="bg-[#f8f5ec] w-full pb-[70px] pt-[80px] px-3 sm:px-4 md:px-6">
-      <div className="max-w-7xl mx-auto bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-md">
+    <section className="bg-[#f8f5ec] w-full sm:pb-[70px] sm:pt-[80px] px-3 py-8 sm:px-4 md:px-6">
+      <div className="max-w-7xl mx-auto bg-white p-4 sm:p-6 md:p-8 rounded-xl shadow-2xl">
         {/* Heading */}
         <motion.h2
           className="font-extrabold text-3xl sm:text-4xl md:text-5xl text-center text-black mb-12 tracking-wide"

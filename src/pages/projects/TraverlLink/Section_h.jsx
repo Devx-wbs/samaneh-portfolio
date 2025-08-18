@@ -3,8 +3,8 @@ import { motion } from "framer-motion";
 
 const Section_h = () => {
   return (
-    <section className="bg-[#F5F2EC] px-4 py-20">
-      <div className="max-w-7xl mx-auto bg-white p-6 sm:p-10 rounded-xl shadow-md text-center">
+    <section className="bg-[#F5F2EC] px-4 sm:py-20 py-8">
+      <div className="max-w-7xl mx-auto bg-white p-6 sm:p-10 rounded-xl shadow-2xl text-center">
         
         {/* Heading with animation + underline */}
         <motion.h2

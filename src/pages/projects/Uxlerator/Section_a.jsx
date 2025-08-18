@@ -51,7 +51,7 @@ const Section_a = () => {
   ];
 
   return (
-    <section className="relative bg-[#f7f3e9] w-full pb-[90px] pt-[200px] px-4 overflow-hidden">
+    <section className="relative bg-[#f7f3e9] w-full sm:pb-[90px] pt-[110px] pb-8 sm:pt-[130px]  px-4 overflow-hidden">
       {/* White container */}
       <div className="max-w-7xl mx-auto bg-white rounded-xl border border-gray-100 p-10 flex flex-col relative z-10">
         

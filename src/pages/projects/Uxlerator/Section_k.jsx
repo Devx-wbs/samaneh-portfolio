@@ -16,7 +16,7 @@ const points = [
 
 const Section_K = () => {
   return (
-    <section className="bg-[#f8f5ec] w-full py-[80px] px-4 overflow-hidden">
+    <section className="bg-[#f8f5ec] w-full sm:py-[80px] py-8 px-4 overflow-hidden">
       <div className="max-w-7xl mx-auto bg-white rounded-2xl shadow-xl p-10 flex flex-col lg:flex-row items-center gap-12">
         
         {/* Left Image */}

@@ -16,7 +16,7 @@ const Section_a = () => {
   };
 
   return (
-    <div className="min-h-screen  flex justify-center px-4 sm:px-6 md:px-10 py-12 sm:py-16 font-sans ">
+    <div className="min-h-screen  flex justify-center px-4 sm:px-6 md:px-10 py-8 sm:py-16 font-sans ">
       <motion.div
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
         className="mt-[60px] px-6 py-8 sm:px-10 sm:py-12 rounded-xl shadow-2xl w-full max-w-7xl flex flex-col lg:flex-row gap-10"

@@ -3,33 +3,12 @@ import { motion } from "framer-motion";
 
 const Section_e = () => {
   return (
-    <div className="bg-[#ececec] flex items-center justify-center px-4 py-16">
-      <div className="flex flex-col md:flex-row items-center gap-10 max-w-7xl w-full">
-        {/* Small Card - Moved to LEFT with slide animation */}
+    <div className="bg-[#ececec] flex items-center justify-center px-4 sm:py-16 p-8 overflow-hidden">
+      <div className="flex flex-col md:flex-row items-center gap-10 max-w-7xl w-full overflow-hidden">
+      
+        {/* Left Card (Image Section) */}
         <motion.div
-          initial={{ opacity: 0, x: -80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          transition={{ duration: 0.9, ease: "easeOut" }}
-          viewport={{ once: false, amount: 0.2 }}
-          className="w-full md:w-[320px] bg-[#55b197] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-[240px] md:h-96 hover:shadow-2xl transition-shadow duration-300"
-        >
-          <div>
-            <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide">
-              UXLERATOR
-            </h2>
-            <p className="text-sm sm:text-base mb-10 leading-relaxed font-inter">
-              A mobile app for UX job seekers to connect with experienced
-              mentors, seek career guidance and establish networks.
-            </p>
-          </div>
-          <button className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-md text-sm w-full md:w-auto transition-all duration-300 shadow-sm font-inter">
-            VIEW PROJECT
-          </button>
-        </motion.div>
-
-        {/* Image Panel - Moved to RIGHT with spring animation */}
-        <motion.div
-          initial={{ opacity: 0, scale: 0.8 }}
+          initial={{ opacity: 0, scale: 0.8 }} 
           whileInView={{ opacity: 1, scale: 1 }}
           transition={{
             type: "spring",
@@ -65,6 +44,28 @@ const Section_e = () => {
               className="h-48 sm:h-56 md:h-64 drop-shadow-lg rounded-lg hover:scale-105 transition duration-300"
             />
           </div>
+        </motion.div>
+
+        {/* Right Card (Text Section) */}
+        <motion.div
+          initial={{ opacity: 0, x: 80 }}   // comes from right → left
+          whileInView={{ opacity: 1, x: 0 }}
+          transition={{ duration: 0.9, ease: "easeOut" }}
+          viewport={{ once: false, amount: 0.2 }}
+          className="w-full md:w-[320px] bg-[#55b197] text-gray-900 p-6 sm:p-8 rounded-xl shadow-xl text-center md:text-left flex flex-col justify-between h-[240px] md:h-96 hover:shadow-2xl transition-shadow duration-300"
+        >
+          <div>
+            <h2 className="text-lg sm:text-xl font-grotesk font-bold mb-4 tracking-wide">
+              UXLERATOR
+            </h2>
+            <p className="text-sm sm:text-base mb-10 leading-relaxed font-inter">
+              A mobile app for UX job seekers to connect with experienced
+              mentors, seek career guidance and establish networks.
+            </p>
+          </div>
+          <button className="bg-gray-800 hover:bg-gray-900 text-white px-6 py-3 rounded-md text-sm w-full md:w-auto transition-all duration-300 shadow-sm font-inter">
+            VIEW PROJECT
+          </button>
         </motion.div>
       </div>
     </div>

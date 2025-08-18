@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 
 const Section_e = () => {
   return (
-    <section className="bg-gradient-to-b from-[#F5F2EC] to-[#eae6dd] px-4 py-28">
+    <section className="bg-gradient-to-b from-[#F5F2EC] to-[#eae6dd] px-4 sm:py-28 py-8">
       <motion.div
         initial={{ opacity: 0, y: 40 }}
         whileInView={{ opacity: 1, y: 0 }}

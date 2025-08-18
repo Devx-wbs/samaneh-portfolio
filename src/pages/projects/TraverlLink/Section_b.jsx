@@ -16,13 +16,13 @@ const Section_b = () => {
   };
 
   return (
-    <section className="bg-[#F5F2EC] py-16 px-4 flex justify-center font-sans">
+    <section className="bg-[#F5F2EC] sm:py-16 px-4 py-8 flex justify-center font-sans">
       <motion.div
         initial="hidden"
         whileInView="visible"
         viewport={{ once: false, amount: 0.3 }}
         transition={{ type: "spring", stiffness: 200, damping: 20 }}
-        className="bg-white max-w-7xl w-full p-10 rounded-xl shadow-xl"
+        className="bg-white max-w-7xl w-full p-10 rounded-xl shadow-2xl"
       >
         {/* Heading */}
         <motion.h2

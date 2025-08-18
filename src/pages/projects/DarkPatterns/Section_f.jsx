@@ -28,7 +28,7 @@ const fadeUpImage = {
 
 const Section_f = () => {
   return (
-    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 py-16 sm:py-20 font-sans">
+    <div className="min-h-screen bg-[#F9F6EF] flex justify-center px-4 sm:py-16 sm:px-6 py-8 font-sans">
       <div className="bg-white w-full max-w-7xl rounded-xl shadow-xl p-6 sm:p-10 md:p-12 flex flex-col items-center gap-12">
         {/* Animated Heading and Text */}
         <motion.div

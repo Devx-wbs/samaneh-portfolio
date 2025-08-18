@@ -27,8 +27,8 @@ const features = [
 
 const Section_d = () => {
   return (
-    <section className="bg-[#F5F2EC] py-24 px-4 flex justify-center">
-      <div className="max-w-7xl w-full flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center bg-white p-6 sm:p-10 rounded-3xl shadow-xl">
+    <section className="bg-[#F5F2EC] sm:py-24 px-4 py-8 flex justify-center">
+      <div className="max-w-7xl w-full flex flex-col lg:grid lg:grid-cols-2 gap-12 items-center bg-white p-6 sm:p-10 rounded-3xl shadow-2xl">
 
         {/* Left: Text content */}
         <motion.div

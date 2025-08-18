@@ -8,7 +8,7 @@ const Section_f = () => {
       whileInView={{ opacity: 1, y: 0 }}
       transition={{ duration: 0.8, ease: "easeOut" }}
       viewport={{ once: true }}
-      className="bg-[#f1f1f1] px-4 py-16"
+      className="bg-[#f1f1f1] px-4 sm:py-16 p-8"
     >
       <div className="max-w-5xl mx-auto">
         <motion.h2

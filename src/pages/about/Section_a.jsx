@@ -2,7 +2,7 @@ import { motion } from "framer-motion";
 
 export default function Section_a() {
   return (
-    <section className="bg-white w-full pt-[150px] pb-[80px] px-4 flex items-center justify-center">
+    <section className="bg-white w-full pt-[120px] md:pt-[150px] pb-[80px] px-4 flex items-center justify-center">
       <motion.div
         className="max-w-7xl w-full flex flex-col lg:flex-row items-center gap-16"
         initial={{ opacity: 0 }}
